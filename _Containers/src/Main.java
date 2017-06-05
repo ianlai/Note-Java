@@ -3,20 +3,26 @@
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.Collections;
+import java.util.HashMap;
 import java.util.HashSet;
+import java.util.Iterator;
 import java.util.LinkedHashSet;
 import java.util.List;
+import java.util.Map;
 import java.util.Set;
 import java.util.TreeSet;
+
+//  https://www.mkyong.com/java/how-to-loop-a-map-in-java/
 
 public class Main {
 
 	public static void main(String[] args) {
-		showArray();
-		showCollection();  //1-9 are List, 10 is Set
+		//showArray();
+		showSingleCollection();  //1-9 are List, 10 is Set
+		showDoubleCollection();  //1-9 are List, 10 is Set
 	}
 	public static void showArray(){
-
+		System.out.println("========== [SHOW ARRAY] ==========");
 		//========== 1.Initialize ==========
 		System.out.println("========== 1.Initialize ==========");
 		int[] arr1 = new int[]{3,4,5,6,7,8,9,0,1,2};
@@ -98,13 +104,21 @@ public class Main {
 		System.out.println();
 		System.out.println();
 	}
-	public static void showCollection(){
-		
+	public static void showSingleCollection(){
+
+		System.out.println("========== [SHOW SINGLE COLLECTION] ==========");
 		//========== 1.Initialize ==========
 		System.out.println("========== 1.Initialize ==========");
 		//List<Integer> list = new List<Integer>();     //No, List is an interface 
 		List<Integer> list = new ArrayList<Integer>();
+		List<Integer> list2 = new ArrayList<Integer>(123); //set capacityto be 123 but size is still 0 (not add 123) 
+		List<Integer> list3 = new ArrayList<Integer>(Arrays.asList(123,456,789));
+		List<Integer> list4 = new ArrayList<Integer>(Collections.nCopies(10, -1));
 		
+		System.out.println("Empty list: " + list);
+		System.out.println("Empty list: " + list2);  //this is EMPTY too
+		System.out.println("Multiple element list (customized): " + list3);
+		System.out.println("Multiple element list (all-same)  : " + list4);
 		
 		//========== 2.Operation ==========
 		System.out.println("========== 2.Operation ==========");
@@ -150,8 +164,8 @@ public class Main {
 		System.out.println("Found " + targetY + " at " + list.indexOf(targetY));
 		System.out.println("Found " + targetN + " at " + list.indexOf(targetN)); //if no, return -1
 		
-		System.out.println("Check " + targetY + " in the list? " + list.contains(targetY));
-		System.out.println("Found " + targetN + " in the list? " + list.contains(targetN)); //if no, return false
+		System.out.println("Check " + targetY + " in the list? " + list.contains(targetY)); //true
+		System.out.println("Found " + targetN + " in the list? " + list.contains(targetN)); //false
 		
 		//========== 5.Copy ==========
 		System.out.println("========== 5.Copy ==========");
@@ -247,6 +261,62 @@ public class Main {
 		System.out.println(ts);
 		System.out.println("LinkedHashSet:");
 		System.out.println(ls);
+		
+		hs.add(50);
+		ts.add(50);
+		ls.add(50);
+		
+		//Set will not contain duplicated element 
+		System.out.println("HashSet:");
+		System.out.println(hs);
+		System.out.println("TreeSet:");
+		System.out.println(ts);
+		System.out.println("LinkedHashSet:");
+		System.out.println(ls);
   	}
-	
+	public static void showDoubleCollection(){
+		//========== 1.Initialize ==========
+		System.out.println("========== 1.Initialize ==========");
+		Map<Integer, String> mp = new HashMap<Integer, String>();
+		
+		//========== 2.Operation ==========
+		System.out.println("========== 2.Operation ==========");
+		mp.put(7,  "7pp");
+		mp.put(10, "10p");
+		mp.put(25, "25p");
+		mp.put(18, "18p");
+		mp.put(14, "14p");
+		mp.put(10, "new10");  //if put() at the existing key, the value will be modified 
+		String s = mp.get(25);
+		System.out.println(s);
+		
+		System.out.println(mp);
+		
+		//========== 3.Traverse ==========
+		System.out.println("========== 3.Traverse (iterator) ==========");
+		Iterator it = mp.entrySet().iterator();
+		while(it.hasNext()){
+			Map.Entry pair = (Map.Entry)it.next();
+			//System.out.println(pair.getKey() + " = " + pair.getValue());
+			if((Integer)pair.getKey() > 15){
+				System.out.println("Delete: " + pair.getKey() + ": " + pair.getValue());
+				it.remove(); //use this (iterator's function) to delete element 
+			}	
+		}
+		System.out.println("========== 3.Traverse (for-loop) ==========");
+		for(Map.Entry<Integer, String> pair: mp.entrySet()){
+			System.out.println(pair.getKey() + ": " + pair.getValue());
+		}
+		
+		//========== 4.Contains (easier than Array) ==========
+		System.out.println("========== 4.Contains ==========");
+		System.out.println(mp);
+		int keyY = 10;  //inside
+		int keyN = 90;  //not inside
+		System.out.println(mp.get(keyY));  //get value
+		System.out.println(mp.get(keyN));  //get null if not exists
+		
+		System.out.println(mp.containsKey(keyY));  //true
+		System.out.println(mp.containsKey(keyN));  //false
+	}
 }
