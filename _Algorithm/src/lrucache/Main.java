@@ -19,8 +19,6 @@ public class Main {
 //		fcache.put(4,40); fcache.print();
 //		System.out.println(fcache.get(1)); fcache.print();
 
-
-		
 		fcache.put(1,1); fcache.print();
 		fcache.put(2,2); fcache.print();
 		fcache.get(1); fcache.print();

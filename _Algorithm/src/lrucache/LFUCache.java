@@ -16,7 +16,6 @@ import java.util.Map;
 
 public class LFUCache {
 	int mCapacity;
-	int mSize=0;
 	Map<Integer, Node> map;
 	Node head;
 	Node tail;
@@ -32,12 +31,14 @@ public class LFUCache {
 			mKey = k;
 			mValue = v;
 		}
+
 		Node(int k, int v, int o) {
 			mKey = k;
 			mValue = v;
 			mOccurrence = o;
 		}
-		public void print(){
+
+		public void print() {
 			System.out.print("(" + mKey + ":" + mValue + ":" + mOccurrence + ")");
 		}
 	}
@@ -53,6 +54,7 @@ public class LFUCache {
 
 	public int get(int key) {
 		System.out.println("get " + key);
+		if(mCapacity==0) return -1;
 		Node n = map.get(key);
 		if (n != null) { // exist
 			int result = n.mValue;
@@ -68,6 +70,7 @@ public class LFUCache {
 
 	public void put(int key, int value) {
 		System.out.println("put " + key);
+		if(mCapacity==0) return;
 		Node resultNode = map.get(key);
 		if (resultNode != null) { // exist
 			Node n = resultNode;
@@ -81,29 +84,27 @@ public class LFUCache {
 		} else { // not exist
 			Node n = new Node(key, value);
 			map.put(key, n);
-			
-			if(map.size()==0){
+
+			if (map.size() == 0) {
 				moveToHeadOfSameOccurence(n, head);
-			}else{
+			} else {
 				Node hoso = getHeadOfSameOccurence();
-				if(hoso==tail.prev && map.size() > mCapacity){ //last one
-					removeFromTail();
-					hoso = getHeadOfSameOccurence();
+				// special case, last one has higher occurrence than new node 1 
+				// so the last one should be evicted, but not the new one
+				if (hoso == tail.prev && map.size() > mCapacity) { 
 					moveToHeadOfSameOccurence(n, hoso.prev);
-					return;
+				}else{
+					moveToHeadOfSameOccurence(n, hoso);
 				}
 			}
 			// moveToHead(n);
 			if (map.size() > mCapacity) {
 				removeFromTail();
 			}
-			++mSize;
 		}
 	}
 
 	public void print() {
-		// System.out.println("Capacity: " + mCapacity);
-		// System.out.println(map);
 		Node n = head.next;
 		while (n != tail) {
 			n.print();
@@ -114,15 +115,15 @@ public class LFUCache {
 		System.out.println();
 	}
 
-	//For new node
+	// For new node
 	private Node getHeadOfSameOccurence() {
 		// head of same occurence
-		// ex. head -> 4 -> 3 -> 3 -> 2 -> [2] -> 1 -> 1 ->  tail
-		//                                  |                
-		//                                 hoso              
+		// ex. head -> 4 -> 3 -> 3 -> 2 -> [2] -> 1 -> 1 -> tail
+		// |
+		// hoso
 		Node hoso = tail.prev;
 		int v = 1;
-		//System.out.println(v);
+		// System.out.println(v);
 		while (true) {
 			if (hoso.mOccurrence > v || hoso == head) {
 				break;
@@ -134,12 +135,13 @@ public class LFUCache {
 		System.out.println();
 		return hoso;
 	}
-	//For existing node
+
+	// For existing node
 	private Node getHeadOfSameOccurence(Node n) {
 		// head of same occurence
 		// ex. head -> [4] -> 3 -> 3 -> [2] -> 2 -> tail
-		//              |                |
-		//             hoso              n
+		// | |
+		// hoso n
 		Node hoso = n;
 		int v = hoso.mOccurrence;
 		while (true) {
@@ -148,9 +150,9 @@ public class LFUCache {
 			}
 			hoso = hoso.prev;
 		}
-		//System.out.print("hoso  : ");
-		//hoso.print();
-		//System.out.println();
+		// System.out.print("hoso : ");
+		// hoso.print();
+		// System.out.println();
 		return hoso;
 	}
 
