@@ -17,7 +17,7 @@ import java.util.TreeSet;
 public class Main {
 
 	public static void main(String[] args) {
-		//showArray();
+		showArray();
 		showSingleCollection();  //1-9 are List, 10 is Set
 		showDoubleCollection();  //1-9 are List, 10 is Set
 	}
@@ -109,16 +109,19 @@ public class Main {
 		System.out.println("========== [SHOW SINGLE COLLECTION] ==========");
 		//========== 1.Initialize ==========
 		System.out.println("========== 1.Initialize ==========");
+		Integer[] integerArr5 = new Integer[]{5,6,7,8,9};
 		//List<Integer> list = new List<Integer>();     //No, List is an interface 
 		List<Integer> list = new ArrayList<Integer>();
-		List<Integer> list2 = new ArrayList<Integer>(123); //set capacityto be 123 but size is still 0 (not add 123) 
+		List<Integer> list2 = new ArrayList<Integer>(123); //set capacity to be 123 but size is still 0 (not add the element 123) 
 		List<Integer> list3 = new ArrayList<Integer>(Arrays.asList(123,456,789));
-		List<Integer> list4 = new ArrayList<Integer>(Collections.nCopies(10, -1));
+		List<Integer> list4 = new ArrayList<Integer>(Collections.nCopies(10, -1));  //10 "-1" will be added 
+		List<Integer> list5 = new ArrayList<Integer>(Arrays.asList(integerArr5));
 		
 		System.out.println("Empty list: " + list);
 		System.out.println("Empty list: " + list2);  //this is EMPTY too
-		System.out.println("Multiple element list (customized): " + list3);
-		System.out.println("Multiple element list (all-same)  : " + list4);
+		System.out.println("Multiple element list (customized when initializing) : " + list3);  
+		System.out.println("Multiple element list (all set as a common element)  : " + list4);
+		System.out.println("Multiple element list (convert from Integer array)   : " + list5);
 		
 		//========== 2.Operation ==========
 		System.out.println("========== 2.Operation ==========");
@@ -262,6 +265,7 @@ public class Main {
 		System.out.println("LinkedHashSet:");
 		System.out.println(ls);
 		
+		System.out.println("--- After adding 50 to the sets---");
 		hs.add(50);
 		ts.add(50);
 		ls.add(50);

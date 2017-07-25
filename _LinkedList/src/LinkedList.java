@@ -17,12 +17,8 @@ public class LinkedList {
 			end = end.next;
 		}
 	}
-//	public void print(){
-//		ListNode n = start;
-//		while(n!=null){
-//			System.out.print(n.val + " -> ");
-//			n = n.next;
-//		}
-//		return;
-//	}	
+	public void print(){
+		ListNode.print(this.start);
+		return;
+	}	
 }
