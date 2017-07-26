@@ -41,8 +41,8 @@ public class Main {
 		 * IsSymmetric function
 		 */
 		{
-			Node tree1 = Node.arrayToTree(new Integer[] { 1, 2, 2, 3, null, null, 3 });
-			Node tree2 = Node.arrayToTree(new Integer[] { 1, 2, 3, 3, null, 2, null });
+			Node tree1 = Node.arrayToTree(new Integer[] { 1, 2, 2, 3, null, null, 3 });  //symmetric
+			Node tree2 = Node.arrayToTree(new Integer[] { 1, 2, 3, 3, null, 2, null });  //non-symmetric
 			System.out.println(Node.isSymmetric(tree1));
 			System.out.println(Node.isSymmetric(tree2));
 

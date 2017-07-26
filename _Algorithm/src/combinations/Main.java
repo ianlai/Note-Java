@@ -6,7 +6,7 @@ import java.util.List;
 public class Main {
 
 	public static void main(String[] args) {
-		System.out.println(combine(4,4));
+		System.out.println(combine(2,6));
 		
 	}
 	// return the combinations choosing k from 1~n, that is, nCk 
