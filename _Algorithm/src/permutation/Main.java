@@ -19,6 +19,7 @@ public class Main {
 		printList(result1); // correct
 		printList(result2); // correct
 		printList(result3); // correct
+		
 		printList(resultRepeat1); // wrong (redundant is also shown)
 		printList(resultRepeat2); // wrong (no result because the element will
 							      //        never be enough to be added in)

@@ -3,10 +3,18 @@ package coinChange;
 import java.util.Arrays;
 
 public class MinCoinChange {
+	
+	int target;
+	int[] coins;
+	
+	MinCoinChange(int t, int[] c){
+		target = t;
+		coins = c;
+	}
+	
 	public void run(){
-		int[] coins = new int[]{1,2,5};
-		int target = 6;
 		int result = coinChange(coins, target);
+		System.out.println("[Min Methods]");
 		System.out.println(result);
 	}
     public int coinChange(int[] coins, int amount) {        

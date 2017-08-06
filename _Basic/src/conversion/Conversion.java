@@ -31,7 +31,6 @@ public class Conversion {
 		System.out.println(ss);
 		System.out.println(sss);
 		
-		
 		System.out.println(c.charValue());                 //'1' -> 1
 		System.out.println(Character.getNumericValue(c));  //'1' -> 1	
 		System.out.println(c2.charValue());                //'9' -> 9
@@ -42,5 +41,16 @@ public class Conversion {
 		System.out.println(Character.getNumericValue(c4));            //'a' -> 10
 		System.out.println(c5.charValue());                           //'z' -> z 
 		System.out.println(Character.getNumericValue(c5));            //'z' -> 35 
+		
+		System.out.println("================");
+		
+		Double D = 2.5;
+		double d = 3.5;
+		int i1 = D.intValue();
+		int i2 = (int)d;
+		int i3 = (int)Math.sqrt(2);
+		System.out.println(i1);
+		System.out.println(i2);
+		System.out.println(i3);
 	}
 }
