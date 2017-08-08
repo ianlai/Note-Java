@@ -6,7 +6,7 @@ public class Main {
 
 	public static void main(String[] args) {
 		
-		int target = 150;
+		int target = 15;
 		int[] coins = new int[] { 1, 2, 8, 10 };
 		
 		//int target = 75212;

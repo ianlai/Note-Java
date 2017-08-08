@@ -68,8 +68,12 @@ public class TotalCoinChange {
 																// coins[index]
 		}
 		int temp = table[target - coins[index]][index];
+		
+		// optimal substructure: 
+		// count(S[], m, n) = count(S[], m-1, n) + count(S[], m, n-Sm).
 		if (temp == -1) {
-			table[target - coins[index]][index] = _change(target - coins[index], coins, index, table) // including
+			table[target - coins[index]][index] 
+					= _change(target - coins[index], coins, index, table) // including
 					+ _change(target, coins, index - 1, table); // not including
 																// coins[index]
 		}
