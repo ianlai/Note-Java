@@ -14,7 +14,7 @@ import java.util.TreeSet;
 
 //  https://www.mkyong.com/java/how-to-loop-a-map-in-java/
 
-public class Main {
+public class ArrayAndList {
 
 	public static void main(String[] args) {
 		showArray();

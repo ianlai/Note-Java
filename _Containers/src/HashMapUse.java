@@ -1,10 +1,10 @@
-package _Syntax;
+
 
 import java.util.HashMap;
 import java.util.Iterator;
 import java.util.Map;
 
-public class _HashMap {
+public class HashMapUse {
 	public static void main(String[] args) {
 		HashMap<String, Integer> map = new HashMap<String, Integer>();
 		map.put("dog", 1);

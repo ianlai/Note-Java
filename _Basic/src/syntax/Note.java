@@ -1,9 +1,9 @@
-package _Syntax;
+package syntax;
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
 
-import _Syntax.StringToInt.A;
+import syntax.StringToInt.A;
 
 public class Note {
 

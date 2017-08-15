@@ -1,4 +1,4 @@
-package _Syntax;
+package syntax;
 
 public class _String {
 
