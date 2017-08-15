@@ -4,6 +4,10 @@ public class Conversion {
 	public Conversion(){
 		
 	}
+	public static void main(String[] args) {
+		new Conversion().run();
+
+	}
 	public void run(){
 		int       i =  9 ; //Integer.MAX_VALUE = 2_147_483_647;
 		long      l = Long.MAX_VALUE;
