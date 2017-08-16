@@ -81,9 +81,9 @@ class Node {
 		if (index <= input.length) {
 			Integer v = input[index - 1]; // tree's index starts from 1
 			if (v != null) {
-				Node t = new Node(v);
-				t.left = createNode(input, index * 2);
-				t.right = createNode(input, index * 2 + 1);
+				Node t = new Node(v);                       //create node, input value  
+				t.left = createNode(input, index * 2);      //connect left node 
+				t.right = createNode(input, index * 2 + 1); //connect right node
 				return t;
 			}
 		}
@@ -125,6 +125,7 @@ class Node {
 			if (current.right != null)
 				list.add(current.right);
 		}
+		System.out.println();
 	}
 
 	public static void printBFS(Node n) {
@@ -139,4 +140,6 @@ class Node {
 				list.add(current.right);
 		}
 	}
+	
+	
 }
