@@ -6,8 +6,11 @@ public class Main {
 
 	public static void main(String[] args) {
 		
-		int target = 15;
-		int[] coins = new int[] { 1, 2, 8, 10 };
+		//int target = 15;
+		//int[] coins = new int[] { 1, 2, 8, 10 };
+		
+		int target = 10;
+		int[] coins = new int[] {2,3,5,6 };
 		
 		//int target = 75212;
 		//int[] coins = new int[]{5, 7, 1, 2, 9, 16, 4, 8, 17};

@@ -5,7 +5,7 @@ import java.util.concurrent.TimeUnit;
 
 public class TotalCoinChange {
 	int target = 10;
-	int[] coins = new int[] { 2, 5, 3, 6 };
+	int[] coins = new int[] { 2, 3, 5, 6 };
 
 	TotalCoinChange(int t, int[] c){
 		target = t;
@@ -51,12 +51,12 @@ public class TotalCoinChange {
 				f[i] += f[i - coin];
 			}
 		}
-		return f[amount];
+		return f[amount];     
 	}
 
 	/* Top-Down */
 	public int _change(int target, int[] coins, int index, int[][] table) {
-		// System.out.println(target + "," + index);
+		System.out.println(target + "," + index);
 		if (target == 0)
 			return 1;
 		if (target < 0 || index < 0)
@@ -68,7 +68,8 @@ public class TotalCoinChange {
 																// coins[index]
 		}
 		int temp = table[target - coins[index]][index];
-		
+		int remaining = target-coins[index];
+		//System.out.println(remaining + ", " + index + " = " + temp );
 		// optimal substructure: 
 		// count(S[], m, n) = count(S[], m-1, n) + count(S[], m, n-Sm).
 		if (temp == -1) {
