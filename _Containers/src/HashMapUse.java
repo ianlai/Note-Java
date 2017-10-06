@@ -1,5 +1,6 @@
 
 
+import java.util.AbstractMap;
 import java.util.HashMap;
 import java.util.Iterator;
 import java.util.Map;
@@ -26,8 +27,13 @@ public class HashMapUse {
 			System.out.println(pair.getKey().getClass().getName() + " --- " + pair.getValue().getClass().getName());
 		}
 		
-		
 	    add("aa bb ccc dddd ee", "ccc bb ee");
+	    
+	    //------------------------------------------
+		Map<Integer, Integer> mp1 = new HashMap<>();
+		//Map<Integer, Integer> mp2 = new Map<>();                        //Map is an interface 
+		//Map<Integer, Integer> mp2 = new AbstractMap<Integer,Integer>(); //AbstractMap is an abstract class 
+		
 		
 	}
 	

@@ -47,7 +47,8 @@ public class StackAndQueue {
 		/* Basic bevaviors of the two are the same */
 		Queue<Integer> q1 = new ArrayDeque<Integer>();
 		Queue<Integer> q2 = new LinkedList<Integer>();  //LinkedList also implement List 
-		
+		//Queue<Integer> q3 = new Queue<Integer>();      //Queue is an interface 
+				
 		q1.add(1);
 		q1.add(2);
 		q1.add(3);

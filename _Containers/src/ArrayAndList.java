@@ -308,8 +308,15 @@ public class ArrayAndList {
 			}	
 		}
 		System.out.println("========== 3.Traverse (for-loop) ==========");
+		
+		//get pair 
 		for(Map.Entry<Integer, String> pair: mp.entrySet()){
 			System.out.println(pair.getKey() + ": " + pair.getValue());
+		}
+		
+		//get key
+		for(int key: mp.keySet()){
+			System.out.println(key + ": " + mp.get(key));
 		}
 		
 		//========== 4.Contains (easier than Array) ==========
