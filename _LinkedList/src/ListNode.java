@@ -6,14 +6,42 @@ public class ListNode {
 		val = x;
 	}
 
+	public static ListNode createList(int[] arr){
+		LinkedList list = new LinkedList();
+		for(int i=0; i<arr.length; ++i){
+			list.add(arr[i]);
+		}
+		return list.start;
+	}
+	
+	public static ListNode createListOdd(){
+		int arr[] = new int[]{1,2,3,4,5,6,7,8,9};
+		return createList(arr);
+	}
+	public static ListNode createListEven(){
+		int arr[] = new int[]{1,2,3,4,5,6,7,8};
+		return createList(arr);
+	}
+	
 	public static void print(ListNode node) {
 		ListNode n = node;
 		while (n != null) {
 			System.out.print(n.val + " -> ");
 			n = n.next;
 		}
+		System.out.println();
 		return;
 	}
+	
+	public void print() {
+		ListNode n = this;
+		while (n != null) {
+			System.out.print(n.val + " -> ");
+			n = n.next;
+		}
+		System.out.println();
+	}
+	
 
 	public static ListNode mergeTwoSortedList(ListNode l1, ListNode l2) {
 		if (l1 == null && l2 == null)
