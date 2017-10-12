@@ -4,28 +4,28 @@ import java.util.Queue;
 import java.util.ArrayDeque;
 
 /**
- * Definition for a binary tree node.
- * public class Node {
+ * Definition for a binary tree TreeNode.
+ * public class TreeNode {
  *     int val;
- *     Node left;
- *     Node right;
- *     Node(int x) { val = x; }
+ *     TreeNode left;
+ *     TreeNode right;
+ *     TreeNode(int x) { val = x; }
  * }
  */
 
-public class BinaryTreeLevelOrderTraversal {
+public class _102_BinaryTreeLevelOrderTraversal {
 
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
-		Node tree = Node.arrayToTree(new Integer[] { 2, 1, 18, null, 14, 3,5, 7,null,8, 5,4,16,null,9 });  
+		TreeNode tree = TreeNode.arrayToTree(new Integer[] { 2, 1, 18, null, 14, 3,5, 7,null,8, 5,4,16,null,9 });  
 		System.out.println(levelOrder(tree));
 	}
     static class TN{
-        Node node; 
+        TreeNode TreeNode; 
         int level; 
-        TN(Node tn, int l) {node = tn; level = l;}
+        TN(TreeNode tn, int l) {TreeNode = tn; level = l;}
     }
-    public static List<List<Integer>> levelOrder(Node root) {
+    public static List<List<Integer>> levelOrder(TreeNode root) {
         if(root==null) return new ArrayList<>();
         
         List<List<Integer>> ll = new ArrayList<List<Integer>>();
@@ -40,10 +40,10 @@ public class BinaryTreeLevelOrderTraversal {
             TN first = q.poll();
             
             /* add children */
-            if(first.node.left!=null)
-                q.add(new TN(first.node.left, first.level+1));
-            if(first.node.right!=null)
-                q.add(new TN(first.node.right, first.level+1));
+            if(first.TreeNode.left!=null)
+                q.add(new TN(first.TreeNode.left, first.level+1));
+            if(first.TreeNode.right!=null)
+                q.add(new TN(first.TreeNode.right, first.level+1));
             
             /* use */ 
             if(first.level != currentLevel){
@@ -53,8 +53,8 @@ public class BinaryTreeLevelOrderTraversal {
                 
                 currentLevel++; 
             }
-            list.add(first.node.val);
-            //System.out.print(first.node.val + " ");
+            list.add(first.TreeNode.val);
+            //System.out.print(first.TreeNode.val + " ");
         }
         ll.add(list);
         return ll; 

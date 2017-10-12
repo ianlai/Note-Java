@@ -1,20 +1,20 @@
 import java.util.ArrayList;
 import java.util.List;
 
-class Node {
+class TreeNode {
 	int val;
 	String name;
-	Node right, left;
+	TreeNode right, left;
 
-	Node() {
+	TreeNode() {
 	}
 
-	Node(int i) {
+	TreeNode(int i) {
 		val = i;
 		name = String.valueOf(i);
 	}
 
-	Node(int i, String n) {
+	TreeNode(int i, String n) {
 		val = i;
 		name = n;
 	}
@@ -72,16 +72,16 @@ class Node {
 		// return string.toString();
 	}
 
-	public static Node arrayToTree(Integer[] input) {
-		Node root = createNode(input, 1);
+	public static TreeNode arrayToTree(Integer[] input) {
+		TreeNode root = createNode(input, 1);
 		return root;
 	}
 
-	private static Node createNode(Integer[] input, int index) {
+	private static TreeNode createNode(Integer[] input, int index) {
 		if (index <= input.length) {
 			Integer v = input[index - 1]; // tree's index starts from 1
 			if (v != null) {
-				Node t = new Node(v);                       //create node, input value  
+				TreeNode t = new TreeNode(v);                       //create node, input value  
 				t.left = createNode(input, index * 2);      //connect left node 
 				t.right = createNode(input, index * 2 + 1); //connect right node
 				return t;
@@ -90,35 +90,11 @@ class Node {
 		return null;
 	}
 
-	public static boolean isSymmetric(Node root) {
-		if (root == null)
-			return true;
-		if (root.left == null && root.right == null)
-			return true;
-		return isSymmetric(root.left, root.right);
-	}
-
-	private static boolean isSymmetric(Node left, Node right) {
-		if (left == null && right == null)
-			return true;
-		if (left == null || right == null)
-			return false;
-		if (left != null && right != null) {
-			if (left.val != right.val)
-				return false;
-			if (!isSymmetric(left.left, right.right))
-				return false; // outer
-			if (!isSymmetric(left.right, right.left))
-				return false; // inner
-		}
-		return true;
-	}
-
 	public void printBFS() {
-		List<Node> list = new ArrayList<Node>();
+		List<TreeNode> list = new ArrayList<TreeNode>();
 		list.add(this);
 		while (!list.isEmpty()) {
-			Node current = list.remove(0);
+			TreeNode current = list.remove(0);
 			System.out.print(current.val + "-");
 			if (current.left != null)
 				list.add(current.left);
@@ -128,11 +104,11 @@ class Node {
 		System.out.println();
 	}
 
-	public static void printBFS(Node n) {
-		List<Node> list = new ArrayList<Node>();
+	public static void printBFS(TreeNode n) {
+		List<TreeNode> list = new ArrayList<TreeNode>();
 		list.add(n);
 		while (!list.isEmpty()) {
-			Node current = list.remove(0);
+			TreeNode current = list.remove(0);
 			System.out.print(current.val + "-");
 			if (current.left != null)
 				list.add(current.left);

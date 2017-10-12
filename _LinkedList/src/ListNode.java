@@ -1,4 +1,4 @@
-public class ListNode {
+public class ListNode{
 	int val;
 	ListNode next;
 
@@ -42,6 +42,45 @@ public class ListNode {
 		System.out.println();
 	}
 	
+	public static ListNode swap(ListNode head, int m, int n){
+		int max = Math.max(m, n);
+		int min = Math.min(m, n);
+		m = max;
+		n = min;
+
+		ListNode dummy = new ListNode(-1);
+		dummy.next = head; 
+		
+		ListNode mc = head; 
+		ListNode mp = dummy;  //prev
+		ListNode mn = head.next;  //next
+		
+		ListNode nc = head; 
+		ListNode np = dummy;  //prev
+		ListNode nn = head.next;  //next
+		
+		for(int i=0 ; i<n-1; ++i){
+			mc = mc.next;
+			mp = mp.next;
+			mn = mn.next;
+			
+			nc = nc.next;
+			np = np.next;
+			nn = nn.next;
+		}
+		for(int i=0 ; i<m-n; ++i){
+			mc = mc.next;
+			mp = mp.next;
+			mn = mn.next;
+		}
+		
+		mc.next = nn;
+		mp.next = nc; 
+		nc.next = mn;
+		np.next = mc; 
+		
+		return (n==1) ? mc : head;
+	}
 
 	public static ListNode mergeTwoSortedList(ListNode l1, ListNode l2) {
 		if (l1 == null && l2 == null)
@@ -153,5 +192,10 @@ public class ListNode {
 			afterEntry.next = p2;
 		}
 		return head;
+	}
+
+	@Override
+	public String toString() {
+		return "[" + val + "]";
 	}
 }

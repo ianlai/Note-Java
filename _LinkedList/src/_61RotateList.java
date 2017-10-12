@@ -17,6 +17,7 @@ public class _61RotateList {
 		list.print();
 	}
 
+	/* Walk through the list twice. This should be revised. */
     public ListNode rotateRight(ListNode head, int k) {
         if(head==null || head.next==null) return head;
         ListNode curr = head;

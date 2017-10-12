@@ -1,14 +1,14 @@
-public class MergeTwoBinaryTree {
+public class _617_MergeTwoBinaryTree {
 
 	public static void main(String[] args) {
-		Node tree1 = Node.arrayToTree(new Integer[] { 1, 3, 2, 5 });  
-		Node tree2 = Node.arrayToTree(new Integer[] { 2, 1, 3, null, 4, null, 7 });  
+		TreeNode tree1 = TreeNode.arrayToTree(new Integer[] { 1, 3, 2, 5 });  
+		TreeNode tree2 = TreeNode.arrayToTree(new Integer[] { 2, 1, 3, null, 4, null, 7 });  
 		tree1.printBFS();
 		tree2.printBFS();
-		Node treeMerge = mergeTrees(tree1, tree2);
+		TreeNode treeMerge = mergeTrees(tree1, tree2);
 		treeMerge.printBFS();
 	}
-    public static Node mergeTrees(Node t1, Node t2) {
+    public static TreeNode mergeTrees(TreeNode t1, TreeNode t2) {
         if(t1==null && t2==null) return null;
         if(t1!=null && t2==null) return t1;
         if(t1==null && t2!=null) return t2;

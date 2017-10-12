@@ -12,7 +12,7 @@ public class Main {
 			for (int i = 0; i < NUM; ++i) {
 				arr1[i] = i;
 			}
-			Node tree1 = Node.arrayToTree(arr1);
+			TreeNode tree1 = TreeNode.arrayToTree(arr1);
 
 			// In-order printout
 			tree1.printInOrder();
@@ -36,24 +36,14 @@ public class Main {
 			System.out
 					.println("Inorder traversal of " + NUM + " units, StringBuilder costs " + (te2 - ts2) / T6 + " ms");
 		}
-		// ====================================================
-		/*
-		 * IsSymmetric function
-		 */
-		{
-			Node tree1 = Node.arrayToTree(new Integer[] { 1, 2, 2, 3, null, null, 3 });  //symmetric
-			Node tree2 = Node.arrayToTree(new Integer[] { 1, 2, 3, 3, null, 2, null });  //non-symmetric
-			System.out.println(Node.isSymmetric(tree1));
-			System.out.println(Node.isSymmetric(tree2));
 
-		}
 		// ====================================================
 		/*
 		 * BFS & DFS
 		 */
 		{
 			System.out.println("===== Tree1 =====");
-			Node tree1 = Node.arrayToTree(new Integer[] { 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17 });
+			TreeNode tree1 = TreeNode.arrayToTree(new Integer[] { 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17 });
 			System.out.println("** DFS(pre-order):");
 			tree1.printPreOrder();
 			System.out.println();
@@ -71,7 +61,7 @@ public class Main {
 			System.out.println();
 
 			System.out.println("===== Tree2 =====");
-			Node tree2 = Node
+			TreeNode tree2 = TreeNode
 					.arrayToTree(new Integer[] { 1, null, 2, null, null, 3, 4, null, null, null, null, 5, null, 6, 7 });
 			System.out.println("** DFS(pre-order):");
 			tree2.printPreOrder();

@@ -1,23 +1,22 @@
-import java.util.Scanner;
 
-public class IsValidBST {
+public class _98_ValidateBinarySearchTree {
 
 	public static void main(String[] args) {
-		IsValidBST isvalidbst = new IsValidBST();
-		Node tree1 = Node.arrayToTree(new Integer[] { 2, 1, 3, null, 4, null, 7 });  
-		Node tree2 = Node.arrayToTree(new Integer[] { 5, 1, 8, null, 3, null, 9 });  
+		_98_ValidateBinarySearchTree isvalidbst = new _98_ValidateBinarySearchTree();
+		TreeNode tree1 = TreeNode.arrayToTree(new Integer[] { 2, 1, 3, null, 4, null, 7 });  
+		TreeNode tree2 = TreeNode.arrayToTree(new Integer[] { 5, 1, 8, null, 3, null, 9 });  
 		System.out.println(isvalidbst.isValidBST(tree1));
 		System.out.println(isvalidbst.isValidBST(tree2));
 
 	}
 
-    public boolean isValidBST(Node root) {
+    public boolean isValidBST(TreeNode root) {
         if(root==null) return true;
         int max = Integer.MAX_VALUE;
         int min = Integer.MIN_VALUE;
         return helper(root, max, min);
     }
-    private boolean helper(Node n, int max, int min){
+    private boolean helper(TreeNode n, int max, int min){
         if(n==null) return true; //no violation, so true
         
         int v = n.val;

@@ -5,17 +5,17 @@ import java.util.Stack;
 public class PreorderTraversalIterative {
 
 	public static void main(String[] args) {
-		Node root = Node.arrayToTree(new Integer[]{1,2,3,4,5,6,7,8,9,10,11,12});
+		TreeNode root = TreeNode.arrayToTree(new Integer[]{1,2,3,4,5,6,7,8,9,10,11,12});
 		List list = preorderTraversal(root);
 		System.out.println(list);
 	}
 
-    public static List<Integer> preorderTraversal(Node root) {
-        Stack<Node> s = new Stack<>();
+    public static List<Integer> preorderTraversal(TreeNode root) {
+        Stack<TreeNode> s = new Stack<>();
         List<Integer> l = new ArrayList<>();
         if(root==null) return l;
         
-        Node cur = root;
+        TreeNode cur = root;
         while(cur!=null){
             l.add(cur.val);
             if(cur.right!=null) s.push(cur.right);
