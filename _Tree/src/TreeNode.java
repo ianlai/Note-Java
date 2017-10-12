@@ -18,6 +18,10 @@ class TreeNode {
 		val = i;
 		name = n;
 	}
+	
+	public static TreeNode getDefaultTree(){
+		return arrayToTree(new Integer[]{1,2,3,null,5,6,7, null, null, 10, 11, null, 12, 13, 14, null,null,null,null,20,null,30,40,null,null,50,60});
+	}
 
 	public void printPreOrder() {
 		System.out.print(val + "-");
