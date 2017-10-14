@@ -17,7 +17,7 @@ public class _102_BinaryTreeLevelOrderTraversal {
 
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
-		TreeNode tree = TreeNode.arrayToTree(new Integer[] { 2, 1, 18, null, 14, 3,5, 7,null,8, 5,4,16,null,9 });  
+		TreeNode tree = TreeNode.arrayToTree(new Integer[] { 2, 1, 18, null, 14, 3,5, null ,null,8, 5,4,16,null,9 });  
 		System.out.println(levelOrder(tree));
 	}
     static class TN{

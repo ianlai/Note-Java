@@ -22,6 +22,14 @@ class TreeNode {
 	public static TreeNode getDefaultTree(){
 		return arrayToTree(new Integer[]{1,2,3,null,5,6,7, null, null, 10, 11, null, 12, 13, 14, null,null,null,null,20,null,30,40,null,null,50,60});
 	}
+	public static TreeNode getDefaultTree(int i){
+		if(i==0)
+			return getDefaultTree();
+		else if(i==1)
+			return arrayToTree(new Integer[] { 2, 1, 18, null, 14, 3,5, null, null,8, 5,4,16,null,9 });
+		else
+			return getDefaultTree();
+	}
 
 	public void printPreOrder() {
 		System.out.print(val + "-");
