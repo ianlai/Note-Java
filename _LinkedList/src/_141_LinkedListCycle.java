@@ -1,5 +1,5 @@
 
-public class _141LinkedListCycle {
+public class _141_LinkedListCycle {
 
 	public static void main(String[] args) {
 		LinkedList list1 = new LinkedList();

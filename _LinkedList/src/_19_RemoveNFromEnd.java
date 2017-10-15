@@ -1,5 +1,5 @@
 
-public class _19RemoveNFromEnd {
+public class _19_RemoveNFromEnd {
 
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub

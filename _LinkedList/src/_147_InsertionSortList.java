@@ -1,7 +1,7 @@
 
-public class _147InsertionSortList {
+public class _147_InsertionSortList {
 	public static void main(String[] args) {
-		_147InsertionSortList obj = new _147InsertionSortList();
+		_147_InsertionSortList obj = new _147_InsertionSortList();
 		// int[] arr = new int[]{3,8,5,1,4,9,6};
 		// int[] arr = new int[] { 1, 1, 8, 3 };
 		// int[] arr = new int[]{1,2,3,4,5,6,7,8,9};

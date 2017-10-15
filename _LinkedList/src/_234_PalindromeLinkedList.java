@@ -9,10 +9,10 @@
  * }
  */
 
-public class _234PalindromeLinkedList {
+public class _234_PalindromeLinkedList {
 
 	public static void main(String[] args) {
-		_234PalindromeLinkedList obj = new _234PalindromeLinkedList();
+		_234_PalindromeLinkedList obj = new _234_PalindromeLinkedList();
 		
 		ListNode listodd = ListNode.createListOdd();
 		ListNode listeven= ListNode.createListEven();

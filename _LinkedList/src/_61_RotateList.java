@@ -7,10 +7,10 @@
  * }
  */
 
-public class _61RotateList {
+public class _61_RotateList {
 
 	public static void main(String[] args) {
-		_61RotateList obj = new _61RotateList();
+		_61_RotateList obj = new _61_RotateList();
 		ListNode list = ListNode.createListEven();
 		list.print();
 		list = obj.rotateRight(list, 3);
