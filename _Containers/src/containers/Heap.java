@@ -1,3 +1,4 @@
+package containers;
 import java.util.Arrays;
 
 /* Definition: (1) Complete binary tree
@@ -16,6 +17,9 @@ import java.util.Arrays;
  *        (5) increase key 
  *        
  * Example:  Heapsort
+ * 
+ * http://www.growingwiththeweb.com/data-structures/binary-heap/overview/
+ * 
  */
 public class Heap {
 	
@@ -49,14 +53,15 @@ public class Heap {
 	
 	/* Recursively sift-down, log(n), choose the smaller child to swap */
 	private void heapifyDown(int i){
+		debug("hdn: [" + i + "] = " + mHeap[i]);
 		int l=left(i);
 		int r=right(i);
 		int smallest = i;
 		
-		if(l<=mSize && mHeap[l]<mHeap[i]){
+		if(l<mSize && mHeap[l]<mHeap[i]){
 			smallest = l;
 		}
-		if(r<=mSize && mHeap[r]<mHeap[smallest]){
+		if(r<mSize && mHeap[r]<mHeap[smallest]){
 			smallest = r;
 		}
 		if(smallest!=i){
@@ -85,15 +90,36 @@ public class Heap {
 		mCapacity = capacity;
 	}
 	
-	public void build(){
+	/* This is O(n), not O(nlogn). 
+	 * After the array filled up, do a build, which means let half nodes do the sink-down.
+	 * It is NOT doing sink-up or sink-down each time after one element added in.
+	 * An important thing is that it starts from the half node and do sift-down "forward" */
+	public void build(int[] input){
+		if(input.length > mCapacity)
+			throw new IllegalStateException("Input array is too large.");
+		for(int i=0;i<input.length;i++){
+			mHeap[i] = input[i];
+		}
+		mSize = input.length;
 		
+		int half = (input.length+1)/2;
+		for(int i=half;i>=0; i--){
+			heapifyDown(i);
+		}
 	}
 	
+	/* sift-up, log(n) */
 	public void decreaseKey(int i, int key){
-		
+		debug("decreaseKey: [" + i + "] = " + mHeap[i] + " -> " + key);
+		if(key >= mHeap[i]){
+			mHeap[i] = key;
+		}else{
+			mHeap[i] = key;
+			heapifyUp(i);
+		}
 	}
 	
-	/* log(n) */ 
+	/* sift-up, log(n) */ 
 	public void insert(int x){
 		debug(mSize);
 		debug(mCapacity);
@@ -120,6 +146,7 @@ public class Heap {
 		}
 	}
 	public void print(){
+		System.out.println("Size: " + mSize);
 		for(int i=0; i<mSize; i++){
 			System.out.print(mHeap[i] + ", ");
 		}
@@ -127,9 +154,20 @@ public class Heap {
 //		System.out.println(Arrays.toString(mHeap));  //This will print out the unused part
 	}
 	
+	public static void heapsort(int[] input){
+		int size = input.length;
+		int[] temp = new int[size];
+		System.arraycopy(input, 0, temp, 0, size);
+		Heap heap = new Heap(size);
+		heap.build(temp);
+		for(int i=0;i<size;i++){
+			input[i] = heap.extractMin();
+		}
+	}
 	public static void main(String[] args) {
 
 		Heap h = new Heap(30);
+		Heap h2 = new Heap(30);
 		h.insert(70);
 		h.insert(90);
 		h.insert(60);
@@ -145,17 +183,31 @@ public class Heap {
 		h.insert(2);
 		h.insert(4);
 
-		System.out.println("===after insert===");
+		System.out.println("=== insert ===");
 		h.print();
 
-		System.out.println("===extractMin()===");
-		System.out.println(h.extractMin());
-		h.print();
-		System.out.println("===extractMin()===");
+		System.out.println("=== extractMin ===");
 		System.out.println(h.extractMin());
 		h.print();
 		
-
+		System.out.println("=== extractMin ===");
+		System.out.println(h.extractMin());
+		h.print();
+		
+		System.out.println("=== build heap2 ===");
+		int[] arr2 = new int[]{70,90,60,30,20,10,50,40,5,8,2,4};
+		System.out.println(Arrays.toString(arr2));
+		h2.build(arr2);
+		h2.print();
+		
+		System.out.println("=== decraseKey ===");
+		h2.decreaseKey(10, 30);
+		h2.print();
+		h2.decreaseKey(9, 3);
+		h2.print();
+		
+		System.out.println("=== heapsort ===");
+		Heap.heapsort(arr2);
+		System.out.println(Arrays.toString(arr2));
 	}
-
 }
