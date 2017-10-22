@@ -1,3 +1,4 @@
+package comparator;
 import java.util.*;
 
 public class Person{

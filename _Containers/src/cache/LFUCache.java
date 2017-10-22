@@ -1,8 +1,29 @@
-package lrucache;
+package cache;
 
 import java.util.HashMap;
 import java.util.Map;
 
+/* === 460 LFU Cache ===
+ * Least Frequently Used Cache 
+ * API: 
+ *    Constructor(capacity)
+ * 	  .get(key)
+ * 	  .put(key,value)  
+ * Requirement:
+ * 	  All OPs in O(1)
+ *    Where there is a tie (same frequency), least recently used key should be evicted. //LRU
+ */
+
+/* Implementation: 
+ * 1. Map(key, Node)
+ * 2. DoubleLinkedList to hold the node
+ * 3. Node(key,value)
+ * 4. put: add to the tail O(1)
+ * 5. get: use map to find it in O(1) 
+ * 6. update: move the node to the head as long as it "put" or "get" 
+ */
+
+/* Example */
 //LRUCache cache = new LRUCache( 2 /* capacity */ );
 //cache.put(1, 1);
 //cache.put(2, 2);
@@ -14,16 +35,17 @@ import java.util.Map;
 //cache.get(3);       // returns 3
 //cache.get(4);       // returns 4
 
-public class LFUCache {
-	int mCapacity;
+public class LFUCache implements Cache {
+	int mCapacity = 0;
 	Map<Integer, Node> map;
 	Node head;
 	Node tail;
+	boolean debug = true;
 
 	class Node {
 		int mKey;
 		int mValue;
-		int mOccurrence = 1;
+		int mOccurrence = 1;  //LRU doesn's need this, only LFU
 		Node next;
 		Node prev;
 
@@ -39,7 +61,7 @@ public class LFUCache {
 		}
 
 		public void print() {
-			System.out.print("(" + mKey + ":" + mValue + ":" + mOccurrence + ")");
+			System.out.print("(" + mKey + ":" + mValue + "|" + mOccurrence + ")");
 		}
 	}
 
@@ -53,7 +75,7 @@ public class LFUCache {
 	}
 
 	public int get(int key) {
-		System.out.println("get " + key);
+		System.out.println("get: " + key);
 		if(mCapacity==0) return -1;
 		Node n = map.get(key);
 		if (n != null) { // exist
@@ -62,14 +84,13 @@ public class LFUCache {
 			Node hoso = getHeadOfSameOccurence(n);
 			deleteNode(n);
 			moveToHeadOfSameOccurence(n, hoso);
-			// moveToHead(n);
 			return result;
 		}
-		return -1; // not exist
+		return -1;       // not exist
 	}
 
 	public void put(int key, int value) {
-		System.out.println("put " + key);
+		System.out.println("put: " + key + " " + value);
 		if(mCapacity==0) return;
 		Node resultNode = map.get(key);
 		if (resultNode != null) { // exist
@@ -79,25 +100,23 @@ public class LFUCache {
 			Node hoso = getHeadOfSameOccurence(n);
 			deleteNode(n);
 			moveToHeadOfSameOccurence(n, hoso);
-			// moveToHead(n);
-
 		} else { // not exist
 			Node n = new Node(key, value);
 			map.put(key, n);
 
 			if (map.size() == 0) {
-				moveToHeadOfSameOccurence(n, head);
+				moveToHeadOfSameOccurence(n, head);  //moveToHead()
 			} else {
 				Node hoso = getHeadOfSameOccurence();
 				// special case, last one has higher occurrence than new node 1 
 				// so the last one should be evicted, but not the new one
 				if (hoso == tail.prev && map.size() > mCapacity) { 
+					debug("## special case: add " + n.mKey + ", capacity over, but the tail one has freq " + hoso.prev.mOccurrence);
 					moveToHeadOfSameOccurence(n, hoso.prev);
 				}else{
 					moveToHeadOfSameOccurence(n, hoso);
 				}
 			}
-			// moveToHead(n);
 			if (map.size() > mCapacity) {
 				removeFromTail();
 			}
@@ -115,12 +134,14 @@ public class LFUCache {
 		System.out.println();
 	}
 
-	// For new node
+	//========= Private Methods =========
+	
+	/* For new node */
 	private Node getHeadOfSameOccurence() {
 		// head of same occurence
 		// ex. head -> 4 -> 3 -> 3 -> 2 -> [2] -> 1 -> 1 -> tail
-		// |
-		// hoso
+		//                                  |
+		//                                 hoso
 		Node hoso = tail.prev;
 		int v = 1;
 		// System.out.println(v);
@@ -136,12 +157,12 @@ public class LFUCache {
 		return hoso;
 	}
 
-	// For existing node
+	/* For existing node */
 	private Node getHeadOfSameOccurence(Node n) {
 		// head of same occurence
 		// ex. head -> [4] -> 3 -> 3 -> [2] -> 2 -> tail
-		// | |
-		// hoso n
+		//              |                |
+		//            hoso               n  (addOccurrence first, then hoso.mOcurrence > v) 
 		Node hoso = n;
 		int v = hoso.mOccurrence;
 		while (true) {
@@ -150,12 +171,13 @@ public class LFUCache {
 			}
 			hoso = hoso.prev;
 		}
-		// System.out.print("hoso : ");
-		// hoso.print();
-		// System.out.println();
+		System.out.print("hoso : ");
+		hoso.print();
+		System.out.println();
 		return hoso;
 	}
 
+	/* Insert n to the position between hoso to hoso.next */ 
 	private void moveToHeadOfSameOccurence(Node n, Node hoso) {
 		// move to the position AFTER hoso
 		n.next = hoso.next; // after
@@ -164,12 +186,13 @@ public class LFUCache {
 		n.prev = hoso; // before
 	}
 
-	private void moveToHead(Node n) { // This is for LRU
-		n.next = head.next;
-		n.next.prev = n;
-		head.next = n;
-		n.prev = head;
-	}
+	/* LRU method */
+//	private void moveToHead(Node n) { 
+//		n.next = head.next;
+//		n.next.prev = n;
+//		head.next = n;
+//		n.prev = head;
+//	}
 
 	private void deleteNode(Node n) {
 		n.prev.next = n.next;
@@ -186,5 +209,9 @@ public class LFUCache {
 
 	private void addOccurrence(Node n) {
 		++n.mOccurrence;
+	}
+	
+	private void debug(String s){
+		if(debug) System.out.println(s);
 	}
 }
