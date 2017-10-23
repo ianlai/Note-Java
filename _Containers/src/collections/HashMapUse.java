@@ -1,4 +1,4 @@
-package containers;
+package collections;
 
 
 import java.util.AbstractMap;
