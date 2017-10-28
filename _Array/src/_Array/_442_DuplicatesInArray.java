@@ -8,8 +8,13 @@ import java.util.List;
 // special condition-2:  once or twice 
 // constraint: O(n)
 // constraint: no extra space 
+// return: list containing the duplicates 
 
-public class DuplicatesInArray {
+/* Because the input has condition-1 and condition-2 constrains, 
+ * we can use positive or negative of the original array to 
+ * store the information whether there are duplicates*/
+
+public class _442_DuplicatesInArray {
 	public static void main(String[] args) {
 		int[] arr = new int[]{4,3,2,7,8,2,3,1};
 		System.out.println(findDuplicates(arr));

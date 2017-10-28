@@ -25,9 +25,9 @@ public class Main {
 		cache.put(9,9); cache.print();
 		cache.get(6);   cache.print();
 		cache.get(6);   cache.print();
-		cache.put(11,11);cache.print();
-		cache.get(11);  cache.print();
-		cache.put(11,999);cache.print();
+		cache.put(6,1); cache.print();
+		cache.get(9);   cache.print();
+		cache.put(9,1); cache.print();
 		cache.get(6);   cache.print();
 		
 		cache.get(2);   cache.print();
@@ -40,10 +40,10 @@ public class Main {
 		cache.get(2);   cache.print();
 		cache.get(5);   cache.print();
 		
-		cache.put(6,6); cache.print();
-		cache.put(4,4); cache.print();
+		cache.put(6,2); cache.print();
+		cache.put(4,1); cache.print();
 		cache.get(1);   cache.print();
-		cache.put(7,7); cache.print();
+		cache.put(7,1); cache.print();
 		cache.get(3);   cache.print();
 		cache.get(4);   cache.print();
 	}

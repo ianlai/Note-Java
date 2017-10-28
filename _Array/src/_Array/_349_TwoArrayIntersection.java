@@ -5,7 +5,7 @@ import java.util.HashSet;
 import java.util.Iterator;
 import java.util.Set;
 
-public class TwoArrayIntersection {
+public class _349_TwoArrayIntersection {
 	public static void main(String[] args) {
 		int[] n1 = new int[]{4,6,1,2,1,2,5,6,2,3,5,2,2,5,6,8,3};
 		int[] n2 = new int[]{3,1,0,0,3,2,1,0,12,14,22,5,6,5,3,7,8,3};

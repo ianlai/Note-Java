@@ -14,33 +14,20 @@ import java.util.TreeSet;
 //2. Queue (add at last, poll at first)
 //3. Deque (add at both sides, poll at both sides)
 
-public class StackAndQueue {
+/*
+ *  Queue<Integer> q = new LinkedList<>();   //Queue is an interface only
+ *  .add()  .offer()      //exception or not  if not able to add 
+ * 	.poll() .remove()     //null or exception if empty
+ * 	.peek()               //only check but not remove
+ * 	.isEmpty()
+ */
+
+public class _Queue {
 
 	public static void main(String[] args) {
-		testStack();
 		testQueue();
 		testDeque();
 		testSorted();
-	}
-	
-	private static void testStack(){
-		System.out.println("============= Stack =============");
-		Stack<Integer> stack = new Stack<Integer>();
-		stack.push(1);
-		stack.push(2);
-		stack.push(3);
-		stack.push(4);
-		stack.push(5);
-		
-		System.out.println("peek 3 times: ");
-		System.out.println(stack.peek());
-		System.out.println(stack.peek());
-		System.out.println(stack.peek());
-		
-		System.out.println("pop until empty: ");
-		while(!stack.isEmpty()){
-			System.out.println(stack.pop());
-		}
 	}
 	private static void testQueue(){
 		System.out.println("============= Queue =============");
@@ -55,6 +42,8 @@ public class StackAndQueue {
 		q1.add(3);
 		q1.add(4);
 		q1.add(5);
+		q1.add(3);
+		
 		
 		System.out.println("peek 3 times: ");
 		System.out.println(q1.peek());
