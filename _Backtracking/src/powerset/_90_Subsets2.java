@@ -13,7 +13,7 @@ public class _90_Subsets2 {
 		
 		
 		System.out.println("=========== subsets1 ===========");
-		List<List<Integer>> ll1 = obj.subsets(arr);
+		List<List<Integer>> ll1 = obj.subsets1(arr);
 		System.out.println(ll1);
 		System.out.println(ll1.size());
 		
@@ -36,7 +36,7 @@ public class _90_Subsets2 {
 		System.out.println(lld2.size());
 	}
 
-	public List<List<Integer>> subsets(int[] nums) {
+	public List<List<Integer>> subsets1(int[] nums) {
 
 		/* Iterative */
 		if (nums == null || nums.length == 0)
@@ -64,7 +64,7 @@ public class _90_Subsets2 {
 	}
 	
 	//----------------------------------------------------
-	
+	/* IMPORTANT */
 	/* Same concept with subsetsWithDup2 */
     public List<List<Integer>> subsets2(int[] nums) {
         if(nums==null || nums.length==0) return null;
@@ -116,6 +116,7 @@ public class _90_Subsets2 {
 	}
 	//----------------------------------------------------
 	
+	/* IMPORTANT */
 	/* Partially understood */
     public List<List<Integer>> subsetsWithDup2(int[] nums) {
         Arrays.sort(nums);

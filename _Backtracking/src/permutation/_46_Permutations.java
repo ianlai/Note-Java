@@ -40,6 +40,7 @@ public class _46_Permutations {
 	}
 
 	// --------------------------------------------------
+	/* IMPORTANT */
 	/*
 	 * Get all the permutations. Notice that all the input element should be
 	 * distinct. Use backtrack function (try).

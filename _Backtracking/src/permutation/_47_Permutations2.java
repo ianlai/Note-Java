@@ -7,7 +7,8 @@ import java.util.Collections;
 
 public class _47_Permutations2 {
 	boolean isDebug = true;
-	// --------------------------------------------------
+
+	/* IMPORTANT */
 	/*
 	 * Get all the permutations. Input element might have duplicates. 
 	 * Use backtrack function (try).
