@@ -1,19 +1,34 @@
-package permutation;
+package test;
 
 import java.util.List;
-import powerset._90_Subsets2;
 
-public class Main {
+import combinations._77_Combinations;
+import permutations._46_Permutations;
+import permutations._47_Permutations2;
+import subsets._90_Subsets2;
+
+public class Tester {
 
 	public static void main(String[] args) {
 		
-		int[] arr = new int[] { 1, 2, 3 };
+		int[] arr = new int[] { 1, 2, 3, 4, 5};
 		int[] arrRepeat = new int[] { 1, 2, 2, 3 };
+		
+		/* Permutation */
 		testPermutation1(arr);
 		testPermutation2(arrRepeat);
+		
+		/* Subset */
 		testSubset1(arr);
 		testSubset2(arrRepeat);
-
+		
+		/* Combination */
+		testCombination(5,0); //1
+		testCombination(5,1); //5
+		testCombination(5,2); //10
+		testCombination(5,3); //10
+		testCombination(5,4); //5
+		testCombination(5,5); //1
 	}
 	public static void testPermutation1(int arr[]){
 		_46_Permutations  p1 = new _46_Permutations();
@@ -47,12 +62,15 @@ public class Main {
 		List<List<Integer>> result = s2.subsetsWithDup2(arr);
 		printList(result);
 	}
-	
-	
+	public static void testCombination(int n, int k) {
+		_77_Combinations c = new _77_Combinations();
+		List<List<Integer>> result = c.combine(n, k);
+		printList(result);
+	}
 	
 	public static void printList(List<List<Integer>> ll) {
 		for (int i = 0; i < ll.size(); ++i) {
-			System.out.println(i + 1 + ": " + ll.get(i));
+			System.out.println(String.format("%3s: %s", i+1, ll.get(i)));
 		}
 		System.out.println("------------------------");
 	}

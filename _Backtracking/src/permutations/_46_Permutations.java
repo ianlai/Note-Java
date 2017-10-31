@@ -1,4 +1,4 @@
-package permutation;
+package permutations;
 
 import java.util.List;
 import java.util.ArrayList;
@@ -20,11 +20,11 @@ public class _46_Permutations {
 		for (int e : arr) {
 			input.add(e);
 		}
-		_permutation(input, 0, result);
+		helper(input, 0, result);
 		return result;
 	}
 
-	private void _permutation(List<Integer> arr, int k, List<List<Integer>> list) {
+	private void helper(List<Integer> arr, int k, List<List<Integer>> list) {
 		if (k == arr.size() - 1) {
 			List l = new ArrayList(arr);
 			// list.add(arr); //No, we need to create a new list to put into the
@@ -34,7 +34,7 @@ public class _46_Permutations {
 		}
 		for (int i = k; i < arr.size(); ++i) {
 			Collections.swap(arr, i, k);
-			_permutation(arr, k + 1, list);
+			helper(arr, k + 1, list);
 			Collections.swap(arr, k, i);
 		}
 	}
