@@ -1,4 +1,4 @@
-package powerset;
+package subsets;
 
 import java.util.ArrayList;
 import java.util.Arrays;
