@@ -1,3 +1,4 @@
+package tree;
 
 public class _98_ValidateBinarySearchTree {
 

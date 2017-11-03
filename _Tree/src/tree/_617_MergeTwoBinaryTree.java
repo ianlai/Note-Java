@@ -1,3 +1,4 @@
+package tree;
 public class _617_MergeTwoBinaryTree {
 
 	public static void main(String[] args) {
