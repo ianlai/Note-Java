@@ -14,5 +14,4 @@ public class _268_MissingNumber {
         }
         return x ^ nums.length;  //add the last one 
     }
-
 }
