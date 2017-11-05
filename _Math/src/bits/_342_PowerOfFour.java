@@ -31,5 +31,4 @@ public class _342_PowerOfFour {
 		}
 		return count1==1 && count0%2==0;
 	}
-
 }
