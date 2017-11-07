@@ -184,6 +184,7 @@
         │   ├── _257_BinaryTreePaths.java
         │   ├── _538_ConvertBSTtoGreaterTree.java
         │   ├── _617_MergeTwoBinaryTree.java
+        │   ├── _637_AverageOfLevelsInBinaryTree.java
         │   ├── _669_TrimABinarySerachTree.java
         │   └── _687_LongestUnivaluePath.java
         └── tries
