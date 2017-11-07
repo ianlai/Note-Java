@@ -8,7 +8,6 @@
 │       ├── algo
 │       │   ├── _049_GroupAnagrams.java
 │       │   ├── _056_MergeIntervals.java
-│       │   ├── _062_UniquePaths.java
 │       │   ├── _179_LargestNumber.java
 │       │   ├── _200_NumOfIslands.java
 │       │   ├── _279_PerfectSquares.java
@@ -26,7 +25,6 @@
 ├── _Array
 │   └── src
 │       ├── array
-│       │   ├── _120_Triangle.java
 │       │   ├── _162_FindPeakElement.java
 │       │   ├── _215_KthLargestElementInAnArray.java
 │       │   ├── _349_TwoArrayIntersection.java
@@ -104,6 +102,9 @@
 │       │   ├── TotalCoinChange.java
 │       │   └── _322_CoinChange_Min.java
 │       ├── dp
+│       │   ├── _062_UniquePaths.java
+│       │   ├── _070_ClimbingStairs.java
+│       │   └── _120_Triangle.java
 │       └── houseRobber
 │           ├── Tester.java
 │           ├── _198_HouseRobber.java
