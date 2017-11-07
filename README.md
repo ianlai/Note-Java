@@ -1,3 +1,5 @@
+## Project Tree
+```
 .
 ├── _Algorithm
 │   └── src
@@ -70,7 +72,6 @@
 │       │   └── Test.java
 │       └── testscanner
 │           └── MyScanner.java
-├── _Comparator
 ├── _Containers
 │   └── src
 │       ├── cache
@@ -162,30 +163,30 @@
 │           ├── _557_ReverseWordsInAString3.java
 │           ├── _657_JudgeRouteCircle.java
 │           └── _8_StringToInteger_AtoI.java
-└── _Tree
-    └── src
-        ├── tree
-        │   ├── _100_SameTree.java
-        │   ├── _101_SymmetricTree.java
-        │   ├── _102_BinaryTreeLevelOrderTraversal.java
-        │   ├── _107_BinaryTreeLevelOrderTraversal2.java
-        │   ├── _108_ConvertSortedArrayToBinarySearchTree.java
-        │   ├── _112_PathSum.java
-        │   ├── _113_PathSum2.java
-        │   ├── _199_BinaryTreeRightSideView.java
-        │   ├── _257_BinaryTreePaths.java
-        │   ├── _538_ConvertBSTtoGreaterTree.java
-        │   ├── _617_MergeTwoBinaryTree.java
-        │   ├── _669_TrimABinarySerachTree.java
-        │   ├── _687_LongestUnivaluePath.java
-        │   ├── _95_UniqueBinarySearchTrees2.java
-        │   ├── _96_UniqueBinarySearchTrees.java
-        │   ├── _98_ValidateBinarySearchTree.java
-        │   ├── IterativeTraversal.java
-        │   ├── Main.java
-        │   └── TreeNode.java
-        └── tries
-            ├── _208_ImplementTrie.java
-            └── _211_AddAndSearchWord.java
-
-53 directories, 135 files
+├── _Tree
+│   └── src
+│       ├── tree
+│       │   ├── _100_SameTree.java
+│       │   ├── _101_SymmetricTree.java
+│       │   ├── _102_BinaryTreeLevelOrderTraversal.java
+│       │   ├── _107_BinaryTreeLevelOrderTraversal2.java
+│       │   ├── _108_ConvertSortedArrayToBinarySearchTree.java
+│       │   ├── _112_PathSum.java
+│       │   ├── _113_PathSum2.java
+│       │   ├── _199_BinaryTreeRightSideView.java
+│       │   ├── _257_BinaryTreePaths.java
+│       │   ├── _538_ConvertBSTtoGreaterTree.java
+│       │   ├── _617_MergeTwoBinaryTree.java
+│       │   ├── _669_TrimABinarySerachTree.java
+│       │   ├── _687_LongestUnivaluePath.java
+│       │   ├── _95_UniqueBinarySearchTrees2.java
+│       │   ├── _96_UniqueBinarySearchTrees.java
+│       │   ├── _98_ValidateBinarySearchTree.java
+│       │   ├── IterativeTraversal.java
+│       │   ├── Main.java
+│       │   └── TreeNode.java
+│       └── tries
+│           ├── _208_ImplementTrie.java
+│           └── _211_AddAndSearchWord.java
+└── TreeReadme.sh
+```
