@@ -2,10 +2,10 @@ package test;
 
 import java.util.List;
 
-import combinations._77_Combinations;
-import permutations._46_Permutations;
-import permutations._47_Permutations2;
-import subsets._90_Subsets2;
+import combinations._077_Combinations;
+import permutations._046_Permutations;
+import permutations._047_Permutations2;
+import subsets._090_Subsets2;
 
 public class Tester {
 
@@ -31,8 +31,8 @@ public class Tester {
 		testCombination(5,5); //1
 	}
 	public static void testPermutation1(int arr[]){
-		_46_Permutations  p1 = new _46_Permutations();
-		_47_Permutations2 p2 = new _47_Permutations2();
+		_046_Permutations  p1 = new _046_Permutations();
+		_047_Permutations2 p2 = new _047_Permutations2();
 		List<List<Integer>> result1 = p1.permute1(arr);
 		//List<List<Integer>> result2 = p1.permute2(arr);
 		//List<List<Integer>> result3 = p2.permuteUnique(arr);
@@ -41,8 +41,8 @@ public class Tester {
 		//printList(result3); // correct
 	}
 	public static void testPermutation2(int arrRepeat[]){
-		_46_Permutations  p1 = new _46_Permutations();
-		_47_Permutations2 p2 = new _47_Permutations2();
+		_046_Permutations  p1 = new _046_Permutations();
+		_047_Permutations2 p2 = new _047_Permutations2();
 		//List<List<Integer>> resultRepeat1 = p1.permute1(arrRepeat);
 		//List<List<Integer>> resultRepeat2 = p1.permute2(arrRepeat);
 		List<List<Integer>> resultRepeat3 = p2.permuteUnique(arrRepeat);
@@ -53,17 +53,17 @@ public class Tester {
 		printList(resultRepeat3); // correct
 	}
 	public static void testSubset1(int arr[]){
-		_90_Subsets2 s2 = new _90_Subsets2();
+		_090_Subsets2 s2 = new _090_Subsets2();
 		List<List<Integer>> result = s2.subsets2(arr);
 		printList(result);
 	}
 	public static void testSubset2(int arr[]){
-		_90_Subsets2 s2 = new _90_Subsets2();
+		_090_Subsets2 s2 = new _090_Subsets2();
 		List<List<Integer>> result = s2.subsetsWithDup2(arr);
 		printList(result);
 	}
 	public static void testCombination(int n, int k) {
-		_77_Combinations c = new _77_Combinations();
+		_077_Combinations c = new _077_Combinations();
 		List<List<Integer>> result = c.combine(n, k);
 		printList(result);
 	}

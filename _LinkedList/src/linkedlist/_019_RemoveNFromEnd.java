@@ -1,6 +1,6 @@
 package linkedlist;
 
-public class _19_RemoveNFromEnd {
+public class _019_RemoveNFromEnd {
 
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub

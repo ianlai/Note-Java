@@ -1,9 +1,9 @@
 package tree;
 
-public class _98_ValidateBinarySearchTree {
+public class _098_ValidateBinarySearchTree {
 
 	public static void main(String[] args) {
-		_98_ValidateBinarySearchTree isvalidbst = new _98_ValidateBinarySearchTree();
+		_098_ValidateBinarySearchTree isvalidbst = new _098_ValidateBinarySearchTree();
 		TreeNode tree1 = TreeNode.arrayToTree(new Integer[] { 2, 1, 3, null, 4, null, 7 });  
 		TreeNode tree2 = TreeNode.arrayToTree(new Integer[] { 5, 1, 8, null, 3, null, 9 });  
 		System.out.println(isvalidbst.isValidBST(tree1));

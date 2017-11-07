@@ -4,10 +4,10 @@ import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
 
-public class _90_Subsets2 {
+public class _090_Subsets2 {
 
 	public static void main(String[] args) {
-		_90_Subsets2 obj = new _90_Subsets2();
+		_090_Subsets2 obj = new _090_Subsets2();
 		int[] arr = new int[]{1,2,2,1,3}; 
 		System.out.println(Arrays.toString(arr));
 		

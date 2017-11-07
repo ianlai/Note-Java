@@ -5,7 +5,7 @@ import java.util.Arrays;
 import java.util.List;
 import java.util.concurrent.TimeUnit;
 
-public class _15_3Sum {
+public class _015_3Sum {
 
 	public static void main(String[] args) {
 

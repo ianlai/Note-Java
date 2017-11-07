@@ -2,10 +2,10 @@ package tree;
 import java.util.List;
 import java.util.ArrayList;
 
-public class _95_UniqueBinarySearchTrees2 {
+public class _095_UniqueBinarySearchTrees2 {
 
 	public static void main(String[] args) {
-		_95_UniqueBinarySearchTrees2 obj = new _95_UniqueBinarySearchTrees2();
+		_095_UniqueBinarySearchTrees2 obj = new _095_UniqueBinarySearchTrees2();
 		List<TreeNode> list = obj.generateTrees(3);
 		for(TreeNode n: list){
 			n.printBFS();

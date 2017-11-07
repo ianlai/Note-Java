@@ -7,10 +7,10 @@ import java.util.Map;
 //Points: 
 //  1. Return indices, so we need to keep the original array (copy)
 
-public class _1_TwoSum {
+public class _001_TwoSum {
 
 	public static void main(String[] args) {
-		_1_TwoSum s = new _1_TwoSum();
+		_001_TwoSum s = new _001_TwoSum();
 		int[] n = {3,9,1,15,7};
 		
 		int[] ans1 = s.twoSum1(n, 24);

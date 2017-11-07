@@ -1,8 +1,8 @@
 package string;
 
-public class _8_StringToInteger_AtoI {
+public class _008_StringToInteger_AtoI {
 	public static void main(String[] args) {
-		_8_StringToInteger_AtoI si = new _8_StringToInteger_AtoI();
+		_008_StringToInteger_AtoI si = new _008_StringToInteger_AtoI();
 		
 		String[] ss = new String[10];
 		ss[0] = "123";

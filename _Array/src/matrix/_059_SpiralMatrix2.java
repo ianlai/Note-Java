@@ -1,13 +1,13 @@
 package matrix;
 
-public class _59_SpiralMatrix2 {
+public class _059_SpiralMatrix2 {
 
 	enum Mode {
 		R, D, L, U
 	}
 
 	public static void main(String[] args) {
-		_59_SpiralMatrix2 obj = new _59_SpiralMatrix2();
+		_059_SpiralMatrix2 obj = new _059_SpiralMatrix2();
 		int[][] ans = obj.generateMatrix(8);
 		for (int i = 0; i < ans.length; i++) {
 			for (int j = 0; j < ans[0].length; j++) {

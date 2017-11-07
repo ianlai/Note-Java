@@ -4,7 +4,7 @@ import java.util.Collections;
 import java.util.Comparator;
 import java.util.List;
 
-public class _56_MergeIntervals {
+public class _056_MergeIntervals {
 
     class Interval {
 	      int start;
@@ -24,7 +24,7 @@ public class _56_MergeIntervals {
 
 	 
 	public static void main(String[] args) {
-		_56_MergeIntervals MI = new _56_MergeIntervals();
+		_056_MergeIntervals MI = new _056_MergeIntervals();
 		MI.run();
 	}
 	

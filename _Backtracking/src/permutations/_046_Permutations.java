@@ -5,7 +5,7 @@ import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.Collections;
 
-public class _46_Permutations {
+public class _046_Permutations {
 	boolean isDebug = true;
 
 	/*

@@ -8,10 +8,10 @@ package linkedlist;
  * }
  */
 
-public class _61_RotateList {
+public class _061_RotateList {
 
 	public static void main(String[] args) {
-		_61_RotateList obj = new _61_RotateList();
+		_061_RotateList obj = new _061_RotateList();
 		ListNode list = ListNode.createListEven();
 		list.print();
 		list = obj.rotateRight(list, 3);

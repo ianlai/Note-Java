@@ -1,9 +1,9 @@
 package tree;
 
-public class _96_UniqueBinarySearchTrees {
+public class _096_UniqueBinarySearchTrees {
 
 	public static void main(String[] args) {
-		_96_UniqueBinarySearchTrees obj = new _96_UniqueBinarySearchTrees();
+		_096_UniqueBinarySearchTrees obj = new _096_UniqueBinarySearchTrees();
 		int n = 5; 
 		System.out.println(obj.numTrees(n));
 	}

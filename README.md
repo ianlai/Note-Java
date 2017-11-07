@@ -1,28 +1,28 @@
 ## Project Tree
 ```
 .
+├── README.md
+├── TreeReadme.sh
 ├── _Algorithm
 │   └── src
 │       ├── algo
+│       │   ├── _049_GroupAnagrams.java
+│       │   ├── _056_MergeIntervals.java
+│       │   ├── _062_UniquePaths.java
 │       │   ├── _179_LargestNumber.java
 │       │   ├── _200_NumOfIslands.java
 │       │   ├── _279_PerfectSquares.java
 │       │   ├── _326_PowerOfThree.java
 │       │   ├── _347_TopKFrequentElements.java
-│       │   ├── _491_IncreaseSubsequences.java
-│       │   ├── _49_GroupAnagrams_fast.java
-│       │   ├── _49_GroupAnagrams_slow.java
-│       │   ├── _49_GroupAnagrams_tester.java
-│       │   ├── _56_MergeIntervals.java
-│       │   └── _62_UniquePaths.java
+│       │   └── _491_IncreaseSubsequences.java
 │       ├── reservoirSampling
 │       │   ├── ListNode.java
 │       │   ├── Main.java
 │       │   └── Solution.java
 │       └── sum
-│           ├── _15_3Sum.java
-│           ├── _18_4Sum.java
-│           └── _1_TwoSum.java
+│           ├── _001_TwoSum.java
+│           ├── _015_3Sum.java
+│           └── _018_4Sum.java
 ├── _Array
 │   └── src
 │       ├── array
@@ -32,25 +32,25 @@
 │       │   ├── _349_TwoArrayIntersection.java
 │       │   └── _442_DuplicatesInArray.java
 │       └── matrix
-│           ├── _54_SpiralMatrix.java
-│           └── _59_SpiralMatrix2.java
+│           ├── _054_SpiralMatrix.java
+│           └── _059_SpiralMatrix2.java
 ├── _Backtracking
 │   └── src
 │       ├── combinations
-│       │   └── _77_Combinations.java
+│       │   └── _077_Combinations.java
 │       ├── permutations
-│       │   ├── _46_Permutations.java
-│       │   └── _47_Permutations2.java
+│       │   ├── _046_Permutations.java
+│       │   └── _047_Permutations2.java
 │       ├── subsets
-│       │   ├── _78_Subsets.java
-│       │   └── _90_Subsets2.java
+│       │   ├── _078_Subsets.java
+│       │   └── _090_Subsets2.java
 │       └── test
 │           └── Tester.java
 ├── _Basic
 │   └── src
 │       ├── comparator
-│       │   ├── PersonComparable.java
 │       │   ├── Person.java
+│       │   ├── PersonComparable.java
 │       │   └── PersonTest.java
 │       ├── generic
 │       │   ├── A.java
@@ -61,15 +61,15 @@
 │       │   ├── Main.java
 │       │   └── RefTest.java
 │       ├── syntax
+│       │   ├── Note.java
+│       │   ├── StringToInt.java
+│       │   ├── Test.java
 │       │   ├── _Class.java
 │       │   ├── _Conversion.java
 │       │   ├── _Inheritance.java
-│       │   ├── link
 │       │   ├── _Math.java
-│       │   ├── Note.java
 │       │   ├── _String.java
-│       │   ├── StringToInt.java
-│       │   └── Test.java
+│       │   └── link
 │       └── testscanner
 │           └── MyScanner.java
 ├── _Containers
@@ -82,31 +82,32 @@
 │       ├── collections
 │       │   ├── ArrayAndList.java
 │       │   ├── HashMapUse.java
+│       │   ├── TreeMapUse.java
 │       │   ├── _List.java
 │       │   ├── _Queue.java
-│       │   ├── _Stack.java
-│       │   └── TreeMapUse.java
+│       │   └── _Stack.java
 │       ├── collectionsAdvance
 │       │   ├── DefinedClassAsMapKey.java
 │       │   ├── Person.java
 │       │   └── SortMap.java
 │       └── containers
-│           ├── _225_ImplementStackUsingQueues.java
-│           ├── _232_ImplementQueueUsingStacks.java
 │           ├── Heap.java
-│           ├── MinStackDoubleImpl.java
 │           ├── MinStack.java
-│           └── Poker.java
+│           ├── MinStackDoubleImpl.java
+│           ├── Poker.java
+│           ├── _225_ImplementStackUsingQueues.java
+│           └── _232_ImplementQueueUsingStacks.java
 ├── _DP
 │   └── src
 │       ├── coinChange
-│       │   ├── _322_CoinChange_Min.java
 │       │   ├── Tester.java
-│       │   └── TotalCoinChange.java
+│       │   ├── TotalCoinChange.java
+│       │   └── _322_CoinChange_Min.java
+│       ├── dp
 │       └── houseRobber
+│           ├── Tester.java
 │           ├── _198_HouseRobber.java
-│           ├── _213_HouseRobber2.java
-│           └── Tester.java
+│           └── _213_HouseRobber2.java
 ├── _Java8
 │   └── src
 │       └── java8
@@ -115,32 +116,32 @@
 ├── _LinkedList
 │   └── src
 │       └── linkedlist
-│           ├── _141_LinkedListCycle.java
-│           ├── _147_InsertionSortList.java
-│           ├── _19_RemoveNFromEnd.java
-│           ├── _234_PalindromeLinkedList.java
-│           ├── _328_OddEvenLinkedList.java
-│           ├── _61_RotateList.java
-│           ├── _83_RemoveDuplicatesfromSortedList.java
 │           ├── LinkedList.java
 │           ├── ListNode.java
-│           └── Main.java
+│           ├── Main.java
+│           ├── _019_RemoveNFromEnd.java
+│           ├── _061_RotateList.java
+│           ├── _083_RemoveDuplicatesfromSortedList.java
+│           ├── _141_LinkedListCycle.java
+│           ├── _147_InsertionSortList.java
+│           ├── _234_PalindromeLinkedList.java
+│           └── _328_OddEvenLinkedList.java
 ├── _Math
 │   └── src
-│       └── bits
-│           ├── _136_SingleNumber.java
-│           ├── _137_SingleNumber2.java
-│           ├── _190_ReverseBits.java
-│           ├── _191_NumberOf1Bits_hammingWeight.java
-│           ├── _231_PowerOfTwo.java
-│           ├── _260_SingleNumber3.java
-│           ├── _268_MissingNumber.java
-│           ├── _338_CountingBits.java
-│           ├── _342_PowerOfFour.java
-│           ├── _371_SumOfTwoIntegers.java
-│           ├── _461_HammingDistance.java
-│           └── Basic.java
-├── README.md
+│       ├── bits
+│       │   ├── Basic.java
+│       │   ├── _136_SingleNumber.java
+│       │   ├── _137_SingleNumber2.java
+│       │   ├── _190_ReverseBits.java
+│       │   ├── _191_NumberOf1Bits_hammingWeight.java
+│       │   ├── _231_PowerOfTwo.java
+│       │   ├── _260_SingleNumber3.java
+│       │   ├── _268_MissingNumber.java
+│       │   ├── _338_CountingBits.java
+│       │   ├── _342_PowerOfFour.java
+│       │   ├── _371_SumOfTwoIntegers.java
+│       │   └── _461_HammingDistance.java
+│       └── math
 ├── _Sorting
 │   ├── lib
 │   │   └── Container.jar
@@ -155,38 +156,37 @@
 ├── _String
 │   └── src
 │       └── string
+│           ├── _008_StringToInteger_AtoI.java
 │           ├── _125_ValidPalindrome.java
 │           ├── _387_FirstUniqueCharacterInAString.java
 │           ├── _389_FindTheDifference.java
 │           ├── _412_FizzBuzz.java
 │           ├── _541_ReverseString2.java
 │           ├── _557_ReverseWordsInAString3.java
-│           ├── _657_JudgeRouteCircle.java
-│           └── _8_StringToInteger_AtoI.java
-├── _Tree
-│   └── src
-│       ├── tree
-│       │   ├── _100_SameTree.java
-│       │   ├── _101_SymmetricTree.java
-│       │   ├── _102_BinaryTreeLevelOrderTraversal.java
-│       │   ├── _107_BinaryTreeLevelOrderTraversal2.java
-│       │   ├── _108_ConvertSortedArrayToBinarySearchTree.java
-│       │   ├── _112_PathSum.java
-│       │   ├── _113_PathSum2.java
-│       │   ├── _199_BinaryTreeRightSideView.java
-│       │   ├── _257_BinaryTreePaths.java
-│       │   ├── _538_ConvertBSTtoGreaterTree.java
-│       │   ├── _617_MergeTwoBinaryTree.java
-│       │   ├── _669_TrimABinarySerachTree.java
-│       │   ├── _687_LongestUnivaluePath.java
-│       │   ├── _95_UniqueBinarySearchTrees2.java
-│       │   ├── _96_UniqueBinarySearchTrees.java
-│       │   ├── _98_ValidateBinarySearchTree.java
-│       │   ├── IterativeTraversal.java
-│       │   ├── Main.java
-│       │   └── TreeNode.java
-│       └── tries
-│           ├── _208_ImplementTrie.java
-│           └── _211_AddAndSearchWord.java
-└── TreeReadme.sh
+│           └── _657_JudgeRouteCircle.java
+└── _Tree
+    └── src
+        ├── tree
+        │   ├── IterativeTraversal.java
+        │   ├── Main.java
+        │   ├── TreeNode.java
+        │   ├── _095_UniqueBinarySearchTrees2.java
+        │   ├── _096_UniqueBinarySearchTrees.java
+        │   ├── _098_ValidateBinarySearchTree.java
+        │   ├── _100_SameTree.java
+        │   ├── _101_SymmetricTree.java
+        │   ├── _102_BinaryTreeLevelOrderTraversal.java
+        │   ├── _107_BinaryTreeLevelOrderTraversal2.java
+        │   ├── _108_ConvertSortedArrayToBinarySearchTree.java
+        │   ├── _112_PathSum.java
+        │   ├── _113_PathSum2.java
+        │   ├── _199_BinaryTreeRightSideView.java
+        │   ├── _257_BinaryTreePaths.java
+        │   ├── _538_ConvertBSTtoGreaterTree.java
+        │   ├── _617_MergeTwoBinaryTree.java
+        │   ├── _669_TrimABinarySerachTree.java
+        │   └── _687_LongestUnivaluePath.java
+        └── tries
+            ├── _208_ImplementTrie.java
+            └── _211_AddAndSearchWord.java
 ```

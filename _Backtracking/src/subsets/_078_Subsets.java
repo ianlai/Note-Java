@@ -6,10 +6,10 @@ import java.util.Collections;
 import java.util.Comparator;
 import java.util.List;
 
-public class _78_Subsets {
+public class _078_Subsets {
 
 	public static void main(String[] args) {
-		_78_Subsets obj = new _78_Subsets();
+		_078_Subsets obj = new _078_Subsets();
 		
 		//Java8
 		Comparator<List> sizeComp = (a1, a2) -> a1.size() - a2.size();

@@ -2,10 +2,10 @@ package combinations;
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
-public class _77_Combinations {
+public class _077_Combinations {
 
 	public static void main(String[] args) {
-		_77_Combinations obj = new _77_Combinations();
+		_077_Combinations obj = new _077_Combinations();
 		List<List<Integer>> ll = obj.combine(4,3);
 		printList(ll);
 	}

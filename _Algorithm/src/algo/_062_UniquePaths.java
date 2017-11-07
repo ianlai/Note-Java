@@ -2,7 +2,7 @@ package algo;
 
 import java.util.concurrent.TimeUnit;
 
-public class _62_UniquePaths {
+public class _062_UniquePaths {
 
 	public static void main(String[] args) {
 		System.out.println(uniquePaths(5,14));

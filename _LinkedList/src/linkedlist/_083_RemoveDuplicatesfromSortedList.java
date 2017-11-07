@@ -14,7 +14,7 @@ import java.util.Arrays;
  *     ListNode(int x) { val = x; }
  * }
  */
-class _83_RemoveDuplicatesfromSortedList {
+class _083_RemoveDuplicatesfromSortedList {
 	public static void main(String[] args) {
 		int[] arr = new int[]{1,1,2,2,2,2,3,4,4,5};
 		ListNode list = ListNode.createList(arr);

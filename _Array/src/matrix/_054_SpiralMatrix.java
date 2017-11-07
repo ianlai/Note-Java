@@ -3,10 +3,10 @@ package matrix;
 import java.util.ArrayList;
 import java.util.List;
 
-public class _54_SpiralMatrix {
+public class _054_SpiralMatrix {
 
 	public static void main(String[] args) {
-		_54_SpiralMatrix obj = new _54_SpiralMatrix();
+		_054_SpiralMatrix obj = new _054_SpiralMatrix();
 		int[][] matrix = new int[][] { { 1, 2, 3 }, { 4, 5, 6 }, { 7, 8, 9 } };
 		List<Integer> ans = obj.spiralOrder(matrix);
 		System.out.println(ans);
