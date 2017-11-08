@@ -35,7 +35,7 @@ import java.util.Map;
 //cache.get(3);       // returns 3
 //cache.get(4);       // returns 4
 
-public class LFUCache implements Cache {
+public class _460_LFUCache implements Cache {
 	int mCapacity = 0;
 	Map<Integer, Node> map;
 	Node head;
@@ -65,7 +65,7 @@ public class LFUCache implements Cache {
 		}
 	}
 
-	public LFUCache(int capacity) {
+	public _460_LFUCache(int capacity) {
 		mCapacity = capacity;
 		map = new HashMap<Integer, Node>();
 		head = new Node(0, 0, -1);

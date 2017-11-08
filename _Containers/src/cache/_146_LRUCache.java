@@ -34,7 +34,7 @@ import java.util.Map;
 // cache.get(3);       // returns 3
 // cache.get(4);       // returns 4
 
-public class LRUCache implements Cache{
+public class _146_LRUCache implements Cache{
 	int mCapacity;
 	Map<Integer, Node> map;
 	Node head;
@@ -49,7 +49,7 @@ public class LRUCache implements Cache{
 			mValue = v;
 		}
 	}
-	public LRUCache(int capacity) {
+	public _146_LRUCache(int capacity) {
 		mCapacity = capacity;
 		map = new HashMap<Integer, Node>();
 		head = new Node(0, 0);

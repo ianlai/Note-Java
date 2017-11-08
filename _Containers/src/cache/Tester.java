@@ -1,10 +1,10 @@
 package cache;
 
-public class Main {
+public class Tester {
 
 	public static void main(String[] args) {
-		test(new LFUCache(4));
-		test(new LRUCache(4));
+		test(new _460_LFUCache(4));
+		test(new _146_LRUCache(4));
 	}
 	
 	public static void test(Cache cache){
