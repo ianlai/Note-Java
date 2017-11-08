@@ -56,5 +56,15 @@ public class _Conversion {
 		System.out.println(i1);
 		System.out.println(i2);
 		System.out.println(i3);
+		
+		/* char -> int */
+		char mmc = '5';
+		int  mmi = Character.getNumericValue(mmc);
+		
+		int  mmi2 = 8;
+		char mmc2 = Character.forDigit(mmi2, 10);
+		
+		System.out.println(mmc + " " + mmi);
+		System.out.println(mmi2 + " " + mmc2);
 	}
 }
