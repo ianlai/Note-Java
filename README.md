@@ -146,6 +146,7 @@
 │           ├── _461_HammingDistance.java
 │           └── Basic.java
 ├── README.md
+├── Readme.sh
 ├── _Sorting
 │   ├── lib
 │   │   └── Container.jar
@@ -169,35 +170,35 @@
 │           ├── _541_ReverseString2.java
 │           ├── _557_ReverseWordsInAString3.java
 │           └── _657_JudgeRouteCircle.java
-├── _Tree
-│   └── src
-│       ├── tree
-│       │   ├── _095_UniqueBinarySearchTrees2.java
-│       │   ├── _096_UniqueBinarySearchTrees.java
-│       │   ├── _098_ValidateBinarySearchTree.java
-│       │   ├── _100_SameTree.java
-│       │   ├── _101_SymmetricTree.java
-│       │   ├── _102_BinaryTreeLevelOrderTraversal.java
-│       │   ├── _107_BinaryTreeLevelOrderTraversal2.java
-│       │   ├── _108_ConvertSortedArrayToBinarySearchTree.java
-│       │   ├── _112_PathSum.java
-│       │   ├── _113_PathSum2.java
-│       │   ├── _199_BinaryTreeRightSideView.java
-│       │   ├── _257_BinaryTreePaths.java
-│       │   ├── _538_ConvertBSTtoGreaterTree.java
-│       │   ├── _617_MergeTwoBinaryTree.java
-│       │   ├── _637_AverageOfLevelsInBinaryTree.java
-│       │   ├── _669_TrimABinarySerachTree.java
-│       │   ├── _687_LongestUnivaluePath.java
-│       │   ├── IterativeTraversal.java
-│       │   ├── Main.java
-│       │   └── TreeNode.java
-│       └── tries
-│           ├── _208_ImplementTrie.java
-│           └── _211_AddAndSearchWord.java
-└── TreeReadme.sh
+└── _Tree
+    └── src
+        ├── tree
+        │   ├── _095_UniqueBinarySearchTrees2.java
+        │   ├── _096_UniqueBinarySearchTrees.java
+        │   ├── _098_ValidateBinarySearchTree.java
+        │   ├── _100_SameTree.java
+        │   ├── _101_SymmetricTree.java
+        │   ├── _102_BinaryTreeLevelOrderTraversal.java
+        │   ├── _107_BinaryTreeLevelOrderTraversal2.java
+        │   ├── _108_ConvertSortedArrayToBinarySearchTree.java
+        │   ├── _112_PathSum.java
+        │   ├── _113_PathSum2.java
+        │   ├── _199_BinaryTreeRightSideView.java
+        │   ├── _257_BinaryTreePaths.java
+        │   ├── _538_ConvertBSTtoGreaterTree.java
+        │   ├── _617_MergeTwoBinaryTree.java
+        │   ├── _637_AverageOfLevelsInBinaryTree.java
+        │   ├── _669_TrimABinarySerachTree.java
+        │   ├── _687_LongestUnivaluePath.java
+        │   ├── IterativeTraversal.java
+        │   ├── Main.java
+        │   └── TreeNode.java
+        └── tries
+            ├── _208_ImplementTrie.java
+            └── _211_AddAndSearchWord.java
 ```
 ## Quiz List
+
 001 TwoSum.java
 008 StringToInteger
 015 3Sum.java

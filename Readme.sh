@@ -22,6 +22,7 @@ fi
 totalNum=$(find . -name '*.java' | nl | tail -1 | awk '{print $1}')
 
 echo "## Quiz List" >> $file
+echo >> $file 
 ./List.sh >> $file 
 
 echo "** Total Java Number: $totalNum" >> $file
