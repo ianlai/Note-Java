@@ -1,24 +1,27 @@
 #!/bin/bash
 
-# Usage: ./TreeReadme.sh README.md
-# Note : This will DELETE the original file (README) 
+# Usage: ./TreeReadme.sh 
+# Note : This will DELETE the current README.md 
 
 os="$(uname -s)"
+file="README.md"
 
-echo "## Project Tree" > $1
-echo "\`\`\`" >> $1     
-tree --noreport -I 'bin' >> $1
-echo "\`\`\`" >> $1
-#sed -i '1s/^/```/' $1  #Insert to the top (not necessary)
+echo "## Project Tree" > $file
+echo "\`\`\`" >> $file     
+tree --noreport -I 'bin' >> $file
+echo "\`\`\`" >> $file
+#sed -i '1s/^/```/' $file  #Insert to the top (not necessary)
 
 ### Mac OSX
 if [ $os == "Darwin" ]; then 
     quizNum=$(find -E . -regex '^.+[_]{1}[0-9]{3}.+java$' | nl | tail -1 | awk '{print $1}')
 ### Others (Linux) 
-else
+elif [ $os == "Linux" ]; then
     quizNum=$(find . -regextype posix-extended -regex '^.+[_]{1}[0-9]{3}.+java$' | nl | tail -1 | awk '{print $1}')
 fi
 totalNum=$(find . -name '*.java' | nl | tail -1 | awk '{print $1}')
 
-echo "* Total Number: $totalNum" >> $1
-echo "* Quiz  Number: $quizNum"  >> $1
+echo "## Quiz List" >> $file
+./List.sh >> $file 
+
+echo "** Total Java Number: $totalNum" >> $file
