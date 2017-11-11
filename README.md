@@ -13,10 +13,12 @@
 │       │   ├── _179_LargestNumber.java
 │       │   ├── _200_NumOfIslands.java
 │       │   ├── _279_PerfectSquares.java
+│       │   ├── _287_FindTheDuplicateNumber.java
 │       │   ├── _326_PowerOfThree.java
 │       │   ├── _347_TopKFrequentElements.java
 │       │   ├── _392_IsSubsequence.java
-│       │   └── _491_IncreaseSubsequences.java
+│       │   ├── _491_IncreaseSubsequences.java
+│       │   └── _535_EncodeAndDecodeTinyURL.java
 │       ├── reservoirSampling
 │       │   ├── ListNode.java
 │       │   ├── Main.java
@@ -32,7 +34,9 @@
 │       │   ├── _162_FindPeakElement.java
 │       │   ├── _215_KthLargestElementInAnArray.java
 │       │   ├── _217_ContainsDuplicate.java
+│       │   ├── _238_ProductOfArrayExceptSelf.java
 │       │   ├── _349_TwoArrayIntersection.java
+│       │   ├── _384_ShuffleAnArray.java
 │       │   └── _442_DuplicatesInArray.java
 │       └── matrix
 │           ├── _054_SpiralMatrix.java
@@ -133,7 +137,8 @@
 │           ├── _206_ReverseLinkedList.java
 │           ├── _234_PalindromeLinkedList.java
 │           ├── _237_DeleteNodeInALinkedList.java
-│           └── _328_OddEvenLinkedList.java
+│           ├── _328_OddEvenLinkedList.java
+│           └── _382_LinkedListRandomNode.java
 ├── _Math
 │   └── src
 │       ├── bits
@@ -154,7 +159,8 @@
 │           ├── _009_PalindromeNumber.java
 │           ├── _050_Pow.java
 │           ├── _069_Sqrt.java
-│           └── _204_CountPrimes.java
+│           ├── _204_CountPrimes.java
+│           └── _537_ComplexNumberMultiplication.java
 ├── _Sorting
 │   ├── lib
 │   │   └── Container.jar
@@ -282,10 +288,12 @@
 232 ImplementQueueUsingStacks.java
 234 PalindromeLinkedList.java
 237 DeleteNodeInALinkedList.java
+238 ProductOfArrayExceptSelf.java
 257 BinaryTreePaths.java
 260 SingleNumber3.java
 268 MissingNumber.java
 279 PerfectSquares.java
+287 FindTheDuplicateNumber.java
 322 CoinChange
 326 PowerOfThree.java
 328 OddEvenLinkedList.java
@@ -294,6 +302,8 @@
 347 TopKFrequentElements.java
 349 TwoArrayIntersection.java
 371 SumOfTwoIntegers.java
+382 LinkedListRandomNode.java
+384 ShuffleAnArray.java
 387 FirstUniqueCharacterInAString.java
 389 FindTheDifference.java
 392 IsSubsequence.java
@@ -303,6 +313,8 @@
 460 LFUCache.java
 461 HammingDistance.java
 491 IncreaseSubsequences.java
+535 EncodeAndDecodeTinyURL.java
+537 ComplexNumberMultiplication.java
 538 ConvertBSTtoGreaterTree.java
 541 ReverseString2.java
 557 ReverseWordsInAString3.java
@@ -312,7 +324,7 @@
 669 TrimABinarySerachTree.java
 687 LongestUnivaluePath.java
 =============================
-* Quiz  Java Number: 98
+* Quiz  Java Number: 104
 ```
-* Quiz  Java Number: 98
-* Total Java Number: 151
+* Quiz  Java Number: 104
+* Total Java Number: 157
