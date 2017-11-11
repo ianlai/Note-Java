@@ -207,6 +207,7 @@
         │   ├── _145_BinaryTreePostorderTraversal.java
         │   ├── _199_BinaryTreeRightSideView.java
         │   ├── _226_InvertBinaryTree.java
+        │   ├── _230_KthSmallestElementInABST.java
         │   ├── _257_BinaryTreePaths.java
         │   ├── _538_ConvertBSTtoGreaterTree.java
         │   ├── _617_MergeTwoBinaryTree.java
@@ -284,6 +285,7 @@
 217 ContainsDuplicate.java
 225 ImplementStackUsingQueues.java
 226 InvertBinaryTree.java
+230 KthSmallestElementInABST.java
 231 PowerOfTwo.java
 232 ImplementQueueUsingStacks.java
 234 PalindromeLinkedList.java
@@ -324,7 +326,7 @@
 669 TrimABinarySerachTree.java
 687 LongestUnivaluePath.java
 =============================
-* Quiz  Java Number: 104
+* Quiz  Java Number: 105
 ```
-* Quiz  Java Number: 104
-* Total Java Number: 157
+* Quiz  Java Number: 105
+* Total Java Number: 158

@@ -31,7 +31,9 @@ class TreeNode {
 		else
 			return getDefaultTree();
 	}
-
+	public static TreeNode getBST(){
+		return arrayToTree(new Integer[]{20, 10, 50, 4, 16, 30, 75, 2, 5, 13, 19, 25, null, 60, 90, null, null, null, 7});
+	}
 	public void printPreOrder() {
 		System.out.print(val + "-");
 		if (left != null)
