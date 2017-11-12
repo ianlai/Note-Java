@@ -13,4 +13,4 @@ elif [ $os == "Linux" ]; then
 fi
 
 echo "=============================" 
-echo "* Quiz  Java Number: $quizNum"  
+echo "* Quiz Java Number: $quizNum"  
