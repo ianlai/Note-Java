@@ -193,24 +193,25 @@
 │           └── _657_JudgeRouteCircle.java
 └── _Tree
     └── src
+        ├── traversal
+        │   ├── _094_BinaryTreeInorderTraversal.java
+        │   ├── _102_BinaryTreeLevelOrderTraversal.java
+        │   ├── _107_BinaryTreeLevelOrderTraversal2.java
+        │   ├── _144_BinaryTreePreorderTraversal.java
+        │   └── _145_BinaryTreePostorderTraversal.java
         ├── tree
         │   ├── IterativeTraversal.java
         │   ├── Main.java
         │   ├── TreeNode.java
-        │   ├── _094_BinaryTreeInorderTraversal.java
         │   ├── _095_UniqueBinarySearchTrees2.java
         │   ├── _096_UniqueBinarySearchTrees.java
         │   ├── _098_ValidateBinarySearchTree.java
         │   ├── _100_SameTree.java
         │   ├── _101_SymmetricTree.java
-        │   ├── _102_BinaryTreeLevelOrderTraversal.java
         │   ├── _104_MaximumDepthOfBinaryTree.java
-        │   ├── _107_BinaryTreeLevelOrderTraversal2.java
         │   ├── _108_ConvertSortedArrayToBinarySearchTree.java
         │   ├── _112_PathSum.java
         │   ├── _113_PathSum2.java
-        │   ├── _144_BinaryTreePreorderTraversal.java
-        │   ├── _145_BinaryTreePostorderTraversal.java
         │   ├── _199_BinaryTreeRightSideView.java
         │   ├── _226_InvertBinaryTree.java
         │   ├── _230_KthSmallestElementInABST.java

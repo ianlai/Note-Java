@@ -4,12 +4,10 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.Queue;
 
-import tree._102_BinaryTreeLevelOrderTraversal.TN;
-
-class TreeNode {
-	int val;
-	String name;
-	TreeNode right, left;
+public class TreeNode {
+	public int val;
+	public String name;
+	public TreeNode right, left;
 
 	TreeNode() {
 	}

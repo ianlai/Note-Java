@@ -1,7 +1,10 @@
-package tree;
+package traversal;
 import java.util.List;
 import java.util.ArrayList;
 import java.util.Queue;
+
+import tree.TreeNode;
+
 import java.util.ArrayDeque;
 
 /**

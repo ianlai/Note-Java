@@ -1,8 +1,10 @@
-package tree;
+package traversal;
 
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Stack;
+
+import tree.TreeNode;
 
 /**
  * Definition for a binary tree node.
