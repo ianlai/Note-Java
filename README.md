@@ -30,7 +30,9 @@
 ├── _Array
 │   └── src
 │       ├── array
+│       │   ├── _026_RemoveDuplicatesFromSortedArray.java
 │       │   ├── _033_SearchInRotatedSortedArray.java
+│       │   ├── _088_MergeSortedArray.java
 │       │   ├── _162_FindPeakElement.java
 │       │   ├── _215_KthLargestElementInAnArray.java
 │       │   ├── _217_ContainsDuplicate.java
@@ -177,6 +179,8 @@
 │   └── src
 │       └── string
 │           ├── _008_StringToInteger_AtoI.java
+│           ├── _028_ImplementStrStr.java
+│           ├── _038_CountAndSay.java
 │           ├── _058_LengthOfLastWord.java
 │           ├── _125_ValidPalindrome.java
 │           ├── _387_FirstUniqueCharacterInAString.java
@@ -199,6 +203,7 @@
         │   ├── _100_SameTree.java
         │   ├── _101_SymmetricTree.java
         │   ├── _102_BinaryTreeLevelOrderTraversal.java
+        │   ├── _104_MaximumDepthOfBinaryTree.java
         │   ├── _107_BinaryTreeLevelOrderTraversal2.java
         │   ├── _108_ConvertSortedArrayToBinarySearchTree.java
         │   ├── _112_PathSum.java
@@ -228,7 +233,10 @@
 018 4Sum.java
 019 RemoveNFromEnd.java
 021 MergeTwoSortedLists.java
+026 RemoveDuplicatesFromSortedArray.java
+028 ImplementStrStr.java
 033 SearchInRotatedSortedArray.java
+038 CountAndSay.java
 046 Permutations.java
 047 Permutations2.java
 049 GroupAnagrams.java
@@ -245,6 +253,7 @@
 077 Combinations.java
 078 Subsets.java
 083 RemoveDuplicatesfromSortedList.java
+088 MergeSortedArray.java
 090 Subsets2.java
 092 ReverseLinkedList2.java
 094 BinaryTreeInorderTraversal.java
@@ -254,6 +263,7 @@
 100 SameTree.java
 101 SymmetricTree.java
 102 BinaryTreeLevelOrderTraversal.java
+104 MaximumDepthOfBinaryTree.java
 107 BinaryTreeLevelOrderTraversal2.java
 108 ConvertSortedArrayToBinarySearchTree.java
 112 PathSum.java
@@ -326,7 +336,7 @@
 669 TrimABinarySerachTree.java
 687 LongestUnivaluePath.java
 =============================
-* Quiz  Java Number: 105
+* Quiz  Java Number: 110
 ```
-* Quiz  Java Number: 105
-* Total Java Number: 158
+* Quiz  Java Number: 110
+* Total Java Number: 163
