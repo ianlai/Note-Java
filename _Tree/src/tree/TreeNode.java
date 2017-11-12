@@ -1,6 +1,10 @@
 package tree;
+import java.util.ArrayDeque;
 import java.util.ArrayList;
 import java.util.List;
+import java.util.Queue;
+
+import tree._102_BinaryTreeLevelOrderTraversal.TN;
 
 class TreeNode {
 	int val;
@@ -131,6 +135,46 @@ class TreeNode {
 				list.add(current.right);
 		}
 	}
+	
+    static class TN{
+        TreeNode TreeNode; 
+        int level; 
+        TN(TreeNode tn, int l) {TreeNode = tn; level = l;}
+    }
+    public List<List<Integer>> levelOrder() {
+        if(this==null) return new ArrayList<>();
+        
+        List<List<Integer>> ll = new ArrayList<List<Integer>>();
+        
+        Queue<TN> q = new ArrayDeque<TN>();
+        q.add(new TN(this, 1));
+        
+        int currentLevel = 1; 
+        List<Integer> list = new ArrayList<Integer>();
+        while(!q.isEmpty()){    
+            /* poll */
+            TN first = q.poll();
+            
+            /* add children */
+            if(first.TreeNode.left!=null)
+                q.add(new TN(first.TreeNode.left, first.level+1));
+            if(first.TreeNode.right!=null)
+                q.add(new TN(first.TreeNode.right, first.level+1));
+            
+            /* use */ 
+            if(first.level != currentLevel){
+                //System.out.println();
+                ll.add(list);
+                list = new ArrayList<Integer>();
+                
+                currentLevel++; 
+            }
+            list.add(first.TreeNode.val);
+            //System.out.print(first.TreeNode.val + " ");
+        }
+        ll.add(list);
+        return ll; 
+    }
 	
 	
 }
