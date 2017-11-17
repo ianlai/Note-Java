@@ -113,6 +113,7 @@
 │       │   ├── TotalCoinChange.java
 │       │   └── _322_CoinChange_Min.java
 │       ├── dp
+│       │   ├── _053_MaximumSubarray.java
 │       │   ├── _062_UniquePaths.java
 │       │   ├── _063_UniquePaths2.java
 │       │   ├── _070_ClimbingStairs.java
@@ -250,6 +251,7 @@
 047 Permutations2.java
 049 GroupAnagrams.java
 050 Pow.java
+053 MaximumSubarray.java
 054 SpiralMatrix.java
 056 MergeIntervals.java
 058 LengthOfLastWord.java
@@ -347,7 +349,7 @@
 669 TrimABinarySerachTree.java
 687 LongestUnivaluePath.java
 =============================
-* Quiz Java Number: 113
+* Quiz Java Number: 114
 ```
-* Quiz  Java Number: 113
-* Total Java Number: 167
+* Quiz  Java Number: 114
+* Total Java Number: 168
