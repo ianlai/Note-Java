@@ -1,4 +1,6 @@
-package tree;
+package bst;
+
+import tree.TreeNode;
 
 public class _538_ConvertBSTtoGreaterTree {
 

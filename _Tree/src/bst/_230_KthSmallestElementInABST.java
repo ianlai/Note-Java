@@ -1,7 +1,9 @@
-package tree;
+package bst;
 
 import java.util.ArrayList;
 import java.util.List;
+
+import tree.TreeNode;
 
 /**
  * Definition for a binary tree node.

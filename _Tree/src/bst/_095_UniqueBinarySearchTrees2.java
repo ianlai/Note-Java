@@ -1,5 +1,8 @@
-package tree;
+package bst;
 import java.util.List;
+
+import tree.TreeNode;
+
 import java.util.ArrayList;
 
 public class _095_UniqueBinarySearchTrees2 {
@@ -48,7 +51,7 @@ public class _095_UniqueBinarySearchTrees2 {
 						node.right=r;
 						result.add(node);
 						//System.out.println(">>>>>>>");
-						node.printBFS();
+						//node.printBFS();
 					}
 				}	
 			}

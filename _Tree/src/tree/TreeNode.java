@@ -9,15 +9,15 @@ public class TreeNode {
 	public String name;
 	public TreeNode right, left;
 
-	TreeNode() {
+	public TreeNode() {
 	}
 
-	TreeNode(int i) {
+	public TreeNode(int i) {
 		val = i;
 		name = String.valueOf(i);
 	}
 
-	TreeNode(int i, String n) {
+	public TreeNode(int i, String n) {
 		val = i;
 		name = n;
 	}

@@ -1,6 +1,8 @@
-package tree;
+package bst;
 // Level: Easy
 // Like : 185/42
+
+import tree.TreeNode;
 
 public class _669_TrimABinarySerachTree {
 

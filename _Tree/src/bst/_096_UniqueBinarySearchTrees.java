@@ -1,4 +1,4 @@
-package tree;
+package bst;
 
 public class _096_UniqueBinarySearchTrees {
 

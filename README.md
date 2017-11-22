@@ -200,6 +200,14 @@
 │           └── _657_JudgeRouteCircle.java
 └── _Tree
     └── src
+        ├── bst
+        │   ├── _095_UniqueBinarySearchTrees2.java
+        │   ├── _096_UniqueBinarySearchTrees.java
+        │   ├── _098_ValidateBinarySearchTree.java
+        │   ├── _108_ConvertSortedArrayToBinarySearchTree.java
+        │   ├── _230_KthSmallestElementInABST.java
+        │   ├── _538_ConvertBSTtoGreaterTree.java
+        │   └── _669_TrimABinarySerachTree.java
         ├── traversal
         │   ├── _094_BinaryTreeInorderTraversal.java
         │   ├── _102_BinaryTreeLevelOrderTraversal.java
@@ -210,24 +218,17 @@
         │   ├── IterativeTraversal.java
         │   ├── Main.java
         │   ├── TreeNode.java
-        │   ├── _095_UniqueBinarySearchTrees2.java
-        │   ├── _096_UniqueBinarySearchTrees.java
-        │   ├── _098_ValidateBinarySearchTree.java
         │   ├── _100_SameTree.java
         │   ├── _101_SymmetricTree.java
         │   ├── _104_MaximumDepthOfBinaryTree.java
-        │   ├── _108_ConvertSortedArrayToBinarySearchTree.java
         │   ├── _111_MinimumDepthOfBinaryTree.java
         │   ├── _112_PathSum.java
         │   ├── _113_PathSum2.java
         │   ├── _199_BinaryTreeRightSideView.java
         │   ├── _226_InvertBinaryTree.java
-        │   ├── _230_KthSmallestElementInABST.java
         │   ├── _257_BinaryTreePaths.java
-        │   ├── _538_ConvertBSTtoGreaterTree.java
         │   ├── _617_MergeTwoBinaryTree.java
         │   ├── _637_AverageOfLevelsInBinaryTree.java
-        │   ├── _669_TrimABinarySerachTree.java
         │   └── _687_LongestUnivaluePath.java
         └── tries
             ├── _208_ImplementTrie.java
