@@ -217,6 +217,7 @@
         │   ├── _101_SymmetricTree.java
         │   ├── _104_MaximumDepthOfBinaryTree.java
         │   ├── _108_ConvertSortedArrayToBinarySearchTree.java
+        │   ├── _111_MinimumDepthOfBinaryTree.java
         │   ├── _112_PathSum.java
         │   ├── _113_PathSum2.java
         │   ├── _199_BinaryTreeRightSideView.java
@@ -278,6 +279,7 @@
 104 MaximumDepthOfBinaryTree.java
 107 BinaryTreeLevelOrderTraversal2.java
 108 ConvertSortedArrayToBinarySearchTree.java
+111 MinimumDepthOfBinaryTree.java
 112 PathSum.java
 113 PathSum2.java
 120 Triangle.java
@@ -349,7 +351,7 @@
 669 TrimABinarySerachTree.java
 687 LongestUnivaluePath.java
 =============================
-* Quiz Java Number: 114
+* Quiz Java Number: 115
 ```
-* Quiz  Java Number: 114
-* Total Java Number: 168
+* Quiz  Java Number: 115
+* Total Java Number: 169
