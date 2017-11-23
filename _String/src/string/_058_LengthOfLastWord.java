@@ -1,5 +1,10 @@
 package string;
 
+/* "Hello World"  //5 
+ * "AAA BB"       //2
+ * "AAAAA "       //5 
+ */
+
 public class _058_LengthOfLastWord {
 
 	public static void main(String[] args) {
@@ -13,6 +18,8 @@ public class _058_LengthOfLastWord {
 	}
     public int lengthOfLastWord(String s) {
         if(s==null || s.length()==0) return 0;
+        
+        /* Use two variables in case that the last char is space */
         int count = 0;
         int guard = 0;
         for(int i=0; i<s.length(); ++i){
@@ -24,5 +31,4 @@ public class _058_LengthOfLastWord {
         }
         return count;
     }
-
 }

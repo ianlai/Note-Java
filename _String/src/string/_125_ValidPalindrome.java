@@ -1,4 +1,8 @@
 package string;
+
+/* 
+ * Considering only alphanumeric characters and ignoring cases.
+ */
 public class _125_ValidPalindrome {
 
 	public static void main(String[] args) {
@@ -10,7 +14,7 @@ public class _125_ValidPalindrome {
 		System.out.println(answer1);
 
 		System.out.println();
-		String test2 = "ab 9n ,,..11b    a"; // true
+		String test2 = "ab 9n ,,..11b    a"; // false
 		boolean answer2 = palindrome.isPalindrome(test2);
 		System.out.println(answer2);
 
@@ -60,8 +64,8 @@ public class _125_ValidPalindrome {
 				else
 					--tail;
 			}
-			System.out.println(">>> head: " + head);
-			System.out.println(">>> tail: " + tail);
+			//System.out.println(">>> head: " + head);
+			//System.out.println(">>> tail: " + tail);
 
 			if (!isSame(s, head, tail))
 				return false;

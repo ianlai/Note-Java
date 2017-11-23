@@ -191,6 +191,7 @@
 │           ├── _038_CountAndSay.java
 │           ├── _058_LengthOfLastWord.java
 │           ├── _125_ValidPalindrome.java
+│           ├── _383_RansomNote.java
 │           ├── _387_FirstUniqueCharacterInAString.java
 │           ├── _389_FindTheDifference.java
 │           ├── _412_FizzBuzz.java
@@ -331,6 +332,7 @@
 349 TwoArrayIntersection.java
 371 SumOfTwoIntegers.java
 382 LinkedListRandomNode.java
+383 RansomNote.java
 384 ShuffleAnArray.java
 387 FirstUniqueCharacterInAString.java
 389 FindTheDifference.java
@@ -352,7 +354,7 @@
 669 TrimABinarySerachTree.java
 687 LongestUnivaluePath.java
 =============================
-* Quiz Java Number: 115
+* Quiz Java Number: 116
 ```
-* Quiz  Java Number: 115
-* Total Java Number: 169
+* Quiz  Java Number: 116
+* Total Java Number: 170
