@@ -65,7 +65,11 @@ public class _String {
 		String sss3 = "45678";
 		Integer ppp2 = Integer.valueOf(sss3);
 		System.out.println(sss1 + " " + sss2 + " " + (pp + ppp2));
-
+		
+		/* char -> String */
+		char c = 'a';
+		String s = Character.toString(c);
+		System.out.println(s);
 	}
 
 	public static void stringEquality() {
