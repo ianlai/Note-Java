@@ -166,13 +166,16 @@
 │       │   ├── _342_PowerOfFour.java
 │       │   ├── _371_SumOfTwoIntegers.java
 │       │   └── _461_HammingDistance.java
-│       └── math
-│           ├── _007_ReverseInteger.java
-│           ├── _009_PalindromeNumber.java
-│           ├── _050_Pow.java
-│           ├── _069_Sqrt.java
-│           ├── _204_CountPrimes.java
-│           └── _537_ComplexNumberMultiplication.java
+│       ├── math
+│       │   ├── _007_ReverseInteger.java
+│       │   ├── _009_PalindromeNumber.java
+│       │   ├── _050_Pow.java
+│       │   ├── _069_Sqrt.java
+│       │   ├── _204_CountPrimes.java
+│       │   └── _537_ComplexNumberMultiplication.java
+│       └── stringMath
+│           ├── _066_PlusOne.java
+│           └── _415_AddStrings.java
 ├── _Sorting
 │   ├── lib
 │   │   └── Container.jar
@@ -189,6 +192,7 @@
 │   └── src
 │       └── string
 │           ├── _008_StringToInteger_AtoI.java
+│           ├── _020_ValidParentheses.java
 │           ├── _028_ImplementStrStr.java
 │           ├── _038_CountAndSay.java
 │           ├── _058_LengthOfLastWord.java
@@ -197,7 +201,6 @@
 │           ├── _387_FirstUniqueCharacterInAString.java
 │           ├── _389_FindTheDifference.java
 │           ├── _412_FizzBuzz.java
-│           ├── _415_AddStrings.java
 │           ├── _541_ReverseString2.java
 │           ├── _557_ReverseWordsInAString3.java
 │           └── _657_JudgeRouteCircle.java
@@ -247,6 +250,7 @@
 015 3Sum.java
 018 4Sum.java
 019 RemoveNFromEnd.java
+020 ValidParentheses.java
 021 MergeTwoSortedLists.java
 026 RemoveDuplicatesFromSortedArray.java
 028 ImplementStrStr.java
@@ -264,6 +268,7 @@
 061 RotateList.java
 062 UniquePaths.java
 063 UniquePaths2.java
+066 PlusOne.java
 069 Sqrt.java
 070 ClimbingStairs.java
 075 SortColors.java
@@ -357,7 +362,7 @@
 669 TrimABinarySerachTree.java
 687 LongestUnivaluePath.java
 =============================
-* Quiz Java Number: 117
+* Quiz Java Number: 119
 ```
-* Quiz  Java Number: 117
-* Total Java Number: 172
+* Quiz  Java Number: 119
+* Total Java Number: 174
