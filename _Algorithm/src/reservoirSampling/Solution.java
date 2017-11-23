@@ -8,7 +8,7 @@ public class Solution {
         Note that the head is guaranteed to be not null, so it contains at least one node. */
     ListNode mHead; 
     Random random;
-    boolean isDebug=false;
+    boolean isDebug=true;
     public Solution(ListNode head) {
         mHead = head;
         random = new Random();
@@ -21,11 +21,12 @@ public class Solution {
         debug("------------");
         
         for(int i=0; cur!=null; ++i){
-            int r = random.nextInt(i+1);
+            int r = random.nextInt(i+1);  //rand int from 0 to i 
             debug("i = " + i + "  r = " + r);
             if(r==i){
                 result = cur.val;
             }
+            debug("res = " + result);
             cur=cur.next;
         }
         return result;

@@ -16,39 +16,42 @@ public class _382_LinkedListRandomNode {
 	public static void main(String[] args) {
 		ListNode head = ListNode.createListDefault();
 		head.print();
-		
+
 		Solution s = new Solution(head);
-		for(int i=0; i<20;i++){
+		for (int i = 0; i < 5; i++) {
 			System.out.println(s.getRandom());
-		}	
+		}
 	}
-}
 
-/** @param head The linked list's head.
-Note that the head is guaranteed to be not null, so it contains at least one node. */
-class Solution{
-ListNode mHead; 
-Random random;
+	/*
+	 * The head is guaranteed to be not null, so it contains at least one node.
+	 */
+	static class Solution {
+		ListNode mHead;
+		Random random;
 
-public Solution(ListNode head) {
-    mHead = head;
-    random = new Random();
-}
+		public Solution(ListNode head) {
+			mHead = head;
+			random = new Random();
+		}
 
-/** Returns a random node's value. */
-public int getRandom() {
-    ListNode cur = mHead;
-    int result = mHead.val;
-    
-    for(int i=0; cur!=null; ++i){
-        int r = random.nextInt(i+1);
-        if(r==i){
-            result=cur.val;
-        }
-        cur=cur.next;
-    }
-    return result;
-}
+		/** Returns a random node's value. */
+		public int getRandom() {
+			ListNode cur = mHead;
+			int result = mHead.val;
+
+			for (int i = 0; cur != null; ++i) {
+				int r = random.nextInt(i + 1);
+				if (r == i) {
+					result = cur.val;
+					System.out.println("r==i==" + r);
+					System.out.println("res: " + result);
+				}
+				cur = cur.next;
+			}
+			return result;
+		}
+	}
 }
 
 /**

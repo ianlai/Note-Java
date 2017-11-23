@@ -22,7 +22,8 @@
 │       ├── reservoirSampling
 │       │   ├── ListNode.java
 │       │   ├── Main.java
-│       │   └── Solution.java
+│       │   ├── Solution.java
+│       │   └── _398_RandomPickIndex.java
 │       └── sum
 │           ├── _001_TwoSum.java
 │           ├── _015_3Sum.java
@@ -77,6 +78,7 @@
 │       │   ├── _Conversion.java
 │       │   ├── _Inheritance.java
 │       │   ├── _Math.java
+│       │   ├── _Random.java
 │       │   └── _String.java
 │       └── testscanner
 │           └── MyScanner.java
@@ -337,6 +339,7 @@
 387 FirstUniqueCharacterInAString.java
 389 FindTheDifference.java
 392 IsSubsequence.java
+398 RandomPickIndex.java
 412 FizzBuzz.java
 415 AddStrings.java
 442 DuplicatesInArray.java
@@ -354,7 +357,7 @@
 669 TrimABinarySerachTree.java
 687 LongestUnivaluePath.java
 =============================
-* Quiz Java Number: 116
+* Quiz Java Number: 117
 ```
-* Quiz  Java Number: 116
-* Total Java Number: 170
+* Quiz  Java Number: 117
+* Total Java Number: 172
