@@ -20,7 +20,7 @@ public class _Math {
 	}
 	private void testNegative(){
 		int i = -2345;
-		System.out.println(i%10);
-		System.out.println(i/10);
+		System.out.println(i%10);  //-5
+		System.out.println(i/10);  //-234
 	}
 }

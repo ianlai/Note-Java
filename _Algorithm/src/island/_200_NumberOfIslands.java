@@ -1,6 +1,6 @@
-package algo;
+package island;
 
-public class _200_NumOfIslands {
+public class _200_NumberOfIslands {
 
 	public static void main(String[] args) {
 		char[][] grid = new char[][]
