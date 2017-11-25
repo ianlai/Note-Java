@@ -98,6 +98,7 @@
 │       │   ├── HashMapUse.java
 │       │   ├── TreeMapUse.java
 │       │   ├── _List.java
+│       │   ├── _PriorityQueue.java
 │       │   ├── _Queue.java
 │       │   └── _Stack.java
 │       ├── collectionsAdvance
@@ -145,6 +146,7 @@
 │           ├── _002_AddTwoNumbers.java
 │           ├── _019_RemoveNFromEnd.java
 │           ├── _021_MergeTwoSortedLists.java
+│           ├── _023_MergeKSortedLists.java
 │           ├── _061_RotateList.java
 │           ├── _083_RemoveDuplicatesfromSortedList.java
 │           ├── _092_ReverseLinkedList2.java
@@ -257,6 +259,7 @@
 019 RemoveNFromEnd.java
 020 ValidParentheses.java
 021 MergeTwoSortedLists.java
+023 MergeKSortedLists.java
 026 RemoveDuplicatesFromSortedArray.java
 028 ImplementStrStr.java
 033 SearchInRotatedSortedArray.java
@@ -368,7 +371,7 @@
 669 TrimABinarySerachTree.java
 687 LongestUnivaluePath.java
 =============================
-* Quiz Java Number: 121
+* Quiz Java Number: 122
 ```
-* Quiz  Java Number: 121
-* Total Java Number: 177
+* Quiz  Java Number: 122
+* Total Java Number: 179
