@@ -29,7 +29,8 @@
 │       └── sum
 │           ├── _001_TwoSum.java
 │           ├── _015_3Sum.java
-│           └── _018_4Sum.java
+│           ├── _018_4Sum.java
+│           └── _167_TwoSum2_InputArrayIsSorted.java
 ├── _Array
 │   └── src
 │       ├── array
@@ -314,6 +315,7 @@
 147 InsertionSortList.java
 155 MinStack.java
 162 FindPeakElement.java
+167 TwoSum2
 169 MajorityElement.java
 179 LargestNumber.java
 190 ReverseBits.java
@@ -375,7 +377,7 @@
 669 TrimABinarySerachTree.java
 687 LongestUnivaluePath.java
 =============================
-* Quiz Java Number: 124
+* Quiz Java Number: 125
 ```
-* Quiz  Java Number: 124
-* Total Java Number: 181
+* Quiz  Java Number: 125
+* Total Java Number: 182
