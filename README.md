@@ -54,6 +54,7 @@
 │       │   ├── _017_LetterCombinationsOfAPhoneNumber.java
 │       │   └── _077_Combinations.java
 │       ├── permutations
+│       │   ├── _031_NextPermutation.java
 │       │   ├── _046_Permutations.java
 │       │   └── _047_Permutations2.java
 │       ├── subsets
@@ -263,6 +264,7 @@
 023 MergeKSortedLists.java
 026 RemoveDuplicatesFromSortedArray.java
 028 ImplementStrStr.java
+031 NextPermutation.java
 033 SearchInRotatedSortedArray.java
 038 CountAndSay.java
 046 Permutations.java
@@ -373,7 +375,7 @@
 669 TrimABinarySerachTree.java
 687 LongestUnivaluePath.java
 =============================
-* Quiz Java Number: 123
+* Quiz Java Number: 124
 ```
-* Quiz  Java Number: 123
-* Total Java Number: 180
+* Quiz  Java Number: 124
+* Total Java Number: 181
