@@ -221,6 +221,7 @@
         │   ├── _098_ValidateBinarySearchTree.java
         │   ├── _108_ConvertSortedArrayToBinarySearchTree.java
         │   ├── _230_KthSmallestElementInABST.java
+        │   ├── _235_LowestCommonAncestorOfABinarySearchTree.java
         │   ├── _538_ConvertBSTtoGreaterTree.java
         │   └── _669_TrimABinarySerachTree.java
         ├── traversal
@@ -336,6 +337,7 @@
 231 PowerOfTwo.java
 232 ImplementQueueUsingStacks.java
 234 PalindromeLinkedList.java
+235 LowestCommonAncestorOfABinarySearchTree.java
 237 DeleteNodeInALinkedList.java
 238 ProductOfArrayExceptSelf.java
 257 BinaryTreePaths.java
@@ -377,7 +379,7 @@
 669 TrimABinarySerachTree.java
 687 LongestUnivaluePath.java
 =============================
-* Quiz Java Number: 125
+* Quiz Java Number: 126
 ```
-* Quiz  Java Number: 125
-* Total Java Number: 182
+* Quiz  Java Number: 126
+* Total Java Number: 183
