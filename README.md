@@ -2,6 +2,7 @@
 ```
 .
 ├── List.sh
+├── QuizAndKeyList.xlsx
 ├── README.md
 ├── Readme.sh
 ├── _Algorithm
@@ -56,6 +57,7 @@
 │       │   ├── _017_LetterCombinationsOfAPhoneNumber.java
 │       │   └── _077_Combinations.java
 │       ├── permutations
+│       │   ├── _022_GenerateParentheses.java
 │       │   ├── _031_NextPermutation.java
 │       │   ├── _046_Permutations.java
 │       │   └── _047_Permutations2.java
@@ -100,6 +102,7 @@
 │       ├── collections
 │       │   ├── ArrayAndList.java
 │       │   ├── HashMapUse.java
+│       │   ├── SetUse.java
 │       │   ├── TreeMapUse.java
 │       │   ├── _List.java
 │       │   ├── _PriorityQueue.java
@@ -264,6 +267,7 @@
 019 RemoveNFromEnd.java
 020 ValidParentheses.java
 021 MergeTwoSortedLists.java
+022 GenerateParentheses.java
 023 MergeKSortedLists.java
 026 RemoveDuplicatesFromSortedArray.java
 028 ImplementStrStr.java
@@ -381,7 +385,7 @@
 669 TrimABinarySerachTree.java
 687 LongestUnivaluePath.java
 =============================
-* Quiz Java Number: 127
+* Quiz Java Number: 128
 ```
-* Quiz  Java Number: 127
-* Total Java Number: 184
+* Quiz  Java Number: 128
+* Total Java Number: 186
