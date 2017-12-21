@@ -215,6 +215,7 @@
 │       │   ├── _557_ReverseWordsInAString3.java
 │       │   └── _657_JudgeRouteCircle.java
 │       └── stringMath
+│           ├── _043_MultiplyStrings.java
 │           ├── _066_PlusOne.java
 │           └── _415_AddStrings.java
 └── _Tree
@@ -274,6 +275,7 @@
 031 NextPermutation.java
 033 SearchInRotatedSortedArray.java
 038 CountAndSay.java
+043 MultiplyStrings.java
 046 Permutations.java
 047 Permutations2.java
 049 GroupAnagrams.java
@@ -385,7 +387,7 @@
 669 TrimABinarySerachTree.java
 687 LongestUnivaluePath.java
 =============================
-* Quiz Java Number: 128
+* Quiz Java Number: 129
 ```
-* Quiz  Java Number: 128
-* Total Java Number: 186
+* Quiz  Java Number: 129
+* Total Java Number: 187
