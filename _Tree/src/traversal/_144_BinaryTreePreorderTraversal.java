@@ -25,7 +25,6 @@ public class _144_BinaryTreePreorderTraversal {
 		TreeNode tree = TreeNode.getDefaultTree();
 		List<Integer> list = obj.preorderTraversal(tree);
 		System.out.println(list);
-
 	}
     public List<Integer> preorderTraversal(TreeNode root) {
         Stack<TreeNode> s = new Stack<>();
