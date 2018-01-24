@@ -1,10 +1,13 @@
 package collections;
 
+import java.util.Queue;
+import java.util.ArrayDeque;
 import java.util.PriorityQueue;
 
 public class _PriorityQueue {
 	public static void main(String[] args) {
-		PriorityQueue<Integer> queue1 = new PriorityQueue<>();
+		
+		Queue<Integer> queue1 = new PriorityQueue<>();
 		queue1.add(5);
 		queue1.add(2);
 		queue1.add(8);
@@ -18,27 +21,27 @@ public class _PriorityQueue {
 		
 		System.out.println("--------------------");
 		
-		PriorityQueue<String> queue2 = new PriorityQueue<>();
+		Queue<String> queue2 = new PriorityQueue<>();
 		
 		//capacity, comparator 
-		PriorityQueue<String> queue3 = new PriorityQueue<>(10, (String s1, String s2) -> s1.length()-s2.length());
+		Queue<String> queue3 = new PriorityQueue<>(10, (String s1, String s2) -> s1.length()-s2.length());
 		
-		queue2.add("aab");
+		queue2.add("m");
 		queue2.add("kkfff");
 		queue2.add("dd");
-		queue2.add("cccc");
-		queue2.add("aa");
+		queue2.add("ccffkkicc");
+		queue2.add("ww");
 		while(!queue2.isEmpty()){
 			System.out.println(queue2.poll());
 		}
 		
 		System.out.println("--------------------");
 		
-		queue3.add("aab");
+		queue3.add("m");
 		queue3.add("kkfff");
 		queue3.add("dd");
-		queue3.add("cccc");
-		queue3.add("aa");
+		queue3.add("ccffkkicc");
+		queue3.add("ww");
 		while(!queue3.isEmpty()){
 			System.out.println(queue3.poll());
 		}
