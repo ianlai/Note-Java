@@ -16,8 +16,25 @@ public class _141_LinkedListCycle {
 		System.out.println(hasCycle(list1.start));
 		System.out.println(hasCycle(list2.start));
 		
+		System.out.println(hasCycle1(list1.start));
+		System.out.println(hasCycle1(list2.start));
+		
 	}
+    
+	/* This logic of this version is clearer */ 
     public static boolean hasCycle(ListNode head) {
+        if(head==null) return false;
+        ListNode f = head;
+        ListNode s = head; 
+        while(f!=null&&f.next!=null){
+            f=f.next.next;
+            s=s.next;
+            if(f==s) return true;
+        }
+        return false;
+    }
+    
+    public static boolean hasCycle1(ListNode head) {
         if(head==null || head.next==null) return false;
  
         ListNode slow = head;
