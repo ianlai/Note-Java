@@ -7,6 +7,22 @@ import java.util.Collections;
 
 public class _046_Permutations {
 	boolean isDebug = true;
+	
+	public static void main(String[] args){
+		
+		int[] arr = new int[] { 1, 2, 3, 4};
+		int[] arrRepeat = new int[] { 1, 2, 2, 3 };
+		_046_Permutations  p1 = new _046_Permutations();
+		List<List<Integer>> result1 = p1.permute1(arr);  //ok
+		List<List<Integer>> result2 = p1.permute2(arr);  //ok
+		List<List<Integer>> result3 = p1.permute1(arrRepeat);  //no
+		List<List<Integer>> result4 = p1.permute2(arrRepeat);  //no
+
+		printList(result1); // correct
+	    printList(result2); // correct
+		printList(result3); // wrong: redundant result
+		printList(result4); // wrong: no result 
+	}
 
 	/*
 	 * Get all the permutations. Notice that all the input element should be
@@ -33,6 +49,7 @@ public class _046_Permutations {
 			return;
 		}
 		for (int i = k; i < arr.size(); ++i) {
+			//debug(i+"");
 			Collections.swap(arr, i, k);
 			helper(arr, k + 1, list);
 			Collections.swap(arr, k, i);
@@ -44,6 +61,7 @@ public class _046_Permutations {
 	/*
 	 * Get all the permutations. Notice that all the input element should be
 	 * distinct. Use backtrack function (try).
+	 * This is clearer, but it tries more in the loop. 
 	 */
 	public List<List<Integer>> permute2(int[] nums) {
 		List<List<Integer>> list = new ArrayList<>();
@@ -57,6 +75,7 @@ public class _046_Permutations {
 			list.add(new ArrayList<>(tempList));
 		} else {
 			for (int i = 0; i < nums.length; i++) {
+				//debug(i+"");
 				if (tempList.contains(nums[i]))
 					continue; // element already exists, skip
 				tempList.add(nums[i]);
@@ -70,5 +89,11 @@ public class _046_Permutations {
 	private void debug(String s) {
 		if (isDebug)
 			System.out.println(s);
+	}
+	public static void printList(List<List<Integer>> ll) {
+		for (int i = 0; i < ll.size(); ++i) {
+			System.out.println(String.format("%3s: %s", i+1, ll.get(i)));
+		}
+		System.out.println("------------------------");
 	}
 }
