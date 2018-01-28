@@ -13,18 +13,62 @@ public class _092_ReverseLinkedList2 {
 		_092_ReverseLinkedList2 obj = new _092_ReverseLinkedList2();
 		int[] arr1 = new int[]{1,2,3,4,5,6,7,8,9,10,11,12,13,14,15};
 		
-		ListNode l1 = ListNode.createList(arr1);
-		l1.print();
+		System.out.println("===== Original =====");
+		ListNode l11 = ListNode.createList(arr1);
+		ListNode l12 = ListNode.createList(arr1);
+		l11.print();
+		l12.print();
 		
-		ListNode l2 = obj.reverseBetween(l1, 3, 8);
-		l2.print();
+		System.out.println("===== Reverse(3,8) =====");
+		ListNode l21 = obj.reverseBetween(l11, 3, 8);
+		ListNode l22 = obj.reverseBetween2(l12, 3, 8);
+		l21.print();
+		l22.print();
 		
-		ListNode l3 = obj.reverseBetween(l1, 1, 10);
-		l3.print();
-
+		System.out.println("===== Reverse(1,10) =====");
+		ListNode l31 = obj.reverseBetween(l11, 1, 10);
+		ListNode l32 = obj.reverseBetween(l12, 1, 10);
+		l31.print();
+		l32.print();
 	}
-
+	
+	/* This solution is clearer. 
+	 * Each iteration will add one node to reverse. 
+	 * For example: 
+	 *  ori:  1-2-3-4-5-6-7-8, m=3 n=7
+	 *  r1 :  1-2-4-3-5-6-7-8
+	 *  r2 :  1-2-5-4-3-6-7-8
+	 *  r3 :  1-2-6-5-4-3-7-8
+	 *  r4 :  1-2-7-6-5-4-3-8  //done 
+	 * */
     public ListNode reverseBetween(ListNode head, int m, int n) {
+        if(head==null || head.next==null || m==n) return head;
+        ListNode dummy = new ListNode(0);
+        dummy.next = head; 
+        ListNode np = dummy;     //pre, m-1 [fixed]
+        ListNode ns = head;      //start, m [fixed: position is moving but the node is fixed]
+        ListNode nn = head.next; //next to start [dynamic]
+        
+        /* np=m-1  ns=m  nn=m+1 */
+        for(int i=0; i<m-1; i++){
+            np = np.next;
+        }
+        ns = np.next;
+        nn = ns.next;
+        
+        /* Reverse */
+        for(int i=0; i<n-m; i++){
+            ns.next = nn.next; 
+            nn.next = np.next; 
+            np.next = nn; 
+            nn = ns.next; 
+        }
+        return dummy.next;
+    }
+	
+	/* This solution is easier to think but complicated to implement. 
+	 * It reverses the nodes between m to n directly. */ 
+    public ListNode reverseBetween2(ListNode head, int m, int n) {
        if (head == null || head.next == null)
 			return head;
 		if (m == n)
