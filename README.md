@@ -158,6 +158,7 @@
 │           ├── _083_RemoveDuplicatesfromSortedList.java
 │           ├── _092_ReverseLinkedList2.java
 │           ├── _141_LinkedListCycle.java
+│           ├── _142_LinkedListCycle2.java
 │           ├── _147_InsertionSortList.java
 │           ├── _206_ReverseLinkedList.java
 │           ├── _234_PalindromeLinkedList.java
@@ -318,6 +319,7 @@
 136 SingleNumber.java
 137 SingleNumber2.java
 141 LinkedListCycle.java
+142 LinkedListCycle2.java
 144 BinaryTreePreorderTraversal.java
 145 BinaryTreePostorderTraversal.java
 146 LRUCache.java
@@ -387,7 +389,7 @@
 669 TrimABinarySerachTree.java
 687 LongestUnivaluePath.java
 =============================
-* Quiz Java Number: 129
+* Quiz Java Number: 130
 ```
-* Quiz  Java Number: 129
-* Total Java Number: 187
+* Quiz  Java Number: 130
+* Total Java Number: 188
