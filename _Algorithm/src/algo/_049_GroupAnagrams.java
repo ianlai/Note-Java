@@ -27,9 +27,7 @@ public class _049_GroupAnagrams {
 		System.out.println(result1);  //fast
 		System.out.println(result2);  //slow
 	}
-	public void run(){
-		
-	}
+
 	/* ========================= Fast ========================= */
     public List<List<String>> groupAnagrams(String[] input) {
     	if(input.length==0) return null;
@@ -55,7 +53,9 @@ public class _049_GroupAnagrams {
     List<Integer> stringToByteArr(String s){
     	List<Integer> alpha = new ArrayList<Integer>(Collections.nCopies(26, 0));
     	for(int i=0; i<s.length(); ++i){
-            int index = Character.getNumericValue(s.charAt(i)) - 10; 
+    		int index = s.charAt(i) - 97;
+            int index2 = Character.getNumericValue(s.charAt(i)) - 10;  
+    		//System.out.println(">" + index + " " + index2);
             alpha.set(index, alpha.get(index)+1);
         }
     	return alpha;

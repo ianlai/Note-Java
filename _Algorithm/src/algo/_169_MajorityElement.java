@@ -4,6 +4,7 @@ import java.util.HashMap;
 import java.util.Map;
 
 /* Many ways can do this. Here I use the hashmap. */
+
 public class _169_MajorityElement {
 
 	public static void main(String[] args) {
