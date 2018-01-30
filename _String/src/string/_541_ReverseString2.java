@@ -1,5 +1,10 @@
 package string;
 
+/* Given a string and an integer k, you need to reverse the first k characters for every 2k characters 
+ * counting from the start of the string.
+ * Input: s = "abcdefg", k = 2
+ * Output: "bacdfeg"
+ */
 public class _541_ReverseString2 {
 
 	public static void main(String[] args) {
