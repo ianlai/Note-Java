@@ -1,4 +1,4 @@
-package containers;
+package implementation;
 
 public interface MinStack {
 	void push(int x);

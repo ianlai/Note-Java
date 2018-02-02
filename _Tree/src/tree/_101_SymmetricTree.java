@@ -11,27 +11,20 @@ public class _101_SymmetricTree {
 		System.out.println(obj.isSymmetric(tree2));
 	}
 
-	public boolean isSymmetric(TreeNode root) {
-		if (root == null)
-			return true;
-		if (root.left == null && root.right == null)
-			return true;
-		return isSymmetric(root.left, root.right);
-	}
-
-	private boolean isSymmetric(TreeNode left, TreeNode right) {
-		if (left == null && right == null)
-			return true;
-		if (left == null || right == null)
-			return false;
-		if (left != null && right != null) {
-			if (left.val != right.val)
-				return false;
-			if (!isSymmetric(left.left, right.right))
-				return false; // outer
-			if (!isSymmetric(left.right, right.left))
-				return false; // inner
-		}
-		return true;
-	}
+    public boolean isSymmetric(TreeNode n) {
+        if(n==null) return true;
+        return helper(n.left, n.right);
+    }
+    private boolean helper(TreeNode l, TreeNode r){
+        if(l==null && r==null) return true;
+        if(l==null && r!=null) return false;
+        if(l!=null && r==null) return false;
+        
+        /* Both l!=null and r!=null */
+        if(l.val!=r.val) return false;
+        if(!helper(l.left, r.right)) return false; //outer
+        if(!helper(l.right, r.left)) return false; //inner
+        
+        return true;
+    }
 }

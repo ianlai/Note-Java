@@ -13,33 +13,24 @@ import java.util.Stack;
 /* Use two stacks to implement (simple) 
  * Check MinStackDoubleImpl.java to discuss more.*/ 
 
-public class _155_MinStack implements MinStack{
+public class _155_MinStack{
 
 	public static void main(String[] args) {
-		MinStack msd = new _155_MinStack();
+		_155_MinStack msd = new _155_MinStack();
 		test(msd);
 	}
-	public static void test(MinStack ms) {
-		if(ms instanceof MinStackSingleImpl) {
-			System.out.println("----- Single -----");
-		}else if(ms instanceof _155_MinStack) {
-			System.out.println("----- Double -----");
-		}
+	public static void test(_155_MinStack ms) {
 		ms.push(6); 
 		ms.push(3);
 		ms.push(5);
 		ms.push(2);
 		ms.push(7);
 		ms.push(4);
-		//ms.push(2);  //single stack cannot handle multiple number yet
 		ms.push(9);
 		ms.push(1);
 		ms.push(5);
 		
 		ms.print();
-		if(ms instanceof _155_MinStack) {
-			((_155_MinStack) ms).printSize();  //need to cast
-		}
 
 		System.out.println(ms.getMin());
 		System.out.println(ms.top());
