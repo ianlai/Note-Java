@@ -44,6 +44,7 @@
 │       │   ├── _215_KthLargestElementInAnArray.java
 │       │   ├── _217_ContainsDuplicate.java
 │       │   ├── _238_ProductOfArrayExceptSelf.java
+│       │   ├── _283_MoveZeroes.java
 │       │   ├── _349_IntersectionOfTwoArrays.java
 │       │   ├── _350_IntersectionOfTwoArrays2.java
 │       │   ├── _384_ShuffleAnArray.java
@@ -261,7 +262,6 @@
 │       └── tries
 │           ├── _208_ImplementTrie.java
 │           └── _211_AddAndSearchWord.java
-├── ~$QuizAndKeyList.xlsm
 └── ~$QuizAndKeyList.xlsx
 ```
 ## Quiz List
@@ -362,6 +362,7 @@
 260 SingleNumber3.java
 268 MissingNumber.java
 279 PerfectSquares.java
+283 MoveZeroes.java
 287 FindTheDuplicateNumber.java
 322 CoinChange
 326 PowerOfThree.java
@@ -399,7 +400,7 @@
 669 TrimABinarySerachTree.java
 687 LongestUnivaluePath.java
 =============================
-* Quiz Java Number: 132
+* Quiz Java Number: 133
 ```
-* Quiz  Java Number: 132
-* Total Java Number: 192
+* Quiz  Java Number: 133
+* Total Java Number: 193
