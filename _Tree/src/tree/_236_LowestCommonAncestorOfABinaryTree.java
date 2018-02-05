@@ -25,12 +25,14 @@ public class _236_LowestCommonAncestorOfABinaryTree {
 	}
 	
     public TreeNode lowestCommonAncestor(TreeNode root, TreeNode p, TreeNode q) {
-        if(root==null || root==p || root==q) return root;
+    	
+        /* Either case cannot do more recursive on root */ 
+    	if(root==null || root==p || root==q) return root;
         
         TreeNode l = lowestCommonAncestor(root.left , p, q);
         TreeNode r = lowestCommonAncestor(root.right, p, q);
         
-        /* p and q are in the two sides */
+        /* p and q are in the two sides (where we try to find) */
         if(l!=null && r!=null) return root;
         
         /* p and q are in the right hand side*/
