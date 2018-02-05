@@ -256,6 +256,7 @@
 │       │   ├── _113_PathSum2.java
 │       │   ├── _199_BinaryTreeRightSideView.java
 │       │   ├── _226_InvertBinaryTree.java
+│       │   ├── _236_LowestCommonAncestorOfABinaryTree.java
 │       │   ├── _257_BinaryTreePaths.java
 │       │   ├── _617_MergeTwoBinaryTree.java
 │       │   ├── _637_AverageOfLevelsInBinaryTree.java
@@ -359,6 +360,7 @@
 232 ImplementQueueUsingStacks.java
 234 PalindromeLinkedList.java
 235 LowestCommonAncestorOfABinarySearchTree.java
+236 LowestCommonAncestorOfABinaryTree.java
 237 DeleteNodeInALinkedList.java
 238 ProductOfArrayExceptSelf.java
 257 BinaryTreePaths.java
@@ -403,7 +405,7 @@
 669 TrimABinarySerachTree.java
 687 LongestUnivaluePath.java
 =============================
-* Quiz Java Number: 134
+* Quiz Java Number: 135
 ```
-* Quiz  Java Number: 134
-* Total Java Number: 194
+* Quiz  Java Number: 135
+* Total Java Number: 195
