@@ -43,8 +43,6 @@
 │       │   ├── _121_BestTimeToBuyAndSellStock.java
 │       │   ├── _162_FindPeakElement.java
 │       │   ├── _215_KthLargestElementInAnArray.java
-│       │   ├── _217_ContainsDuplicate.java
-│       │   ├── _219_ContainsDuplicate2.java
 │       │   ├── _238_ProductOfArrayExceptSelf.java
 │       │   ├── _283_MoveZeroes.java
 │       │   ├── _349_IntersectionOfTwoArrays.java
@@ -52,10 +50,13 @@
 │       │   ├── _384_ShuffleAnArray.java
 │       │   ├── _442_DuplicatesInArray.java
 │       │   └── _448_FindAllNumbersDisappearedInAnArray.java
-│       └── matrix
-│           ├── _054_SpiralMatrix.java
-│           ├── _059_SpiralMatrix2.java
-│           └── _073_SetMatrixZeroes.java
+│       ├── matrix
+│       │   ├── _054_SpiralMatrix.java
+│       │   ├── _059_SpiralMatrix2.java
+│       │   └── _073_SetMatrixZeroes.java
+│       └── set
+│           ├── _217_ContainsDuplicate.java
+│           └── _219_ContainsDuplicate2.java
 ├── _Backtracking
 │   └── src
 │       ├── combinations
