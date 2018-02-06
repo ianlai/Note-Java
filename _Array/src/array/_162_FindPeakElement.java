@@ -1,7 +1,16 @@
 package array;
 
 import java.util.Arrays;
-
+/*
+ * A peak element is an element that is greater than its neighbors.
+ * Given an input array where num[i] ≠ num[i+1], find a peak element and return its index.
+ * The array may contain multiple peaks, in that case 
+ * return the index to any one of the peaks is fine.  //any peak element's index is fine
+ * You may imagine that num[-1] = num[n] = -∞.
+ * 
+ * For example, in array [1, 2, 3, 1], 3 is a peak element 
+ * and your function should return the index number 2.
+ */
 public class _162_FindPeakElement {
 
 	public static void main(String[] args) {
@@ -18,7 +27,16 @@ class Solution {
     public int findPeakElement(int[] nums) {
         if(nums==null || nums.length==0) return -1;
         for(int i=1; i<nums.length; i++){
-            if(nums[i] < nums[i-1]) return i-1;
+        	/* Why only test right hand side is enough? (main is i-1)
+        	 * Because if nums[i-2] > nums[i-1], i-2 should be returned before.
+        	 * 
+        	 * Or, we can think, from nums[-1]=Integer.MIN_VALUE, 
+        	 * nums[0] must larger than nums[-1], 
+        	 * then nums[1] must larger than nums[0], //or nums[0] should be returned
+        	 * then nums[2] must larger than nums[1], //or nums[1] should be returned
+        	 * until the end of the array. 
+        	 */
+            if(nums[i-1] > nums[i]) return i-1;  
         }
         return nums.length-1;
     }

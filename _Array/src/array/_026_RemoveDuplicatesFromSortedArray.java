@@ -12,20 +12,30 @@ public class _026_RemoveDuplicatesFromSortedArray {
 
 	public static void main(String[] args) {
 		_026_RemoveDuplicatesFromSortedArray obj = new _026_RemoveDuplicatesFromSortedArray();
-		int[] arr = new int[]{1,1,2,2,2,3,4,5,5,6};
-		int newLength = obj.removeDuplicates(arr);
+		int[] arr1 = new int[]{1,1,2,2,2,3,4,5,5,6};
+		int[] arr2 = new int[]{1,1,2,2,2,3,4,5,5,6};
+		
+		int newLength1 = obj.removeDuplicates1(arr1);
+		int newLength2 = obj.removeDuplicates2(arr2);
 		System.out.println("[Before]");
-		System.out.println(Arrays.toString(arr) + " -- " + arr.length);
+		System.out.println(Arrays.toString(arr1) + " -- " + arr1.length);
 		
 		System.out.println();
-		System.out.println("[After] //acutally array length does not change");
-		System.out.println(Arrays.toString(arr) + " -- " + arr.length);
-		for(int i=0;i<newLength;i++){
-			System.out.print(arr[i] + ", ");
+		System.out.println("[After]  //acutally array length does not change");
+		System.out.println(Arrays.toString(arr1) + " -- " + arr1.length);
+		System.out.println(Arrays.toString(arr2) + " -- " + arr2.length);
+		
+		System.out.println("[After]  //traverse for new length");
+		for(int i=0;i<newLength1;i++){
+			System.out.print(arr1[i] + ", ");
+		}
+		System.out.println();
+		for(int i=0;i<newLength2;i++){
+			System.out.print(arr2[i] + ", ");
 		}
 	}
 
-    public int removeDuplicates(int[] nums) {
+    public int removeDuplicates1(int[] nums) {
         if(nums.length==0) return 0;
 
         int index = 0; 
@@ -34,5 +44,14 @@ public class _026_RemoveDuplicatesFromSortedArray {
             nums[index] = nums[i];
         }
         return index+1;
+    }
+    
+    public int removeDuplicates2(int[] nums) {
+        int cur = 0;
+        for(int i=0; i<nums.length; i++){
+            if(i>0 && nums[i-1]==nums[i]) continue; //skip the redundancies 
+            nums[cur++] = nums[i];
+        }
+        return cur;  //cur already ++ in the last round  
     }
 }
