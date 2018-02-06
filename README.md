@@ -44,6 +44,7 @@
 │       │   ├── _162_FindPeakElement.java
 │       │   ├── _215_KthLargestElementInAnArray.java
 │       │   ├── _217_ContainsDuplicate.java
+│       │   ├── _219_ContainsDuplicate2.java
 │       │   ├── _238_ProductOfArrayExceptSelf.java
 │       │   ├── _283_MoveZeroes.java
 │       │   ├── _349_IntersectionOfTwoArrays.java
@@ -264,8 +265,7 @@
 │       └── tries
 │           ├── _208_ImplementTrie.java
 │           └── _211_AddAndSearchWord.java
-├── ~$QuizAndKeyList.xlsm
-└── ~$QuizAndKeyList.xlsx
+└── ~$QuizAndKeyList.xlsm
 ```
 ## Quiz List
 ```
@@ -353,6 +353,7 @@
 213 HouseRobber2.java
 215 KthLargestElementInAnArray.java
 217 ContainsDuplicate.java
+219 ContainsDuplicate2.java
 225 ImplementStackUsingQueues.java
 226 InvertBinaryTree.java
 230 KthSmallestElementInABST.java
@@ -405,7 +406,7 @@
 669 TrimABinarySerachTree.java
 687 LongestUnivaluePath.java
 =============================
-* Quiz Java Number: 135
+* Quiz Java Number: 136
 ```
-* Quiz  Java Number: 135
-* Total Java Number: 195
+* Quiz  Java Number: 136
+* Total Java Number: 196
