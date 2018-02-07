@@ -19,7 +19,6 @@
 │       │   ├── _326_PowerOfThree.java
 │       │   ├── _347_TopKFrequentElements.java
 │       │   ├── _392_IsSubsequence.java
-│       │   ├── _491_IncreaseSubsequences.java
 │       │   └── _535_EncodeAndDecodeTinyURL.java
 │       ├── island
 │       │   ├── _200_NumberOfIslands.java
@@ -69,7 +68,8 @@
 │       │   └── _047_Permutations2.java
 │       ├── subsets
 │       │   ├── _078_Subsets.java
-│       │   └── _090_Subsets2.java
+│       │   ├── _090_Subsets2.java
+│       │   └── _491_IncreaseSubsequences.java
 │       └── test
 │           └── Tester.java
 ├── _Basic
