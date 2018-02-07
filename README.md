@@ -116,6 +116,7 @@
 │       │   └── _Stack.java
 │       ├── collectionsAdvance
 │       │   ├── DefinedClassAsMapKey.java
+│       │   ├── ListInSet.java
 │       │   ├── Person.java
 │       │   └── SortMap.java
 │       ├── containers
@@ -412,4 +413,4 @@
 * Quiz Java Number: 137
 ```
 * Quiz  Java Number: 137
-* Total Java Number: 197
+* Total Java Number: 198
