@@ -37,6 +37,7 @@
 │   └── src
 │       ├── array
 │       │   ├── _026_RemoveDuplicatesFromSortedArray.java
+│       │   ├── _027_RemoveElement.java
 │       │   ├── _033_SearchInRotatedSortedArray.java
 │       │   ├── _088_MergeSortedArray.java
 │       │   ├── _121_BestTimeToBuyAndSellStock.java
@@ -287,6 +288,7 @@
 022 GenerateParentheses.java
 023 MergeKSortedLists.java
 026 RemoveDuplicatesFromSortedArray.java
+027 RemoveElement.java
 028 ImplementStrStr.java
 031 NextPermutation.java
 033 SearchInRotatedSortedArray.java
@@ -412,7 +414,7 @@
 669 TrimABinarySerachTree.java
 687 LongestUnivaluePath.java
 =============================
-* Quiz Java Number: 138
+* Quiz Java Number: 139
 ```
-* Quiz  Java Number: 138
-* Total Java Number: 200
+* Quiz  Java Number: 139
+* Total Java Number: 201
