@@ -214,6 +214,7 @@
 │           └── _075_SortColors.java
 ├── _String
 │   └── src
+│       ├── _014_LongestCommonPrefix.java
 │       ├── string
 │       │   ├── _008_StringToInteger_AtoI.java
 │       │   ├── _020_ValidParentheses.java
@@ -274,6 +275,7 @@
 ```
 ## Quiz List
 ```
+ 
 001 TwoSum.java
 002 AddTwoNumbers.java
 007 ReverseInteger.java
@@ -414,7 +416,7 @@
 669 TrimABinarySerachTree.java
 687 LongestUnivaluePath.java
 =============================
-* Quiz Java Number: 139
+* Quiz Java Number: 140
 ```
-* Quiz  Java Number: 139
-* Total Java Number: 201
+* Quiz  Java Number: 140
+* Total Java Number: 202
