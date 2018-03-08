@@ -7,15 +7,14 @@ import java.util.concurrent.TimeUnit;
 import containers.Heap;
 
 public class Main {
-	final static int number = 30000;
+	final static int number = 100000;
 	final static int numberRange = 10000;
 	final static Random rand = new Random();
-	final static boolean debug = false;
+	final static boolean debugBefore = false;
+	final static boolean debugAfter = false;
 
 	public static void main(String[] args) {
-
-		//int data[] = new int[]{16,53,80,24,1,56,45,57,17,54};
-		// int data[] = new int[] { 2, 3, 8, 7, 1, 6, 5 };
+		
 		int data[] = new int[number];
 		initailize(data);
 
@@ -24,14 +23,16 @@ public class Main {
 		long startTime1 = System.nanoTime();
 		BubbleSort bubblesort = new BubbleSort();
 		bubblesort.putData(data.clone());
-
-		System.out.println("-------- Before Bubble Sorting --------");
-		if (debug)
+		
+		if (debugBefore){
+			System.out.println("-------- Before Bubble Sorting --------");
 			bubblesort.printData(false);
+		}
+			
 		bubblesort.sorting();
 
 		System.out.println("-------- After Bubble Sorting --------");
-		if (debug)
+		if (debugAfter)
 			bubblesort.printData(false);
 		long endTime1 = System.nanoTime();
 
@@ -41,14 +42,14 @@ public class Main {
 		QuickSort quicksort = new QuickSort();
 		quicksort.putData(data.clone());
 
-		System.out.println("-------- Before Quick Sorting 1--------");
-		if (debug)
+		if (debugBefore){
+			System.out.println("-------- Before Quick Sorting 1--------");
 			quicksort.printData(false);
-
+		}
 		quicksort.sorting1();
 
 		System.out.println("-------- After Quick Sorting 1--------");
-		if (debug)
+		if (debugAfter)
 			quicksort.printData(false);
 		long endTime2 = System.nanoTime();
 
@@ -58,14 +59,15 @@ public class Main {
 
 		quicksort.putData(data.clone());
 
-		System.out.println("-------- Before Quick Sorting 2--------");
-		if (debug)
+		if (debugBefore){
+			System.out.println("-------- Before Quick Sorting 2--------");
 			quicksort.printData(false);
+		}
 
 		quicksort.sorting2();
 
 		System.out.println("-------- After Quick Sorting 2--------");
-		if (debug)
+		if (debugAfter)
 			quicksort.printData(false);
 		long endTime3 = System.nanoTime();
 
@@ -76,14 +78,14 @@ public class Main {
 
 		mergesort.putData(data.clone());
 
-		System.out.println("-------- Before Merge Sorting --------");
-		if (debug)
+		if (debugBefore){
+			System.out.println("-------- Before Merge Sorting --------");
 			mergesort.printData(false);
-
+		}
 		mergesort.sorting();
 
 		System.out.println("-------- After Merge Sorting --------");
-		if (debug)
+		if (debugAfter)
 			mergesort.printData(false);
 		long endTime4 = System.nanoTime();
 
@@ -94,14 +96,14 @@ public class Main {
 		InsertionSort insertionsort = new InsertionSort();
 		insertionsort.putData(data.clone());
 
-		System.out.println("-------- Before Insertion Sorting --------");
-		if (debug)
+		if (debugBefore){
+			System.out.println("-------- Before Insertion Sorting --------");
 			insertionsort.printData(false);
-
+		}
 		insertionsort.sorting();
 
 		System.out.println("-------- After Insertion Sorting --------");
-		if (debug)
+		if (debugAfter)
 			insertionsort.printData(false);
 		long endTime5 = System.nanoTime();
 	
@@ -109,16 +111,36 @@ public class Main {
 		
 		long startTime6 = System.nanoTime();
 		int arr[] = data.clone();
-		System.out.println("-------- Before Heap Sorting --------");
-		if(debug)
+		
+		if(debugBefore){
+			System.out.println("-------- Before Heap Sorting --------");
 			System.out.println(Arrays.toString(arr));
+		}
 	
 		System.out.println("-------- After Heap Sorting --------");
 		Heap.heapsort(arr);
-		if(debug)
+		if(debugAfter)
 			System.out.println(Arrays.toString(arr));
 		long endTime6 = System.nanoTime();
 		
+		// ================================================================
+		long startTime7 = System.nanoTime();
+
+		Sort selectsort = new SelectSort();
+		selectsort.putData(data.clone());
+
+		if (debugBefore){
+			System.out.println("-------- Before Select Sorting --------");
+			selectsort.printData(false);
+		}
+
+		selectsort.sorting();
+
+		System.out.println("-------- After Select Sorting --------");
+		if (debugAfter)
+			insertionsort.printData(false);
+		long endTime7 = System.nanoTime();
+	
 		// ================================================================
 
 		long elapsedTime1 = TimeUnit.NANOSECONDS.toMillis(endTime1 - startTime1);
@@ -127,18 +149,21 @@ public class Main {
 		long elapsedTime4 = TimeUnit.NANOSECONDS.toMillis(endTime4 - startTime4);
 		long elapsedTime5 = TimeUnit.NANOSECONDS.toMillis(endTime5 - startTime5);
 		long elapsedTime6 = TimeUnit.NANOSECONDS.toMillis(endTime6 - startTime6);
+		long elapsedTime7 = TimeUnit.NANOSECONDS.toMillis(endTime7 - startTime7);
 
 		if (!Arrays.equals(bubblesort.data, quicksort.data)) {
 			System.out.println("[Error] Sorting result mismatch.");
 		}
 
-		System.out.println("Bubble    Sort time    (ms): " + elapsedTime1);
-		System.out.println("Quick     Sort-1 time  (ms): " + elapsedTime2);
-		System.out.println("Quick     Sort-2 time  (ms): " + elapsedTime3);
-		System.out.println("Merge     Sort time    (ms): " + elapsedTime4);
-		System.out.println("Insertion Sort time    (ms): " + elapsedTime5);
-		System.out.println("Heap      Sort time    (ms): " + elapsedTime6);
-
+		System.out.println();
+		System.out.println("(1) Bubble    Sort time    (ms): " + elapsedTime1);
+		System.out.println("(2) Select    Sort time    (ms): " + elapsedTime7);
+		System.out.println("(3) Insertion Sort time    (ms): " + elapsedTime5);
+		
+		System.out.println("(4) Merge     Sort time    (ms): " + elapsedTime4);
+		System.out.println("(5) Heap      Sort time    (ms): " + elapsedTime6);
+		System.out.println("(6) Quick     Sort-1 time  (ms): " + elapsedTime2);
+		System.out.println("(7) Quick     Sort-2 time  (ms): " + elapsedTime3);
 	}
 
 	static void initailize(int[] data) {
