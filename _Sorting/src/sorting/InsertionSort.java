@@ -1,6 +1,10 @@
 package sorting;
 
 public class InsertionSort extends Sort{
+	public static void main(String[] args){
+		Sort obj = new InsertionSort();
+		obj.test();
+	}
 
 	@Override
 	public void sorting() {

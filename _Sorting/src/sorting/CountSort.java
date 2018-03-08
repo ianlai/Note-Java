@@ -6,21 +6,10 @@ import java.util.Random;
 public class CountSort extends Sort{
 
 	public static void main(String[] args) {
-		test();
-	}
-	/* Basic test function */
-	public static void test(){
 		Sort obj = new CountSort();
-		obj.data = new int[20];
-		Random rand = new Random();
-		for(int i=0; i<20; i++){
-			obj.data[i] = rand.nextInt(100);
-		}
-		System.out.println(Arrays.toString(obj.data));
-		obj.sorting();
-		System.out.println(Arrays.toString(obj.data));
+		obj.test();
 	}
-
+	
 	@Override
 	public void sorting() {
 		/* Need to find the max value of data */
@@ -47,7 +36,5 @@ public class CountSort extends Sort{
 				index++; 
 			}
 		}
-		
 	}
-
 }

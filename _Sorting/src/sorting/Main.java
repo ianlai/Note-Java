@@ -6,9 +6,33 @@ import java.util.concurrent.TimeUnit;
 //--- My own package ---
 import containers.Heap;
 
+/* ---------------------------------------
+ * Input size  : 50000
+ * Input range : 50000
+ * (1) Bubble    Sort time    (ms): 3973
+ * (2) Select    Sort time    (ms): 396
+ * (3) Insertion Sort time    (ms): 897
+ * (4) Merge     Sort time    (ms): 785
+ * (5) Heap      Sort time    (ms): 98
+ * (6) Quick     Sort-1 time  (ms): 14
+ * (7) Quick     Sort-2 time  (ms): 13
+ * (8) Count     Sort time    (ms): 3
+ * ---------------------------------------
+ * Input size  : 50000
+ * Input range : 100
+ * (1) Bubble    Sort time    (ms): 4128
+ * (2) Select    Sort time    (ms): 434
+ * (3) Insertion Sort time    (ms): 962
+ * (4) Merge     Sort time    (ms): 905
+ * (5) Heap      Sort time    (ms): 159
+ * (6) Quick     Sort-1 time  (ms): 12
+ * (7) Quick     Sort-2 time  (ms): 27
+ * (8) Count     Sort time    (ms): 3
+ */
+
 public class Main {
-	final static int number = 100000;
-	final static int numberRange = 10000;
+	final static int number = 10000;
+	final static int numberRange = 50000;
 	final static Random rand = new Random();
 	final static boolean debugBefore = false;
 	final static boolean debugAfter = false;
@@ -138,8 +162,26 @@ public class Main {
 
 		System.out.println("-------- After Select Sorting --------");
 		if (debugAfter)
-			insertionsort.printData(false);
+			selectsort.printData(false);
 		long endTime7 = System.nanoTime();
+	
+		// ================================================================
+		long startTime8 = System.nanoTime();
+
+		Sort countsort = new CountSort();
+		countsort.putData(data.clone());
+
+		if (debugBefore){
+			System.out.println("-------- Before Count Sorting --------");
+			countsort.printData(false);
+		}
+
+		countsort.sorting();
+
+		System.out.println("-------- After Count Sorting --------");
+		if (debugAfter)
+			countsort.printData(false);
+		long endTime8 = System.nanoTime();
 	
 		// ================================================================
 
@@ -150,6 +192,7 @@ public class Main {
 		long elapsedTime5 = TimeUnit.NANOSECONDS.toMillis(endTime5 - startTime5);
 		long elapsedTime6 = TimeUnit.NANOSECONDS.toMillis(endTime6 - startTime6);
 		long elapsedTime7 = TimeUnit.NANOSECONDS.toMillis(endTime7 - startTime7);
+		long elapsedTime8 = TimeUnit.NANOSECONDS.toMillis(endTime8 - startTime8);
 
 		if (!Arrays.equals(bubblesort.data, quicksort.data)) {
 			System.out.println("[Error] Sorting result mismatch.");
@@ -164,6 +207,8 @@ public class Main {
 		System.out.println("(5) Heap      Sort time    (ms): " + elapsedTime6);
 		System.out.println("(6) Quick     Sort-1 time  (ms): " + elapsedTime2);
 		System.out.println("(7) Quick     Sort-2 time  (ms): " + elapsedTime3);
+		
+		System.out.println("(8) Count     Sort time    (ms): " + elapsedTime8);
 	}
 
 	static void initailize(int[] data) {

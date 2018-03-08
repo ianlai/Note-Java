@@ -1,5 +1,10 @@
 package sorting;
 public class MergeSort extends Sort{
+	public static void main(String[] args){
+		Sort obj = new MergeSort();
+		obj.test();
+	}
+	
 	@Override
 	public void sorting() {
 		int[] helper = new int[data.length];

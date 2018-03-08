@@ -1,6 +1,10 @@
 package sorting;
 
 public class BubbleSort extends Sort{
+	public static void main(String[] args){
+		Sort obj = new BubbleSort();
+		obj.test();
+	}
 	@Override
 	public void sorting(){
 		int length=data.length;
