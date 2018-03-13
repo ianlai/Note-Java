@@ -49,7 +49,8 @@
 │       │   ├── _350_IntersectionOfTwoArrays2.java
 │       │   ├── _384_ShuffleAnArray.java
 │       │   ├── _442_DuplicatesInArray.java
-│       │   └── _448_FindAllNumbersDisappearedInAnArray.java
+│       │   ├── _448_FindAllNumbersDisappearedInAnArray.java
+│       │   └── _674_LongestContinuousIncreasingSubsequence.java
 │       ├── matrix
 │       │   ├── _054_SpiralMatrix.java
 │       │   ├── _059_SpiralMatrix2.java
@@ -419,9 +420,10 @@
 637 AverageOfLevelsInBinaryTree.java
 657 JudgeRouteCircle.java
 669 TrimABinarySerachTree.java
+674 LongestContinuousIncreasingSubsequence.java
 687 LongestUnivaluePath.java
 =============================
-* Quiz Java Number: 141
+* Quiz Java Number: 142
 ```
-* Quiz  Java Number: 141
-* Total Java Number: 205
+* Quiz  Java Number: 142
+* Total Java Number: 206
