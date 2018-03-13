@@ -144,7 +144,8 @@
 │       │   ├── _062_UniquePaths.java
 │       │   ├── _063_UniquePaths2.java
 │       │   ├── _070_ClimbingStairs.java
-│       │   └── _120_Triangle.java
+│       │   ├── _120_Triangle.java
+│       │   └── _300_LongestIncreasingSubsequence.java
 │       └── houseRobber
 │           ├── Tester.java
 │           ├── _198_HouseRobber.java
@@ -206,10 +207,12 @@
 │   └── src
 │       └── sorting
 │           ├── BubbleSort.java
+│           ├── CountSort.java
 │           ├── InsertionSort.java
 │           ├── Main.java
 │           ├── MergeSort.java
 │           ├── QuickSort.java
+│           ├── SelectSort.java
 │           ├── Sort.java
 │           └── _075_SortColors.java
 ├── _String
@@ -234,44 +237,45 @@
 │           ├── _043_MultiplyStrings.java
 │           ├── _066_PlusOne.java
 │           └── _415_AddStrings.java
-└── _Tree
-    └── src
-        ├── bst
-        │   ├── _095_UniqueBinarySearchTrees2.java
-        │   ├── _096_UniqueBinarySearchTrees.java
-        │   ├── _098_ValidateBinarySearchTree.java
-        │   ├── _108_ConvertSortedArrayToBinarySearchTree.java
-        │   ├── _230_KthSmallestElementInABST.java
-        │   ├── _235_LowestCommonAncestorOfABinarySearchTree.java
-        │   ├── _538_ConvertBSTtoGreaterTree.java
-        │   └── _669_TrimABinarySerachTree.java
-        ├── traversal
-        │   ├── _094_BinaryTreeInorderTraversal.java
-        │   ├── _102_BinaryTreeLevelOrderTraversal.java
-        │   ├── _107_BinaryTreeLevelOrderTraversal2.java
-        │   ├── _144_BinaryTreePreorderTraversal.java
-        │   └── _145_BinaryTreePostorderTraversal.java
-        ├── tree
-        │   ├── IterativeTraversal.java
-        │   ├── Main.java
-        │   ├── TreeNode.java
-        │   ├── _100_SameTree.java
-        │   ├── _101_SymmetricTree.java
-        │   ├── _104_MaximumDepthOfBinaryTree.java
-        │   ├── _111_MinimumDepthOfBinaryTree.java
-        │   ├── _112_PathSum.java
-        │   ├── _113_PathSum2.java
-        │   ├── _199_BinaryTreeRightSideView.java
-        │   ├── _226_InvertBinaryTree.java
-        │   ├── _236_LowestCommonAncestorOfABinaryTree.java
-        │   ├── _257_BinaryTreePaths.java
-        │   ├── _572_SubtreeOfAnotherTree.java
-        │   ├── _617_MergeTwoBinaryTree.java
-        │   ├── _637_AverageOfLevelsInBinaryTree.java
-        │   └── _687_LongestUnivaluePath.java
-        └── tries
-            ├── _208_ImplementTrie.java
-            └── _211_AddAndSearchWord.java
+├── _Tree
+│   └── src
+│       ├── bst
+│       │   ├── _095_UniqueBinarySearchTrees2.java
+│       │   ├── _096_UniqueBinarySearchTrees.java
+│       │   ├── _098_ValidateBinarySearchTree.java
+│       │   ├── _108_ConvertSortedArrayToBinarySearchTree.java
+│       │   ├── _230_KthSmallestElementInABST.java
+│       │   ├── _235_LowestCommonAncestorOfABinarySearchTree.java
+│       │   ├── _538_ConvertBSTtoGreaterTree.java
+│       │   └── _669_TrimABinarySerachTree.java
+│       ├── traversal
+│       │   ├── _094_BinaryTreeInorderTraversal.java
+│       │   ├── _102_BinaryTreeLevelOrderTraversal.java
+│       │   ├── _107_BinaryTreeLevelOrderTraversal2.java
+│       │   ├── _144_BinaryTreePreorderTraversal.java
+│       │   └── _145_BinaryTreePostorderTraversal.java
+│       ├── tree
+│       │   ├── IterativeTraversal.java
+│       │   ├── Main.java
+│       │   ├── TreeNode.java
+│       │   ├── _100_SameTree.java
+│       │   ├── _101_SymmetricTree.java
+│       │   ├── _104_MaximumDepthOfBinaryTree.java
+│       │   ├── _111_MinimumDepthOfBinaryTree.java
+│       │   ├── _112_PathSum.java
+│       │   ├── _113_PathSum2.java
+│       │   ├── _199_BinaryTreeRightSideView.java
+│       │   ├── _226_InvertBinaryTree.java
+│       │   ├── _236_LowestCommonAncestorOfABinaryTree.java
+│       │   ├── _257_BinaryTreePaths.java
+│       │   ├── _572_SubtreeOfAnotherTree.java
+│       │   ├── _617_MergeTwoBinaryTree.java
+│       │   ├── _637_AverageOfLevelsInBinaryTree.java
+│       │   └── _687_LongestUnivaluePath.java
+│       └── tries
+│           ├── _208_ImplementTrie.java
+│           └── _211_AddAndSearchWord.java
+└── ~$QuizAndKeyList.xlsm
 ```
 ## Quiz List
 ```
@@ -379,6 +383,7 @@
 279 PerfectSquares.java
 283 MoveZeroes.java
 287 FindTheDuplicateNumber.java
+300 LongestIncreasingSubsequence.java
 322 CoinChange
 326 PowerOfThree.java
 328 OddEvenLinkedList.java
@@ -416,7 +421,7 @@
 669 TrimABinarySerachTree.java
 687 LongestUnivaluePath.java
 =============================
-* Quiz Java Number: 140
+* Quiz Java Number: 141
 ```
-* Quiz  Java Number: 140
-* Total Java Number: 202
+* Quiz  Java Number: 141
+* Total Java Number: 205
