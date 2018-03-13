@@ -40,6 +40,7 @@
 │       │   ├── _027_RemoveElement.java
 │       │   ├── _033_SearchInRotatedSortedArray.java
 │       │   ├── _088_MergeSortedArray.java
+│       │   ├── _118_PascalsTriangle.java
 │       │   ├── _121_BestTimeToBuyAndSellStock.java
 │       │   ├── _162_FindPeakElement.java
 │       │   ├── _215_KthLargestElementInAnArray.java
@@ -338,6 +339,7 @@
 111 MinimumDepthOfBinaryTree.java
 112 PathSum.java
 113 PathSum2.java
+118 PascalsTriangle.java
 120 Triangle.java
 121 BestTimeToBuyAndSellStock.java
 125 ValidPalindrome.java
@@ -423,7 +425,7 @@
 674 LongestContinuousIncreasingSubsequence.java
 687 LongestUnivaluePath.java
 =============================
-* Quiz Java Number: 142
+* Quiz Java Number: 143
 ```
-* Quiz  Java Number: 142
-* Total Java Number: 206
+* Quiz  Java Number: 143
+* Total Java Number: 207
