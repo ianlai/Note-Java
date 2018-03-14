@@ -123,7 +123,8 @@
 │       │   ├── DefinedClassAsMapKey.java
 │       │   ├── DoubleList.java
 │       │   ├── Person.java
-│       │   └── SortMapByKey.java
+│       │   ├── SortMap1.java
+│       │   └── SortMap2.java
 │       ├── containers
 │       │   ├── _155_MinStack.java
 │       │   ├── _225_ImplementStackUsingQueues.java
@@ -428,4 +429,4 @@
 * Quiz Java Number: 143
 ```
 * Quiz  Java Number: 143
-* Total Java Number: 207
+* Total Java Number: 208
