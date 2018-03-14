@@ -11,7 +11,7 @@ import java.util.Map.Entry;
 
 import java.util.TreeMap;
 
-public class SortMapByKey {
+public class SortMap1 {
 
 	public static void main(String[] args) {
 		Map<String, Integer> map = new HashMap<>();
