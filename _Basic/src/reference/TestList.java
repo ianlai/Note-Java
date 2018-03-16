@@ -4,8 +4,11 @@ import java.util.Arrays;
 import java.util.Collections;
 import java.util.List;
 
-public class ListTest {
-	public void run(){
+public class TestList {
+	public static void main(String[] args) {
+		test();
+	}
+	public static void test(){
 		System.out.println("=================== Single List =================== ");  
 		
 		System.out.println(">> Old List:");

@@ -17,7 +17,7 @@ import java.util.List;
 // Test3: modify value of Array and List in a method
 // Both of them will be modified outside of method.
 
-public class RefTest {
+public class TestRef {
 	
 	class Node{
 		int id;
@@ -25,8 +25,12 @@ public class RefTest {
 			id = i;
 		}
 	}
+	public static void main(String[] args) {
+		TestRef obj = new TestRef();
+		obj.test();
+	}
 	
-	public void run(){
+	public void test(){
 		int i1     =  9;
 		Integer i2 = 99;
 		Node n1    = new Node(999);

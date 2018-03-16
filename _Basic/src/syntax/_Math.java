@@ -7,9 +7,17 @@ public class _Math {
 
 	public static void main(String[] args) {
 		_Math obj = new _Math();
+		obj.testBasic();
 		obj.testMax();
 		obj.testNegative();
 		obj.testBigNumber();
+	}
+	private void testBasic() {
+		printSeparate();
+		System.out.println(2/3);  //0
+		System.out.println(5/3);  //1
+		int a= 200_000_000;       //easy to read
+		System.out.println(a);
 	}
 	private void testBigNumber(){
 		printSeparate();
