@@ -5,8 +5,17 @@ import java.util.List;
 
 // http://tutorials.jenkov.com/java-generics/wildcards.html
 
-public class Main {
+/* Parent class */
+class A{ 
+	
+}
 
+/* Child class */
+class B extends A{
+	
+}
+
+public class _Wildcard {
 	public static void main(String[] args) {
 
 		// =============== Generic Type (function)
