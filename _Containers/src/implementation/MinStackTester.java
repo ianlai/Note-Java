@@ -1,4 +1,5 @@
 package implementation;
+import java.util.Arrays;
 import java.util.Stack;
 
 import implementation.MinStack;
@@ -16,84 +17,76 @@ import implementation.MinStackSingleImpl;
 /* Use two stacks to implement (simple) 
  * Check MinStackDoubleImpl.java to discuss more.*/ 
 
-public class MinStackTester implements MinStack{
-
+public class MinStackTester{
 	public static void main(String[] args) {
-		MinStack msd = new MinStackTester();
-		test(msd);
-	}
-	public static void test(MinStack ms) {
-		if(ms instanceof MinStackSingleImpl) {
-			System.out.println("----- Single -----");
-		}else if(ms instanceof MinStackTester) {
-			System.out.println("----- Double -----");
-		}
-		ms.push(6); 
-		ms.push(3);
-		ms.push(5);
-		ms.push(2);
-		ms.push(7);
-		ms.push(4);
-		//ms.push(2);  //single stack cannot handle multiple number yet
-		ms.push(9);
-		ms.push(1);
-		ms.push(5);
+		MinStack mss = new MinStackSingleImpl();
+		MinStack msd = new MinStackDoubleImpl();
 		
-		ms.print();
-		if(ms instanceof MinStackTester) {
-			((MinStackTester) ms).printSize();  //need to cast
+		test(mss, false);
+		test(msd, false);
+		
+		mss.clear();
+		msd.clear();
+		
+		test(mss, true);  /* Error! SingleImpl cannot handle duplicates */
+		test(msd, true);
+	}
+	private static void init(MinStack ms){
+		int[] arr = new int[]{6,3,5,2,7,1,9,4};
+		System.out.println("INPUT: ");
+		System.out.println("   " + Arrays.toString(arr));
+		for(int e: arr){
+			ms.push(e);
 		}
-
-		System.out.println(ms.getMin());
-		System.out.println(ms.top());
-		ms.pop();
-		ms.pop();
-		ms.pop();
-		ms.pop();
-		ms.pop();
-		System.out.println(ms.getMin());
-		System.out.println(ms.top());
-
-	}
-	/** initialize your data structure here. */
-	Stack<Integer> s1;
-	Stack<Integer> s2;
-
-	public MinStackTester() {
-		s1 = new Stack<>();
-		s2 = new Stack<>();
-	}
-
-	public void push(int x) {
-		s1.push(x);
-		if (s2.isEmpty() || x <= getMin())
-			s2.push(x);
-	}
-
-	public void pop() {
-		int last = s1.pop();
-		if (last == getMin())
-			s2.pop();
-	}
-
-	public int top() {
-		return s1.peek();
-	}
-
-	public int getMin() {
-		return s2.peek();
+		System.out.println();
 	}
 	
-	public void print() {
-		System.out.println(">> Normal stack (s1): " );
-		System.out.println("   " + s1);
-		
-		System.out.println(">> Min stack    (s2): " );
-		System.out.println("   " + s2);
+	/* single stack cannot handle multiple number yet */
+	private static void inputDuplicate(MinStack ms){
+		int[] arr = new int[]{3,1,4,2,5};
+		System.out.println("DUP: ");
+		System.out.println("   " + Arrays.toString(arr));
+		for(int e: arr){
+			ms.push(e);
+		}
+		System.out.println();
 	}
-	/* only for double */
-	public void printSize() {
-		System.out.println("   S1->" + s1.size() + "  S2->" + s2.size());
+	public static void test(MinStack ms, boolean isDup) {
+		System.out.println("=====================================");
+		System.out.println("===  " + ms.getClass().getSimpleName());
+		System.out.println("=====================================");
+		
+		init(ms);
+		System.out.println("After init:");
+		ms.print();
+		
+		if(isDup){
+			inputDuplicate(ms);
+			System.out.println("After input duplicate:");
+			ms.print();
+		}
+		
+		/* Only feasible in MinStackDoubleImpl */
+		if(ms instanceof MinStackDoubleImpl && ms.debug==true) {
+			((MinStackDoubleImpl) ms).printSize();  //need to cast
+		}
+		
+		ms.printTopAndMin();
+		
+		dprint(ms, "");
+		dprint(ms, "After pop() 5 times: ");
+		ms.pop();
+		ms.pop();
+		ms.pop();
+		ms.pop();
+		ms.pop();
+		if(ms.debug) ms.print();
+		
+		ms.printTopAndMin();
+	}
+	private static void dprint(MinStack ms, String msg){
+		if(ms.debug)
+			System.out.println(msg);
 	}
 }
 
