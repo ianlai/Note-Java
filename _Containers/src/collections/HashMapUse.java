@@ -15,11 +15,7 @@ public class HashMapUse {
 		map.put("fish", 1);
 		System.out.println(map.get("iii"));  //null
 		
-		String ls = "ab cd efg hjiilk ppon";
-		for(String s: ls.split(" ")){
-			System.out.println(s);
-		}
-		
+		/* Use iterator to iterate the map */
 		Iterator it = map.entrySet().iterator();
 		
 		while(it.hasNext()){
@@ -31,11 +27,11 @@ public class HashMapUse {
 	    add("aa bb ccc dddd ee", "ccc bb ee");
 	    
 	    //------------------------------------------
+	    
+	    /* We initiate a map with a concrete class */
 		Map<Integer, Integer> mp1 = new HashMap<>();
 		//Map<Integer, Integer> mp2 = new Map<>();                        //Map is an interface 
 		//Map<Integer, Integer> mp2 = new AbstractMap<Integer,Integer>(); //AbstractMap is an abstract class 
-		
-		
 	}
 	
 	static Map<String, Integer> magazineMap;
@@ -65,7 +61,6 @@ public class HashMapUse {
                 noteMap.put(s, count+1);
             }
         }
-        
         System.out.println(noteMap.size());
     }
 }

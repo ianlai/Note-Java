@@ -6,6 +6,14 @@ import java.util.TreeSet;
 import java.util.ArrayDeque;
 import java.util.PriorityQueue;
 
+/* PriorityQueue can sort the elements natural order or with the comparator we assigned. 
+ * One more advantage is that it can handle duplicates (compared with TreeSet).
+ * However, to keep the natural order (or other order), we can only iterate the elements by poll().
+ *  - poll()           //YES
+ *  - Directly println //NO
+ *  - Enhanced loop    //NO
+ *  Be careful that after we iterate the PriorityQueue with poll(), it will become empty. 
+ */
 public class _PriorityQueue {
 	public static void main(String[] args) {
 		
@@ -68,11 +76,12 @@ public class _PriorityQueue {
 		
 		/* Default print */
 		System.out.println("[PriorityQueue]");
-		System.out.println(queue);   //no
+		System.out.println(queue);   //no: not sorted (but duplicates still there) 
 		System.out.println("[TreeSet]");
-		System.out.println(set);     //ok
+		System.out.println(set);     //ok: sorted (but duplicates disappear) 
 		
-		System.out.println();System.out.println();
+		System.out.println();
+		System.out.println();
 		
 		/* WRONG!! PriorityQueue will lose its nature order if accessing with an enhanced-loop */
 		System.out.println("[PriorityQueue - Enhanced Loop]");

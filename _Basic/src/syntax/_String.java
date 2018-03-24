@@ -1,5 +1,8 @@
 package syntax;
 
+import java.util.ArrayList;
+import java.util.List;
+
 public class _String {
 
 	public static void main(java.lang.String[] args) {
@@ -8,9 +11,11 @@ public class _String {
 		stringImmutable();
 		typeConversion();
 		stringEquality();
+		stringDivide();
 	}
 
 	public static void calcCharOccurence() {
+		System.out.println("==========");
 		// Calculate char's occurrence
 		String s = "abcdababbcdefg"; // b:4
 		Character target = new Character('b');
@@ -19,7 +24,7 @@ public class _String {
 	}
 
 	public static void stringBuilderUse() {
-		// StringBuilder
+		System.out.println("==========");
 		String ss = "";
 		StringBuilder sb = new StringBuilder();
 		String sb_final;
@@ -43,9 +48,11 @@ public class _String {
 		System.out.println("StringBuilder: " + (end_sb - start_sb));
 	}
 
+	/* Copying a string doesn't need to use clone because String is immutable. 
+	 * Wecan copy reference only instead.
+	 */
 	public static void stringImmutable() {
-		// Copying a string doesn't need to use clone because String is immutable. We
-		// can copy reference only instead.
+		System.out.println("==========");
 		String s1 = "aaaaabbbbb";
 		String s2 = "";
 		s2 = s1;
@@ -58,6 +65,7 @@ public class _String {
 	}
 
 	public static void typeConversion() {
+		System.out.println("==========");
 		int pp = 3;
 		Integer ppp = new Integer(pp);
 		String sss1 = String.valueOf(pp);
@@ -73,7 +81,7 @@ public class _String {
 	}
 
 	public static void stringEquality() {
-		System.out.println("===== String Equality =====");
+		System.out.println("==========");
 
 		String sn1 = new String("aaa");
 		String sn2 = new String("aaa");
@@ -89,5 +97,15 @@ public class _String {
 		String ss3 = "b" + "b" + "b";
 		System.out.println(ss1 == ss3); // TRUE again (static string in compile time)
 	}
-
+	public static void stringDivide(){
+		System.out.println("==========");
+		List<String> list = new ArrayList<>();
+		String origin = "ab cd efg hjiilk ppon";
+		for(String s: origin.split(" ")){
+			list.add(s);
+		}
+		for(String s: list){
+			System.out.println(s);
+		}
+	}
 }

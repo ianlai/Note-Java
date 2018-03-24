@@ -14,6 +14,6 @@ public class _TreeSet {
 		set.add("dzzzzfghijkkk");
 		set.add("dz");
 		set.add("ddddd");
-		System.out.println(set);  //sorted 
+		System.out.println(set);  //sorted alphabetically
 	}
 }
