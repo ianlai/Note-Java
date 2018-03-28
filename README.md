@@ -19,6 +19,7 @@
 │       │   ├── _326_PowerOfThree.java
 │       │   ├── _347_TopKFrequentElements.java
 │       │   ├── _392_IsSubsequence.java
+│       │   ├── _458_PoorPigs.java
 │       │   └── _535_EncodeAndDecodeTinyURL.java
 │       ├── island
 │       │   ├── _200_NumberOfIslands.java
@@ -51,6 +52,7 @@
 │       │   ├── _384_ShuffleAnArray.java
 │       │   ├── _442_DuplicatesInArray.java
 │       │   ├── _448_FindAllNumbersDisappearedInAnArray.java
+│       │   ├── _561_ArrayPartition1.java
 │       │   └── _674_LongestContinuousIncreasingSubsequence.java
 │       ├── matrix
 │       │   ├── _054_SpiralMatrix.java
@@ -93,6 +95,7 @@
 │       │   ├── _Char.java
 │       │   ├── _Class.java
 │       │   ├── _Conversion.java
+│       │   ├── _Debug.java
 │       │   ├── _Inheritance.java
 │       │   ├── _Math.java
 │       │   ├── _Random.java
@@ -110,7 +113,7 @@
 │       ├── collections
 │       │   ├── ArrayAndList.java
 │       │   ├── HashMapUse.java
-│       │   ├── SetUse.java
+│       │   ├── _HashSet.java
 │       │   ├── _List.java
 │       │   ├── _PriorityQueue.java
 │       │   ├── _Queue.java
@@ -131,6 +134,7 @@
 │           ├── Heap.java
 │           ├── MinStack.java
 │           ├── MinStackDoubleImpl.java
+│           ├── MinStackSingleImpl.java
 │           ├── MinStackTester.java
 │           ├── MyHashMap.java
 │           └── Poker.java
@@ -408,6 +412,7 @@
 415 AddStrings.java
 442 DuplicatesInArray.java
 448 FindAllNumbersDisappearedInAnArray.java
+458 PoorPigs.java
 460 LFUCache.java
 461 HammingDistance.java
 463 IslandPerimeter.java
@@ -417,6 +422,7 @@
 538 ConvertBSTtoGreaterTree.java
 541 ReverseString2.java
 557 ReverseWordsInAString3.java
+561 ArrayPartition1.java
 572 SubtreeOfAnotherTree.java
 617 MergeTwoBinaryTree.java
 637 AverageOfLevelsInBinaryTree.java
@@ -425,7 +431,7 @@
 674 LongestContinuousIncreasingSubsequence.java
 687 LongestUnivaluePath.java
 =============================
-* Quiz Java Number: 144
+* Quiz Java Number: 146
 ```
-* Quiz  Java Number: 144
-* Total Java Number: 207
+* Quiz  Java Number: 146
+* Total Java Number: 211
