@@ -37,6 +37,7 @@
 ├── _Array
 │   └── src
 │       ├── array
+│       │   ├── _006_ZigZagConversion.java
 │       │   ├── _026_RemoveDuplicatesFromSortedArray.java
 │       │   ├── _027_RemoveElement.java
 │       │   ├── _033_SearchInRotatedSortedArray.java
@@ -205,6 +206,7 @@
 │           ├── _009_PalindromeNumber.java
 │           ├── _050_Pow.java
 │           ├── _069_Sqrt.java
+│           ├── _172_FactorialTrailingZeroes.java
 │           ├── _204_CountPrimes.java
 │           └── _537_ComplexNumberMultiplication.java
 ├── _Sorting
@@ -287,6 +289,7 @@
  
 001 TwoSum.java
 002 AddTwoNumbers.java
+006 ZigZagConversion.java
 007 ReverseInteger.java
 008 StringToInteger
 009 PalindromeNumber.java
@@ -358,6 +361,7 @@
 162 FindPeakElement.java
 167 TwoSum2
 169 MajorityElement.java
+172 FactorialTrailingZeroes.java
 179 LargestNumber.java
 190 ReverseBits.java
 191 NumberOf1Bits
@@ -431,7 +435,7 @@
 674 LongestContinuousIncreasingSubsequence.java
 687 LongestUnivaluePath.java
 =============================
-* Quiz Java Number: 146
+* Quiz Java Number: 148
 ```
-* Quiz  Java Number: 146
-* Total Java Number: 211
+* Quiz  Java Number: 148
+* Total Java Number: 213
