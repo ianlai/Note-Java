@@ -244,6 +244,7 @@
 │       └── stringMath
 │           ├── _043_MultiplyStrings.java
 │           ├── _066_PlusOne.java
+│           ├── _067_AddBinary.java
 │           └── _415_AddStrings.java
 └── _Tree
     └── src
@@ -321,6 +322,7 @@
 062 UniquePaths.java
 063 UniquePaths2.java
 066 PlusOne.java
+067 AddBinary.java
 069 Sqrt.java
 070 ClimbingStairs.java
 073 SetMatrixZeroes.java
@@ -435,7 +437,7 @@
 674 LongestContinuousIncreasingSubsequence.java
 687 LongestUnivaluePath.java
 =============================
-* Quiz Java Number: 148
+* Quiz Java Number: 149
 ```
-* Quiz  Java Number: 148
-* Total Java Number: 213
+* Quiz  Java Number: 149
+* Total Java Number: 214
