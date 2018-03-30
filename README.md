@@ -45,6 +45,7 @@
 │       │   ├── _118_PascalsTriangle.java
 │       │   ├── _121_BestTimeToBuyAndSellStock.java
 │       │   ├── _162_FindPeakElement.java
+│       │   ├── _189_RotateArray.java
 │       │   ├── _215_KthLargestElementInAnArray.java
 │       │   ├── _238_ProductOfArrayExceptSelf.java
 │       │   ├── _283_MoveZeroes.java
@@ -365,6 +366,7 @@
 169 MajorityElement.java
 172 FactorialTrailingZeroes.java
 179 LargestNumber.java
+189 RotateArray.java
 190 ReverseBits.java
 191 NumberOf1Bits
 198 HouseRobber.java
@@ -437,7 +439,7 @@
 674 LongestContinuousIncreasingSubsequence.java
 687 LongestUnivaluePath.java
 =============================
-* Quiz Java Number: 149
+* Quiz Java Number: 150
 ```
-* Quiz  Java Number: 149
-* Total Java Number: 214
+* Quiz  Java Number: 150
+* Total Java Number: 215
