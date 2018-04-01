@@ -4,17 +4,29 @@ public class _415_AddStrings {
 
 	public static void main(String[] args) {
 		_415_AddStrings obj = new _415_AddStrings();
+
 		String a1 = "0";
 		String b1 = "0";
-		String c1 = obj.addStrings(a1, b1);
+		String c1 = obj.addStrings(a1, b1); 
+		System.out.println(a1 + " + " + b1 + " = " + c1);
+		System.out.println();
 		
-		String a2 = "9999";
-		String b2 = "222888";
-		String c2 = obj.addStrings(a2, b2);
+		String a2 = "13";
+		String b2 = "25";
+		String c2 = obj.addStrings(a2, b2); 
+		System.out.println(a2 + " + " + b2 + " = " + c2);
+		System.out.println();
 		
-		System.out.println(c1);
-		System.out.println(c2);
-
+		String a3 = "9999";
+		String b3 = "222888";
+		String c3 = obj.addStrings(a3, b3);
+		System.out.println(a3 + " + " + b3 + " = " + c3);
+		System.out.println();
+		
+		String a4 = "9777";
+		String b4 = "9876";
+		String c4 = obj.addStrings(a4, b4);
+		System.out.println(a4 + " + " + b4 + " = " + c4);
 	}
 	public String addStrings(String num1, String num2) {
 		if(num1.length() >= num2.length()) 
@@ -22,6 +34,7 @@ public class _415_AddStrings {
 		else
 			return _addStrings(num2, num1);
 	}
+	/* num1 is longer than num2 */
     public String _addStrings(String num1, String num2) {
         int l1 = num1.length();
         int l2 = num2.length();
@@ -65,7 +78,8 @@ public class _415_AddStrings {
     		cr[0] = '1';
     	}
         String ans = new String(cr);
-        ans = ans.replace("\u0000", "");   //remove '\u0000'
+        //for(int i=0; i<cr.length; i++) System.out.println(i + ": " + cr[i]); //debug
+        ans = ans.replace("\u0000", "");   //the first char is '\u0000', so we need to replace it
         return ans;
     }
 }

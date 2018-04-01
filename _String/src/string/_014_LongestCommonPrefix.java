@@ -1,3 +1,4 @@
+package string;
 
 public class _014_LongestCommonPrefix {
 
