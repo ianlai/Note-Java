@@ -32,20 +32,18 @@ public class _063_UniquePaths2 {
         for(int i=0; i<m; i++){
             Arrays.fill(mat[i], -1);
         }
-            
-        if(m==0 && n==0) return 0;          //m, n mean maximum here 
-        return p(g, mat, m-1, n-1);
+        if(m==0 && n==0) return 0;                       
+        return p(g, mat, m-1, n-1);                      //m, n mean maximum here 
     }
     public int p(int[][] g, int[][] mat, int m, int n){  //m, n mean current index 
         
-        //System.out.println(m +" " +n);
-    	
         /* first column or first row */
         if(m==0 && n==0){
-            mat[m][n] = (g[m][n]==0) ? 1 : 0;
-        }else{
-            if(m==0) mat[m][n] = (g[m][n]==0) ? p(g, mat, m, n-1) : 0;
-            if(n==0) mat[m][n] = (g[m][n]==0) ? p(g, mat, m-1, n) : 0;
+            mat[m][n] = (g[m][n]==0) ? 1                 : 0;
+        }else if(m==0){
+            mat[m][n] = (g[m][n]==0) ? p(g, mat, m, n-1) : 0;
+        }else if(n==0){
+            mat[m][n] = (g[m][n]==0) ? p(g, mat, m-1, n) : 0;
         }
         
         /* normal column and normal row ; determine whether we have the result or not first*/

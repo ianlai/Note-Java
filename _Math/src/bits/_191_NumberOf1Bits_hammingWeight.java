@@ -2,10 +2,11 @@ package bits;
 
 public class _191_NumberOf1Bits_hammingWeight {
 	public static void main(String[] args) {
-		System.out.println(hammingWeight(3));  //2
-		System.out.println(hammingWeight(8));  //1
-		System.out.println(hammingWeight(18)); //2
-		System.out.println(hammingWeight(35)); //3
+		System.out.println(hammingWeight(3));     //2
+		System.out.println(hammingWeight(8));     //1
+		System.out.println(hammingWeight(18));    //2
+		System.out.println(hammingWeight(35));    //3
+		System.out.println(hammingWeight(33798)); //4
 	}
 	
     // you need to treat n as an unsigned value

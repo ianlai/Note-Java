@@ -2,8 +2,6 @@
 ```
 .
 ├── List.sh
-├── QuizAndKeyList.xlsm
-├── QuizAndKeyList.xlsx
 ├── README.md
 ├── Readme.sh
 ├── _Algorithm
@@ -209,6 +207,7 @@
 │           ├── _069_Sqrt.java
 │           ├── _172_FactorialTrailingZeroes.java
 │           ├── _204_CountPrimes.java
+│           ├── _258_AddDigits.java
 │           └── _537_ComplexNumberMultiplication.java
 ├── _Sorting
 │   ├── lib
@@ -226,9 +225,9 @@
 │           └── _075_SortColors.java
 ├── _String
 │   └── src
-│       ├── _014_LongestCommonPrefix.java
 │       ├── string
 │       │   ├── _008_StringToInteger_AtoI.java
+│       │   ├── _014_LongestCommonPrefix.java
 │       │   ├── _020_ValidParentheses.java
 │       │   ├── _028_ImplementStrStr.java
 │       │   ├── _038_CountAndSay.java
@@ -247,54 +246,58 @@
 │           ├── _066_PlusOne.java
 │           ├── _067_AddBinary.java
 │           └── _415_AddStrings.java
-└── _Tree
-    └── src
-        ├── bst
-        │   ├── _095_UniqueBinarySearchTrees2.java
-        │   ├── _096_UniqueBinarySearchTrees.java
-        │   ├── _098_ValidateBinarySearchTree.java
-        │   ├── _108_ConvertSortedArrayToBinarySearchTree.java
-        │   ├── _230_KthSmallestElementInABST.java
-        │   ├── _235_LowestCommonAncestorOfABinarySearchTree.java
-        │   ├── _538_ConvertBSTtoGreaterTree.java
-        │   └── _669_TrimABinarySerachTree.java
-        ├── traversal
-        │   ├── _094_BinaryTreeInorderTraversal.java
-        │   ├── _102_BinaryTreeLevelOrderTraversal.java
-        │   ├── _107_BinaryTreeLevelOrderTraversal2.java
-        │   ├── _144_BinaryTreePreorderTraversal.java
-        │   └── _145_BinaryTreePostorderTraversal.java
-        ├── tree
-        │   ├── IterativeTraversal.java
-        │   ├── Main.java
-        │   ├── TreeNode.java
-        │   ├── _100_SameTree.java
-        │   ├── _101_SymmetricTree.java
-        │   ├── _104_MaximumDepthOfBinaryTree.java
-        │   ├── _111_MinimumDepthOfBinaryTree.java
-        │   ├── _112_PathSum.java
-        │   ├── _113_PathSum2.java
-        │   ├── _199_BinaryTreeRightSideView.java
-        │   ├── _226_InvertBinaryTree.java
-        │   ├── _236_LowestCommonAncestorOfABinaryTree.java
-        │   ├── _257_BinaryTreePaths.java
-        │   ├── _572_SubtreeOfAnotherTree.java
-        │   ├── _617_MergeTwoBinaryTree.java
-        │   ├── _637_AverageOfLevelsInBinaryTree.java
-        │   └── _687_LongestUnivaluePath.java
-        └── tries
-            ├── _208_ImplementTrie.java
-            └── _211_AddAndSearchWord.java
+├── _Tree
+│   └── src
+│       ├── bst
+│       │   ├── _095_UniqueBinarySearchTrees2.java
+│       │   ├── _096_UniqueBinarySearchTrees.java
+│       │   ├── _098_ValidateBinarySearchTree.java
+│       │   ├── _108_ConvertSortedArrayToBinarySearchTree.java
+│       │   ├── _230_KthSmallestElementInABST.java
+│       │   ├── _235_LowestCommonAncestorOfABinarySearchTree.java
+│       │   ├── _538_ConvertBSTtoGreaterTree.java
+│       │   └── _669_TrimABinarySerachTree.java
+│       ├── traversal
+│       │   ├── _094_BinaryTreeInorderTraversal.java
+│       │   ├── _102_BinaryTreeLevelOrderTraversal.java
+│       │   ├── _107_BinaryTreeLevelOrderTraversal2.java
+│       │   ├── _144_BinaryTreePreorderTraversal.java
+│       │   └── _145_BinaryTreePostorderTraversal.java
+│       ├── tree
+│       │   ├── IterativeTraversal.java
+│       │   ├── Main.java
+│       │   ├── TreeNode.java
+│       │   ├── _100_SameTree.java
+│       │   ├── _101_SymmetricTree.java
+│       │   ├── _104_MaximumDepthOfBinaryTree.java
+│       │   ├── _111_MinimumDepthOfBinaryTree.java
+│       │   ├── _112_PathSum.java
+│       │   ├── _113_PathSum2.java
+│       │   ├── _199_BinaryTreeRightSideView.java
+│       │   ├── _226_InvertBinaryTree.java
+│       │   ├── _236_LowestCommonAncestorOfABinaryTree.java
+│       │   ├── _257_BinaryTreePaths.java
+│       │   ├── _572_SubtreeOfAnotherTree.java
+│       │   ├── _617_MergeTwoBinaryTree.java
+│       │   ├── _637_AverageOfLevelsInBinaryTree.java
+│       │   └── _687_LongestUnivaluePath.java
+│       └── tries
+│           ├── _208_ImplementTrie.java
+│           └── _211_AddAndSearchWord.java
+└── misc
+    ├── QuizAndKeyList.xlsm
+    ├── QuizAndKeyList_old.xlsx
+    └── ~$QuizAndKeyList.xlsm
 ```
 ## Quiz List
 ```
- 
 001 TwoSum.java
 002 AddTwoNumbers.java
 006 ZigZagConversion.java
 007 ReverseInteger.java
 008 StringToInteger
 009 PalindromeNumber.java
+014 LongestCommonPrefix.java
 015 3Sum.java
 017 LetterCombinationsOfAPhoneNumber.java
 018 4Sum.java
@@ -392,6 +395,7 @@
 237 DeleteNodeInALinkedList.java
 238 ProductOfArrayExceptSelf.java
 257 BinaryTreePaths.java
+258 AddDigits.java
 260 SingleNumber3.java
 268 MissingNumber.java
 279 PerfectSquares.java
@@ -439,7 +443,7 @@
 674 LongestContinuousIncreasingSubsequence.java
 687 LongestUnivaluePath.java
 =============================
-* Quiz Java Number: 150
+* Quiz Java Number: 151
 ```
-* Quiz  Java Number: 150
-* Total Java Number: 215
+* Quiz  Java Number: 151
+* Total Java Number: 216

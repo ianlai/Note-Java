@@ -5,14 +5,16 @@ import java.util.concurrent.TimeUnit;
 public class _062_UniquePaths {
 
 	public static void main(String[] args) {
-		System.out.println(uniquePaths(5,14));
 		
+		System.out.println(uniquePaths1(5,14));
+		
+		/* Test the time difference between top-down and buttom-up approaches (both of them overflow) */
 		long startTime1 = System.nanoTime();
-		System.out.println(uniquePaths(32,14));
+		System.out.println(uniquePaths1(7000,144));  //overflow 
 		long endTime1 = System.nanoTime();
 		
 		long startTime2 = System.nanoTime();
-		System.out.println(uniquePaths2(32,14));
+		System.out.println(uniquePaths2(7000,144));  //overflow 
 		long endTime2 = System.nanoTime();
 		
 		long elapsedTime1 = TimeUnit.NANOSECONDS.toMillis(endTime1 - startTime1);
@@ -21,32 +23,31 @@ public class _062_UniquePaths {
 		System.out.println("Method1(ms):" + elapsedTime1);
 		System.out.println("Method2(ms):" + elapsedTime2);
 	}
-    public static int uniquePaths(int m, int n) {
-        int[][] mat = new int[m+1][n+1];
-        for(int i=0; i<m+1; ++i){
-            for(int j=0; j<n+1; ++j){
+	
+	/* Top-down (Memoization) */
+    public static long uniquePaths1(int m, int n) {
+    	long[][] mat = new long[m][n];
+        for(int i=0; i<m; ++i){
+            for(int j=0; j<n; ++j){
                 mat[i][j]=-1;
             }
         }
-        return p(mat, m, n);
+        return p(mat, m-1, n-1);
     }
-    private static int p(int[][] mat, int m, int n){
-        //System.out.println(m + " -- " + n);
-        if(m==1 || n==1) return 1;
-        if(mat[m][n]==-1){
-            mat[m][n] = p(mat, m-1, n) + p(mat, m, n-1);
+    private static long p(long[][] mat, int i, int j){
+        if(i==0 || j==0) return 1;
+        if(mat[i][j]==-1){
+            mat[i][j] = p(mat, i-1, j) + p(mat, i, j-1);
         }
-        //System.out.println(m + " " + n + " " + mat[m][n]);
-        return mat[m][n];
+        return mat[i][j];
     }
     
-    public static int uniquePaths2(int m, int n)
+    /* Buttom-Up (Tabulation) */
+    public static long uniquePaths2(int m, int n)
     {
-        int[][] r = new int[m][n];
-        for (int i = 0; i < m; i++)
-        {
-            for (int j = 0 ; j < n ; j++)
-            {
+    	long[][] r = new long[m][n];
+        for (int i = 0; i < m; i++){
+            for (int j = 0 ; j < n ; j++){
                 if (i==0 || j==0)
                     r[i][j] = 1;
                 else
