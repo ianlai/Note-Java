@@ -180,6 +180,7 @@
 │           ├── _141_LinkedListCycle.java
 │           ├── _142_LinkedListCycle2.java
 │           ├── _147_InsertionSortList.java
+│           ├── _203_RemoveLinkedListElements.java
 │           ├── _206_ReverseLinkedList.java
 │           ├── _234_PalindromeLinkedList.java
 │           ├── _237_DeleteNodeInALinkedList.java
@@ -286,8 +287,7 @@
 │           └── _211_AddAndSearchWord.java
 └── misc
     ├── QuizAndKeyList.xlsm
-    ├── QuizAndKeyList_old.xlsx
-    └── ~$QuizAndKeyList.xlsm
+    └── QuizAndKeyList_old.xlsx
 ```
 ## Quiz List
 ```
@@ -376,6 +376,7 @@
 199 BinaryTreeRightSideView.java
 200 NumberOfIslands.java
 202 HappyNumber.java
+203 RemoveLinkedListElements.java
 204 CountPrimes.java
 206 ReverseLinkedList.java
 208 ImplementTrie.java
@@ -443,7 +444,7 @@
 674 LongestContinuousIncreasingSubsequence.java
 687 LongestUnivaluePath.java
 =============================
-* Quiz Java Number: 151
+* Quiz Java Number: 152
 ```
-* Quiz  Java Number: 151
-* Total Java Number: 216
+* Quiz  Java Number: 152
+* Total Java Number: 217
