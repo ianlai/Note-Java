@@ -234,6 +234,7 @@
 │       │   ├── _038_CountAndSay.java
 │       │   ├── _058_LengthOfLastWord.java
 │       │   ├── _125_ValidPalindrome.java
+│       │   ├── _242_ValidAnagram.java
 │       │   ├── _344_ReverseString.java
 │       │   ├── _383_RansomNote.java
 │       │   ├── _387_FirstUniqueCharacterInAString.java
@@ -395,6 +396,7 @@
 236 LowestCommonAncestorOfABinaryTree.java
 237 DeleteNodeInALinkedList.java
 238 ProductOfArrayExceptSelf.java
+242 ValidAnagram.java
 257 BinaryTreePaths.java
 258 AddDigits.java
 260 SingleNumber3.java
@@ -444,7 +446,7 @@
 674 LongestContinuousIncreasingSubsequence.java
 687 LongestUnivaluePath.java
 =============================
-* Quiz Java Number: 152
+* Quiz Java Number: 153
 ```
-* Quiz  Java Number: 152
-* Total Java Number: 217
+* Quiz  Java Number: 153
+* Total Java Number: 218
