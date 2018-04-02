@@ -3,6 +3,23 @@ package array;
 import java.util.ArrayList;
 import java.util.List;
 
+/*
+ * Given an array of integers where 1 ≤ a[i] ≤ n (n = size of array), 
+ * some elements appear twice and others appear once.
+ * Find all the elements of [1, n] inclusive that do not appear in this array.
+ * Could you do it without extra space and in O(n) runtime? 
+ * You may assume the returned list does not count as extra space.
+ * Example:
+ * Input:  [4,3,2,7,8,2,3,1]
+ * Output: [5,6]
+ */
+
+/* Each element appear: 0, 1, 2 times
+ * If one element found 1st time: toggle its corresponding position to be negative
+ * If one element found 2nd time: since its corresponding position is negative already, ignore it
+ * When the traverse finished, both one-time and two-time will be negative. 
+ * Only the positive one does not appear. 
+ */
 public class _448_FindAllNumbersDisappearedInAnArray {
 
 	public static void main(String[] args) {
@@ -12,7 +29,6 @@ public class _448_FindAllNumbersDisappearedInAnArray {
 		
 		System.out.println(obj.findDisappearedNumbers(arr1));
 		System.out.println(obj.findDisappearedNumbers(arr2));
-
 	}
 
     public List<Integer> findDisappearedNumbers(int[] nums) {
@@ -20,9 +36,10 @@ public class _448_FindAllNumbersDisappearedInAnArray {
         if(nums==null || nums.length==0) return ans;
         for(int i=0; i<nums.length; i++){
             int index = Math.abs(nums[i])-1;
-            if(nums[index]>0){
+            if(nums[index]>0){   //1st
                 nums[index] = -nums[index];
             }
+            //ignore 2nd (don't care)
         }
         for(int i=0; i<nums.length; i++){
             if(nums[i]>0){
