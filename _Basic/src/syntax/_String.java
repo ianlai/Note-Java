@@ -12,6 +12,7 @@ public class _String {
 		typeConversion();
 		stringEquality();
 		stringDivide();
+		testSubstring();
 	}
 
 	public static void calcCharOccurence() {
@@ -107,5 +108,12 @@ public class _String {
 		for(String s: list){
 			System.out.println(s);
 		}
+	}
+	public static void testSubstring(){
+		System.out.println("==========");
+		String s = "abcdefg";
+		System.out.println(s.substring(2, 3));  //begin index, end index
+		System.out.println(s.substring(2, 6));  //begin index, end index
+		System.out.println(s.indexOf('x'));
 	}
 }
