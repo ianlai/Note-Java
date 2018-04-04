@@ -56,7 +56,6 @@ public class _003_LongestSubstringWithoutRepeatingCharacters {
                 set.remove(s.charAt(i++));
             }
         }
-
         return max;
     }
 }

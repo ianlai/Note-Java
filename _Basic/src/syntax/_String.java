@@ -111,9 +111,12 @@ public class _String {
 	}
 	public static void testSubstring(){
 		System.out.println("==========");
-		String s = "abcdefg";
+		String s = "abcdefgabc";
 		System.out.println(s.substring(2, 3));  //begin index, end index
 		System.out.println(s.substring(2, 6));  //begin index, end index
-		System.out.println(s.indexOf('x'));
+		
+		System.out.println(s.indexOf('x'));     //-1
+		System.out.println(s.indexOf('b'));     //1
+		System.out.println(s.lastIndexOf('a')); //7
 	}
 }
