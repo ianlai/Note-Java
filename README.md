@@ -211,6 +211,7 @@
 │           ├── _172_FactorialTrailingZeroes.java
 │           ├── _204_CountPrimes.java
 │           ├── _258_AddDigits.java
+│           ├── _263_UglyNumber.java
 │           └── _537_ComplexNumberMultiplication.java
 ├── _Sorting
 │   ├── lib
@@ -410,6 +411,7 @@
 257 BinaryTreePaths.java
 258 AddDigits.java
 260 SingleNumber3.java
+263 UglyNumber.java
 268 MissingNumber.java
 279 PerfectSquares.java
 283 MoveZeroes.java
@@ -457,7 +459,7 @@
 674 LongestContinuousIncreasingSubsequence.java
 687 LongestUnivaluePath.java
 =============================
-* Quiz Java Number: 159
+* Quiz Java Number: 160
 ```
-* Quiz  Java Number: 159
-* Total Java Number: 224
+* Quiz  Java Number: 160
+* Total Java Number: 225
