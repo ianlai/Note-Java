@@ -182,6 +182,7 @@
 │           ├── _141_LinkedListCycle.java
 │           ├── _142_LinkedListCycle2.java
 │           ├── _147_InsertionSortList.java
+│           ├── _160_IntersectionOfTwoLinkedLists.java
 │           ├── _203_RemoveLinkedListElements.java
 │           ├── _206_ReverseLinkedList.java
 │           ├── _234_PalindromeLinkedList.java
@@ -375,6 +376,7 @@
 147 InsertionSortList.java
 151 ReverseWordsInAString.java
 155 MinStack.java
+160 IntersectionOfTwoLinkedLists.java
 162 FindPeakElement.java
 167 TwoSum2
 169 MajorityElement.java
@@ -459,7 +461,7 @@
 674 LongestContinuousIncreasingSubsequence.java
 687 LongestUnivaluePath.java
 =============================
-* Quiz Java Number: 160
+* Quiz Java Number: 161
 ```
-* Quiz  Java Number: 160
-* Total Java Number: 225
+* Quiz  Java Number: 161
+* Total Java Number: 226
