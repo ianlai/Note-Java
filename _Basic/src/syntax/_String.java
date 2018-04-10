@@ -118,5 +118,7 @@ public class _String {
 		System.out.println(s.indexOf('x'));     //-1
 		System.out.println(s.indexOf('b'));     //1
 		System.out.println(s.lastIndexOf('a')); //7
+		
+		System.out.println(s.contains("cde"));
 	}
 }

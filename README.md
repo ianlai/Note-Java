@@ -43,6 +43,7 @@
 │       │   ├── _088_MergeSortedArray.java
 │       │   ├── _118_PascalsTriangle.java
 │       │   ├── _121_BestTimeToBuyAndSellStock.java
+│       │   ├── _128_LongestConsecutiveSequence.java
 │       │   ├── _162_FindPeakElement.java
 │       │   ├── _189_RotateArray.java
 │       │   ├── _215_KthLargestElementInAnArray.java
@@ -295,7 +296,8 @@
 │           ├── _208_ImplementTrie.java
 │           └── _211_AddAndSearchWord.java
 └── misc
-    └── QuizAndKeyList.xlsm
+    ├── QuizAndKeyList.xlsm
+    └── ~$QuizAndKeyList.xlsm
 ```
 ## Quiz List
 ```
@@ -366,6 +368,7 @@
 120 Triangle.java
 121 BestTimeToBuyAndSellStock.java
 125 ValidPalindrome.java
+128 LongestConsecutiveSequence.java
 136 SingleNumber.java
 137 SingleNumber2.java
 141 LinkedListCycle.java
@@ -461,7 +464,7 @@
 674 LongestContinuousIncreasingSubsequence.java
 687 LongestUnivaluePath.java
 =============================
-* Quiz Java Number: 161
+* Quiz Java Number: 162
 ```
-* Quiz  Java Number: 161
-* Total Java Number: 226
+* Quiz  Java Number: 162
+* Total Java Number: 227
