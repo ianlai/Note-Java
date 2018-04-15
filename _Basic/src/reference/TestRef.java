@@ -68,6 +68,15 @@ public class TestRef {
 		
 		System.out.println("Array:         " + Arrays.toString(arr1) + " <-- keep the modification (Array)");
 		System.out.println("List:          " + list1 + " <-- keep the modification (List)");
+		
+		String sss1 = "sss1";
+		String sss2 = "sss2";
+		sss1 = sss2; 
+		sss2 = new String();
+		sss2 = "sss2-new";
+		sss1 = sss2;
+		System.out.println(sss1);
+		System.out.println(sss2);
 	}
 	private void modifyInt(int i){
 		i++;

@@ -233,6 +233,7 @@
 │   └── src
 │       ├── string
 │       │   ├── _003_LongestSubstringWithoutRepeatingCharacters.java
+│       │   ├── _005_LongestPalindromicSubstring.java
 │       │   ├── _008_StringToInteger_AtoI.java
 │       │   ├── _013_RomanToInteger.java
 │       │   ├── _014_LongestCommonPrefix.java
@@ -296,8 +297,7 @@
 │           ├── _208_ImplementTrie.java
 │           └── _211_AddAndSearchWord.java
 └── misc
-    ├── QuizAndKeyList.xlsm
-    └── ~$QuizAndKeyList.xlsm
+    └── QuizAndKeyList.xlsm
 ```
 ## Quiz List
 ```
@@ -305,6 +305,7 @@
 002 AddTwoNumbers.java
 003 LongestSubstringWithoutRepeatingCharacters.java
 004 MedianOfTwoSortedArrays.java
+005 LongestPalindromicSubstring.java
 006 ZigZagConversion.java
 007 ReverseInteger.java
 008 StringToInteger
@@ -464,7 +465,7 @@
 674 LongestContinuousIncreasingSubsequence.java
 687 LongestUnivaluePath.java
 =============================
-* Quiz Java Number: 162
+* Quiz Java Number: 163
 ```
-* Quiz  Java Number: 162
-* Total Java Number: 227
+* Quiz  Java Number: 163
+* Total Java Number: 228
