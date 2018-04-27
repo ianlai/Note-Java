@@ -47,6 +47,7 @@ public class _077_Combinations {
     }
     
     /* We don't need a used array to record the whole array because combination*/ 
+    /* The output will be sorted because the order does not matter */
     private void backtracking(List<List<Integer>> ll, List<Integer> cur, int[] nums, int index, int left){
     	if(left==0){
     		ll.add(new ArrayList<Integer>(cur));

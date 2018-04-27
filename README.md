@@ -75,7 +75,8 @@
 │       │   ├── _022_GenerateParentheses.java
 │       │   ├── _031_NextPermutation.java
 │       │   ├── _046_Permutations.java
-│       │   └── _047_Permutations2.java
+│       │   ├── _047_Permutations2.java
+│       │   └── _060_PermutationSequence.java
 │       ├── subsets
 │       │   ├── _078_Subsets.java
 │       │   ├── _090_Subsets2.java
@@ -252,7 +253,8 @@
 │       │   ├── _412_FizzBuzz.java
 │       │   ├── _541_ReverseString2.java
 │       │   ├── _557_ReverseWordsInAString3.java
-│       │   └── _657_JudgeRouteCircle.java
+│       │   ├── _657_JudgeRouteCircle.java
+│       │   └── _771_JewelsAndStones.java
 │       └── stringMath
 │           ├── _043_MultiplyStrings.java
 │           ├── _066_PlusOne.java
@@ -298,7 +300,8 @@
 │           ├── _208_ImplementTrie.java
 │           └── _211_AddAndSearchWord.java
 └── misc
-    └── QuizAndKeyList.xlsm
+    ├── QuizAndKeyList.xlsm
+    └── ~$QuizAndKeyList.xlsm
 ```
 ## Quiz List
 ```
@@ -338,6 +341,7 @@
 056 MergeIntervals.java
 058 LengthOfLastWord.java
 059 SpiralMatrix2.java
+060 PermutationSequence.java
 061 RotateList.java
 062 UniquePaths.java
 063 UniquePaths2.java
@@ -466,8 +470,9 @@
 669 TrimABinarySerachTree.java
 674 LongestContinuousIncreasingSubsequence.java
 687 LongestUnivaluePath.java
+771 JewelsAndStones.java
 =============================
-* Quiz Java Number: 164
+* Quiz Java Number: 166
 ```
-* Quiz  Java Number: 164
-* Total Java Number: 229
+* Quiz  Java Number: 166
+* Total Java Number: 231
