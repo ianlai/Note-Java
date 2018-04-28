@@ -30,7 +30,7 @@ import containers.Heap;
  * (8) Count     Sort time    (ms): 3
  */
 
-public class Main {
+public class Tester {
 	final static int number = 10000;
 	final static int numberRange = 50000;
 	final static Random rand = new Random();
