@@ -1,4 +1,4 @@
-package array;
+package sellStock;
 
 public class _121_BestTimeToBuyAndSellStock {
 

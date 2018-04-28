@@ -1,4 +1,4 @@
-package array;
+package sellStock;
 
 import java.util.Arrays;
 
