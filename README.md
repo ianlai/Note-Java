@@ -236,9 +236,11 @@
 │           └── _075_SortColors.java
 ├── _String
 │   └── src
+│       ├── palindrome
+│       │   ├── _005_LongestPalindromicSubstring.java
+│       │   └── _647_PalindromicSubstrings.java
 │       ├── string
 │       │   ├── _003_LongestSubstringWithoutRepeatingCharacters.java
-│       │   ├── _005_LongestPalindromicSubstring.java
 │       │   ├── _008_StringToInteger_AtoI.java
 │       │   ├── _013_RomanToInteger.java
 │       │   ├── _014_LongestCommonPrefix.java
@@ -470,13 +472,14 @@
 572 SubtreeOfAnotherTree.java
 617 MergeTwoBinaryTree.java
 637 AverageOfLevelsInBinaryTree.java
+647 PalindromicSubstrings.java
 657 JudgeRouteCircle.java
 669 TrimABinarySerachTree.java
 674 LongestContinuousIncreasingSubsequence.java
 687 LongestUnivaluePath.java
 771 JewelsAndStones.java
 =============================
-* Quiz Java Number: 168
+* Quiz Java Number: 169
 ```
-* Quiz  Java Number: 168
-* Total Java Number: 233
+* Quiz  Java Number: 169
+* Total Java Number: 234

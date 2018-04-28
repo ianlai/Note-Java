@@ -1,4 +1,4 @@
-package string;
+package palindrome;
 
 /* 
  * Considering only alphanumeric characters and ignoring cases.

@@ -1,5 +1,4 @@
 package linkedlist;
-import java.util.Arrays;
 
 //
 // https://leetcode.com/problems/remove-duplicates-from-sorted-list/description/
