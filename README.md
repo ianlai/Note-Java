@@ -238,6 +238,8 @@
 │   └── src
 │       ├── palindrome
 │       │   ├── _005_LongestPalindromicSubstring.java
+│       │   ├── _125_ValidPalindrome.java
+│       │   ├── _516_LongestPalindromicSubsequence.java
 │       │   └── _647_PalindromicSubstrings.java
 │       ├── string
 │       │   ├── _003_LongestSubstringWithoutRepeatingCharacters.java
@@ -248,7 +250,6 @@
 │       │   ├── _028_ImplementStrStr.java
 │       │   ├── _038_CountAndSay.java
 │       │   ├── _058_LengthOfLastWord.java
-│       │   ├── _125_ValidPalindrome.java
 │       │   ├── _151_ReverseWordsInAString.java
 │       │   ├── _242_ValidAnagram.java
 │       │   ├── _344_ReverseString.java
@@ -463,6 +464,7 @@
 461 HammingDistance.java
 463 IslandPerimeter.java
 491 IncreaseSubsequences.java
+516 LongestPalindromicSubsequence.java
 535 EncodeAndDecodeTinyURL.java
 537 ComplexNumberMultiplication.java
 538 ConvertBSTtoGreaterTree.java
@@ -479,7 +481,7 @@
 687 LongestUnivaluePath.java
 771 JewelsAndStones.java
 =============================
-* Quiz Java Number: 169
+* Quiz Java Number: 170
 ```
-* Quiz  Java Number: 169
-* Total Java Number: 234
+* Quiz  Java Number: 170
+* Total Java Number: 235
