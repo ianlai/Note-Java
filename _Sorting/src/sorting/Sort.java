@@ -5,6 +5,8 @@ import java.util.Random;
 
 public abstract class Sort {
 	int[] data = new int[]{5,8,2,7,1,4,7,2,9,3,5,2,4};
+	//int[] data = new int[]{5,4,3,2};
+	//int[] data = new int[]{5,4,3,2,1};
 	abstract public void sorting();
 	public void putData(int[] d){
 		data = d;
