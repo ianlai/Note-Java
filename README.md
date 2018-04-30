@@ -299,6 +299,7 @@
 │       │   ├── _226_InvertBinaryTree.java
 │       │   ├── _236_LowestCommonAncestorOfABinaryTree.java
 │       │   ├── _257_BinaryTreePaths.java
+│       │   ├── _543_DiameterOfBinaryTree.java
 │       │   ├── _572_SubtreeOfAnotherTree.java
 │       │   ├── _617_MergeTwoBinaryTree.java
 │       │   ├── _637_AverageOfLevelsInBinaryTree.java
@@ -471,6 +472,7 @@
 537 ComplexNumberMultiplication.java
 538 ConvertBSTtoGreaterTree.java
 541 ReverseString2.java
+543 DiameterOfBinaryTree.java
 557 ReverseWordsInAString3.java
 561 ArrayPartition1.java
 572 SubtreeOfAnotherTree.java
@@ -483,7 +485,7 @@
 687 LongestUnivaluePath.java
 771 JewelsAndStones.java
 =============================
-* Quiz Java Number: 171
+* Quiz Java Number: 172
 ```
-* Quiz  Java Number: 171
-* Total Java Number: 236
+* Quiz  Java Number: 172
+* Total Java Number: 237
