@@ -17,12 +17,22 @@ public class _104_MaximumDepthOfBinaryTree {
 		_104_MaximumDepthOfBinaryTree obj = new _104_MaximumDepthOfBinaryTree();
 		Integer[] arr = new Integer[]{1,2,3,4,5,6,7,8,9,null,1,2,3,4,5,6,7,8,9,null,1,2,3,4,5,6,7,8,9,9,8,7,6,5,4,3,2,1};
 		TreeNode tree = TreeNode.arrayToTree(arr);
-		int d = obj.maxDepth(tree);
 		List<List<Integer>> ll = tree.levelOrder();
-		System.out.println("Depth: " + d);
+		int d1 = obj.maxDepth(tree);
+		int d2 = obj.maxDepth2(tree);
+		System.out.println("Depth (method1): " + d1);
+		System.out.println("Depth (method2): " + d2);
 		System.out.println(ll);
 	}
-    public int maxDepth(TreeNode root) {
+	/* Method1: Recursive (simpler) */
+	public int maxDepth(TreeNode n){
+		if(n==null) return 0;  
+		//if(n.left==null&&n.right==null) return 1;
+		int height = Math.max(maxDepth(n.left), maxDepth(n.right));
+		return height+1;
+	}
+	/* Method2: DFS */
+    public int maxDepth2(TreeNode root) {
         int[] depth = new int[2];
         depth[0] = 1;   //max depth
         depth[1] = 1;   //current depth
