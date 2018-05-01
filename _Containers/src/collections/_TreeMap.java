@@ -12,7 +12,15 @@ public class _TreeMap {
 		tm.put(2, 2);
 		tm.put(7, 10);
 		tm.put(1, 150);
-		tm.pollLastEntry(); 
+		tm.put(9, 65);
+		tm.put(4, 15);
 		System.out.println(tm);  //sorted by key
+		
+		
+		System.out.println("===== Sorted by key =====");
+		while(!tm.isEmpty()){
+			Map.Entry<Integer, Integer> pair = tm.pollLastEntry();
+			System.out.println(pair.getKey() + "--" + pair.getValue());
+		}
 	}
 }

@@ -15,6 +15,7 @@ public class _347_TopKFrequentElements {
 		
 		System.out.println("Original:");
 		System.out.println(Arrays.toString(nums));
+		System.out.println("=================");
 		
 		List<Integer> l = topKFrequent(nums, k);
 		
@@ -28,7 +29,7 @@ public class _347_TopKFrequentElements {
         TreeMap<Integer, List<Integer>> tm = new TreeMap<>();
         List<Integer> ans = new ArrayList<>();
         
-        /* scan the original array, calculate the frequency, put into a hashmap <element, freq> */
+        /* Scan the original array, calculate the frequency, put into a hashmap <element, freq> */
         for(int i=0; i<nums.length; ++i){
             if(hm.containsKey(nums[i])){
                 hm.put(nums[i], hm.get(nums[i])+1); //existed 
@@ -36,10 +37,12 @@ public class _347_TopKFrequentElements {
                 hm.put(nums[i], 1);                 //just added 
             }
         }
+        
         System.out.println("Calculation:");
         System.out.println(hm);
+        System.out.println("=================");
         
-        /* iterate the hashmap, put into a treemap <freq, element list> */
+        /* Iterate the hashmap, put into a treemap <freq, element list> */
         for(int key: hm.keySet()){
             int freq = hm.get(key);
             int value = key;
@@ -50,12 +53,12 @@ public class _347_TopKFrequentElements {
                 l.add(value);
                 tm.put(freq, l);
             }
-            //tm.put(hm.get(key), key);  
         }
         System.out.println("Sorted freq:");
         System.out.println(tm);
+        System.out.println("=================");
         
-        /* get the element from treemap's tail (last) */
+        /* Get the element from treemap's tail (last) */
         
         /* Sol-1: use addAll(), it sometimes will input too many elements */
 //        while(ans.size()<k){
