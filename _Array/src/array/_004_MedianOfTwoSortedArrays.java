@@ -44,9 +44,9 @@ public class _004_MedianOfTwoSortedArrays {
         int mod =p%2;
         
         int[] combine = new int[p];
-        int i=0;
-        int j=0;
-        int k=0;
+        int i=0;  //pointer of nums1
+        int j=0;  //pointer of nums2
+        int k=0;  //pointer of combine
         
         /* If we use this condition, it will leaf loop when either of them finish.
           (this is not correct if it does not yet reaching (m+n/2) )*/
@@ -72,9 +72,11 @@ public class _004_MedianOfTwoSortedArrays {
             }
             k++; 
             
+            /* p is even */
             if(k==half+1 && mod==0){
                 return (double)(combine[k-1]+combine[k-2])/2;  //cast to double is necessary, or it will be round down
             }
+            /* p is odd */
             if(k==half+1 && mod==1){
                 return combine[k-1];
             }
