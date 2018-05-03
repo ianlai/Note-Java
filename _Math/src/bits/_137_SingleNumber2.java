@@ -1,6 +1,15 @@
 package bits;
 
-/* Every element appears THREE times, except one only appears ONCE. Find it. */
+/* Every element appears THREE times, except one only appears ONCE. Find it. 
+ * Example 1:
+ * Input: [2,2,3,2]
+ * Output: 3
+ * 
+ * Example 2:
+ * Input: [0,1,0,1,0,1,99]
+ * Output: 99
+ * */
+
 public class _137_SingleNumber2 {
 
 	public static void main(String[] args) {
@@ -34,7 +43,7 @@ public class _137_SingleNumber2 {
         for(int i=0; i<nums.length; i++){
             int f = first;    //record
             int s = second;   //not needed, just save the characters
-            int t = nums[i];  //not needed, just save the charaters
+            int t = nums[i];  //not needed, just save the characters
             first  = ~f&s&t | f&~s&~t;   
             second = ~f & (s^t); 
         }

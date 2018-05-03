@@ -4,7 +4,7 @@ public class _268_MissingNumber {
 
 	public static void main(String[] args) {
 		_268_MissingNumber obj = new _268_MissingNumber();
-		int[] arr = new int[]{0,1,2,3,4,  6,7,8,9};
+		int[] arr = new int[]{0,1,2,3,4, 6,7,8,9};
 		System.out.println(obj.missingNumber(arr));
 	}
     public int missingNumber(int[] nums) {
