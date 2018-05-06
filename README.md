@@ -261,7 +261,8 @@
 │       │   ├── _541_ReverseString2.java
 │       │   ├── _557_ReverseWordsInAString3.java
 │       │   ├── _657_JudgeRouteCircle.java
-│       │   └── _771_JewelsAndStones.java
+│       │   ├── _771_JewelsAndStones.java
+│       │   └── _796_RotateString.java
 │       └── stringMath
 │           ├── _043_MultiplyStrings.java
 │           ├── _066_PlusOne.java
@@ -484,8 +485,9 @@
 674 LongestContinuousIncreasingSubsequence.java
 687 LongestUnivaluePath.java
 771 JewelsAndStones.java
+796 RotateString.java
 =============================
-* Quiz Java Number: 172
+* Quiz Java Number: 173
 ```
-* Quiz  Java Number: 172
-* Total Java Number: 237
+* Quiz  Java Number: 173
+* Total Java Number: 238
