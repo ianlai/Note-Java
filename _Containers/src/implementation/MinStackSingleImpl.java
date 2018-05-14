@@ -10,7 +10,7 @@ public class MinStackSingleImpl implements MinStack{
 			mMin = x; 
 			mStack.push(x);
 		}else {
-			if(x<mMin) {
+			if(x<=mMin) {
 				mStack.push(mMin);  //Add one more min if input smaller than min (important)
 				mMin = x;	
 			}

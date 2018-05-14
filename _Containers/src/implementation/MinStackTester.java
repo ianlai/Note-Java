@@ -1,5 +1,6 @@
 package implementation;
 import java.util.Arrays;
+import java.util.Random;
 import java.util.Stack;
 
 import implementation.MinStack;
@@ -22,14 +23,21 @@ public class MinStackTester{
 		MinStack mss = new MinStackSingleImpl();
 		MinStack msd = new MinStackDoubleImpl();
 		
-		test(mss, false);
-		test(msd, false);
+		/* Single Test */
+		singleTest(mss, false);
+		singleTest(msd, false);
 		
 		mss.clear();
 		msd.clear();
 		
-		test(mss, true);  /* Error! SingleImpl cannot handle duplicates */
-		test(msd, true);
+		singleTest(mss, true);  /* SingleImpl can handle duplicates as long as the condition in push is "<=" instead of "<" */
+		singleTest(msd, true);
+		
+		mss.clear();
+		msd.clear();
+		
+		/* Multiple Test */
+		multipleTest(mss, msd);
 	}
 	private static void init(MinStack ms){
 		int[] arr = new int[]{6,3,5,2,7,1,9,4};
@@ -51,7 +59,41 @@ public class MinStackTester{
 		}
 		System.out.println();
 	}
-	public static void test(MinStack ms, boolean isDup) {
+	public static void multipleTest(MinStack mss, MinStack msd) {
+		Random rand = new Random();
+		int round = 100;
+		for(int i=0; i<round; i++){
+			/* input 20 */
+			for(int j=0; j<20; j++){
+				int t = rand.nextInt(10);
+				mss.push(t);
+				msd.push(t);
+			}
+			/* pop 5 */
+			for(int j=0; j<5; j++){
+				mss.pop();
+				msd.pop();
+			}
+			/* input 20 */
+			for(int j=0; j<20; j++){
+				int t = rand.nextInt(10);
+				mss.push(t);
+				msd.push(t);
+			}
+			/* pop 5 */
+			for(int j=0; j<5; j++){
+				mss.pop();
+				msd.pop();
+			}
+			System.out.print(i + " :");
+			System.out.print((mss.top()==msd.top()) + " ");
+			System.out.print((mss.top()==msd.top()) );
+			System.out.println();
+		}
+		
+	}
+	
+	public static void singleTest(MinStack ms, boolean isDup) {
 		System.out.println("=====================================");
 		System.out.println("===  " + ms.getClass().getSimpleName());
 		System.out.println("=====================================");
