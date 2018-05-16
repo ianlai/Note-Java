@@ -24,13 +24,13 @@ public class _HashSet {
 		
 		/* String comparison */ 
 		if(s1=="abc") 
-			System.out.println("same1");
+			System.out.println("same1");  //same
 		if(s1.equals("abc")) 
-			System.out.println("same2");
+			System.out.println("same2");  //same
 		if(s1==s3) 
 			System.out.println("same3");  //not the same (two objects) 
-		if(s1.equals(s3)) 
-			System.out.println("same4");
+		if(s1.equals(s3))                
+			System.out.println("same4");  //same
 		
 		/* Prevent redundant */
 		set.add(s1);               //added string var

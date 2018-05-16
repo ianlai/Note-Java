@@ -11,6 +11,7 @@ public class _078_Subsets {
 	public static void main(String[] args) {
 		_078_Subsets obj = new _078_Subsets();
 		
+		/* Comparator by size */
 		//Java8
 		Comparator<List> sizeComp = (a1, a2) -> a1.size() - a2.size();
 		
@@ -22,6 +23,27 @@ public class _078_Subsets {
 //			}
 //		};
 		
+		/* Comparator by numbers inside */
+		//Java7
+		Comparator<List<Integer>> numComp = new Comparator<List<Integer>>(){
+			@Override
+			public int compare(List<Integer> a1, List<Integer> a2) {
+				if(a1.size()==a2.size()) {
+					StringBuilder sb1 = new StringBuilder();
+					for(int e: a1) {
+						sb1.append(e);
+					}
+					StringBuilder sb2 = new StringBuilder();
+					for(int e: a2) {
+						sb2.append(e);
+					}
+					return Integer.parseInt(sb1.toString()) - Integer.parseInt(sb2.toString());
+				}else {
+					return a1.size() - a2.size();
+				}
+			}
+		};
+		
 		List<Integer> list = new ArrayList<Integer>(Arrays.asList(1,2,3,4));
 
 		
@@ -32,7 +54,8 @@ public class _078_Subsets {
 		powerset2 = obj.getPowersetIterative(list);
 		
 		/* sorting the result */
-		Collections.sort(powerset1, sizeComp);
+		//Collections.sort(powerset1, sizeComp);
+		Collections.sort(powerset1, numComp);
 		
 		System.out.println("===== Recursive =====");
 		System.out.println(powerset1);
@@ -41,56 +64,35 @@ public class _078_Subsets {
 		System.out.println("===== Iterative =====");
 		System.out.println(powerset2);
 		System.out.println(powerset2.size());
-		
-		obj.testCopyList();
-		obj.testCopyList2();
 	}
-	
-	public void testCopyList(){
-		List<List<Integer>> ll1 = new ArrayList<List<Integer>>();
-		List<List<Integer>> ll2 = new ArrayList<List<Integer>>();
-		ll1.add(new ArrayList<Integer>(Arrays.asList(1,2,3)));
-		ll1.add(new ArrayList<Integer>(Arrays.asList(4,5,6)));
-		ll1.add(new ArrayList<Integer>(Arrays.asList(7,8,9)));
-		ll2.addAll(ll1); 
-		ll1.clear();
-		System.out.println(ll1);
-		System.out.println(ll2);  //ll2 can show the list correctly even using addAll()	
-	}
-	public void testCopyList2(){
-		List<List<Integer>> ll = new ArrayList<List<Integer>>();
-		List<Integer> l = new ArrayList<>();
-		l.add(9);
-		ll.add(l);
-		System.out.println(ll);
-		l.add(999);
-		System.out.println(ll);  //l add 999 will reflect in ll even l is inserted into ll before
-	}
+	//----------------------------------------------------
 	/* Iterative */
 	public List<List<Integer>> getPowersetIterative(List<Integer> set) {
 		if (set == null || set.size() == 0)
 			return null;
 		List<List<Integer>> answer = new ArrayList<List<Integer>>();
 		for (int i = 0; i < set.size(); i++) {
-
+			/* (1) answer has original elements (last round) ex. [1] [1,2] [2]*/
+			
+			/* (2) add new elements with (1) listlist ex. [1,3] [1,2,3] [2,3] */
 			List<List<Integer>> temp = new ArrayList<List<Integer>>();
 			for (List<Integer> l : answer) {
 				List<Integer> lwithNew = new ArrayList<Integer>(l);
 				lwithNew.add(set.get(i));
 				temp.add(lwithNew);
 			}
-			
+			/* (3) add new single element ex. [3]*/
 			List<Integer> single = new ArrayList<Integer>();
 			single.add(set.get(i));
 			temp.add(single);
 	 
 			answer.addAll(temp);
 		}
-		/* Add empty list */
+		/* (4) add empty list ex. [] */
 		answer.add(new ArrayList<Integer>());
 		return answer; 
 	}
-
+	//----------------------------------------------------
 	/* Recursive */
 	public List<List<Integer>> getPowerset(List<Integer> set) {
 		return getPowerset(set, set.size() - 1);
@@ -111,7 +113,10 @@ public class _078_Subsets {
 			
 			//answer.addAll(newSuperset);  //create new sets based on old sets
 			for(List<Integer> subset: newSuperset){
+				/* without new item */ 
 				answer.add(new ArrayList<Integer>(subset));   //copy by own definition (very important)
+				
+				/* with new items */
 				subset.add(item);        //finish creating the new sets
 				answer.add(subset);      //add the new sets to powerset
 			}

@@ -2,36 +2,71 @@ package subsets;
 
 import java.util.ArrayList;
 import java.util.Arrays;
+import java.util.Collections;
+import java.util.Comparator;
 import java.util.List;
 
 public class _090_Subsets2 {
 
 	public static void main(String[] args) {
 		_090_Subsets2 obj = new _090_Subsets2();
-		int[] arr = new int[]{1,2,2,1,3}; 
+		int[] arr = new int[]{1,2,2,1}; 
 		System.out.println(Arrays.toString(arr));
 		
+		/* Comparator by numbers inside */
+		//Java7
+		Comparator<List<Integer>> numComp = new Comparator<List<Integer>>(){
+			@Override
+			public int compare(List<Integer> a1, List<Integer> a2) {
+				if(a1.size()==a2.size()) {
+					StringBuilder sb1 = new StringBuilder();
+					for(int e: a1) {
+						sb1.append(e);
+					}
+					StringBuilder sb2 = new StringBuilder();
+					for(int e: a2) {
+						sb2.append(e);
+					}
+					return Integer.parseInt(sb1.toString()) - Integer.parseInt(sb2.toString());
+				}else {
+					return a1.size() - a2.size();
+				}
+			}
+		};
 		
+		/* Wrong answer */
 		System.out.println("=========== subsets1 ===========");
 		List<List<Integer>> ll1 = obj.subsets1(arr);
+		
+		
+		/* Wrong answer ; same concept as subsetsWithDup2 */ 
+		System.out.println("=========== subsets2 ===========");
+		List<List<Integer>> ll2 = obj.subsets2(arr);
+		
+		/* Correct answer */
+		List<List<Integer>> lld1 = obj.subsetsWithDup1(arr);
+		System.out.println("=========== subsetsWithDup1 ===========");
+		
+		/* Correct answer */
+		System.out.println("=========== subsetsWithDup2 ===========");
+		List<List<Integer>> lld2 = obj.subsetsWithDup2(arr);
+
+		/* Sort the answer by size and numbers (not required, just for easier debugging) */
+		Collections.sort(ll1, numComp);
+		Collections.sort(ll2, numComp);
+		Collections.sort(lld1, numComp);
+		Collections.sort(lld2, numComp);
+		
+		/* Print out */
 		System.out.println(ll1);
 		System.out.println(ll1.size());
 		
-		/* Same concept as subsetsWithDup2 */ 
-		System.out.println("=========== subsets2 ===========");
-		List<List<Integer>> ll2 = obj.subsets2(arr);
 		System.out.println(ll2);
 		System.out.println(ll2.size());
 		
-		
-		List<List<Integer>> lld1 = obj.subsetsWithDup1(arr);
-		System.out.println("=========== subsetsWithDup1 ===========");
 		System.out.println(lld1);
 		System.out.println(lld1.size());
 		
-		/* Partially understood */ 
-		System.out.println("=========== subsetsWithDup2 ===========");
-		List<List<Integer>> lld2 = obj.subsetsWithDup2(arr);
 		System.out.println(lld2);
 		System.out.println(lld2.size());
 	}
@@ -56,7 +91,6 @@ public class _090_Subsets2 {
 			temp.add(single);
 
 			answer.addAll(temp);
-			//System.out.println(i + ": " + answer);
 		}
 		/* Add empty list */
 		answer.add(new ArrayList<Integer>());
@@ -64,8 +98,7 @@ public class _090_Subsets2 {
 	}
 	
 	//----------------------------------------------------
-	/* IMPORTANT */
-	/* Same concept with subsetsWithDup2 */
+	/* Backtrack: Same concept with subsetsWithDup2 (IMPORTANT) */
     public List<List<Integer>> subsets2(int[] nums) {
         if(nums==null || nums.length==0) return null;
         Arrays.sort(nums);
@@ -75,7 +108,9 @@ public class _090_Subsets2 {
         return ans;
     }
     private void dfsNo(int[] n, int index, List<Integer> cur, List<List<Integer>> ans){
-        ans.add(cur);
+        ans.add(cur);  /* addAll is not needed because each time we add one list by this line.
+         			    * dfsNo is called by 2^size times. 
+                        */ 
         for(int i=index; i<n.length;i++){
             List<Integer> next = new ArrayList<>(cur);
             next.add(n[i]);
@@ -85,7 +120,6 @@ public class _090_Subsets2 {
     }
 	
   //----------------------------------------------------
-    
     /* Not dive into it yet */
 	public List<List<Integer>> subsetsWithDup1(int[] nums) {
 	    Arrays.sort(nums);
@@ -117,7 +151,7 @@ public class _090_Subsets2 {
 	//----------------------------------------------------
 	
 	/* IMPORTANT */
-	/* Partially understood */
+	/* Backtrack: Same concept with subsets2 (IMPORTANT), only added two lines to skip the redundancy */
     public List<List<Integer>> subsetsWithDup2(int[] nums) {
         Arrays.sort(nums);
         List<List<Integer>> result= new ArrayList<>();
@@ -126,24 +160,15 @@ public class _090_Subsets2 {
     }
     
     public void dfs(int[] nums,int index,List<Integer> path,List<List<Integer>> result){
-		//System.out.println("---------");
-		//System.out.println("n[" + index + "]");
-
         result.add(path);
-        //System.out.println(path);
-        //System.out.println(result);
 
         for(int i=index;i<nums.length;i++){
             if(i>index&&nums[i]==nums[i-1]){
-            	//result.add(new ArrayList<>(Arrays.asList(-1))); //for debug
             	continue;
             }
             List<Integer> nPath= new ArrayList<>(path);
-            //System.out.println("i: " + i + "^ nPath:" + nPath);
             nPath.add(nums[i]);
-            //System.out.println("i: " + i + "v nPath:" + nPath);
             dfs(nums,i+1,nPath,result);
         }
-        //System.out.println(result);
     }
 }
