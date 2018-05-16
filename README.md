@@ -41,6 +41,7 @@
 │       │   ├── _026_RemoveDuplicatesFromSortedArray.java
 │       │   ├── _027_RemoveElement.java
 │       │   ├── _033_SearchInRotatedSortedArray.java
+│       │   ├── _035_SearchInsertPosition.java
 │       │   ├── _088_MergeSortedArray.java
 │       │   ├── _118_PascalsTriangle.java
 │       │   ├── _128_LongestConsecutiveSequence.java
@@ -338,6 +339,7 @@
 028 ImplementStrStr.java
 031 NextPermutation.java
 033 SearchInRotatedSortedArray.java
+035 SearchInsertPosition.java
 038 CountAndSay.java
 043 MultiplyStrings.java
 046 Permutations.java
@@ -487,7 +489,7 @@
 771 JewelsAndStones.java
 796 RotateString.java
 =============================
-* Quiz Java Number: 173
+* Quiz Java Number: 174
 ```
-* Quiz  Java Number: 173
-* Total Java Number: 238
+* Quiz  Java Number: 174
+* Total Java Number: 239
