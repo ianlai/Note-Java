@@ -1,6 +1,7 @@
 package collections;
 
 import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.Iterator;
 import java.util.LinkedList;
 import java.util.List;
@@ -32,6 +33,9 @@ public class _List {
 		set(l);
 		print(l);
 		System.out.println(l.contains(999));
+		
+		testCopyList();
+		testCopyList2();
 	}
 	public static void addTail(List<Integer> l){
 		l.add(1);
@@ -52,6 +56,26 @@ public class _List {
 	}
 	public static void set(List<Integer> l){
 		l.set(0,999);  
+	}
+	public static void testCopyList(){
+		List<List<Integer>> ll1 = new ArrayList<List<Integer>>();
+		List<List<Integer>> ll2 = new ArrayList<List<Integer>>();
+		ll1.add(new ArrayList<Integer>(Arrays.asList(1,2,3)));
+		ll1.add(new ArrayList<Integer>(Arrays.asList(4,5,6)));
+		ll1.add(new ArrayList<Integer>(Arrays.asList(7,8,9)));
+		ll2.addAll(ll1); 
+		ll1.clear();
+		System.out.println(ll1);
+		System.out.println(ll2);  //ll2 can show the list correctly even using addAll()	
+	}
+	public static void testCopyList2(){
+		List<List<Integer>> ll = new ArrayList<List<Integer>>();
+		List<Integer> l = new ArrayList<>();
+		l.add(9);
+		ll.add(l);
+		System.out.println(ll);
+		l.add(999);
+		System.out.println(ll);  //l add 999 will reflect in ll even l is inserted into ll before
 	}
 	public static void print(List<Integer> l){
 		Iterator it = l.iterator();
