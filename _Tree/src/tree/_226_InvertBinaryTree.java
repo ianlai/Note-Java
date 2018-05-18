@@ -1,5 +1,20 @@
 package tree;
+/* 
+ * Input:
+	     4
+	   /   \
+	  2     7
+	 / \   / \
+	1   3 6   9
 
+	Output:
+	
+	     4
+	   /   \
+	  7     2
+	 / \   / \
+	9   6 3   1
+ */
 public class _226_InvertBinaryTree {
 
 	public static void main(String[] args) {
@@ -15,11 +30,12 @@ public class _226_InvertBinaryTree {
 		t3.printBFS();
 	}
     public TreeNode invertTree(TreeNode n) {
-        if(n==null) return null;
-        TreeNode l = invertTree(n.left);
-        TreeNode r = invertTree(n.right);
-        n.right = l;
-        n.left  = r;
+        if(n==null) return n;
+        
+        /* swap left and right */
+        TreeNode temp = n.right; 
+        n.right=invertTree(n.left);
+        n.left =invertTree(temp);
         return n;
     }
 }

@@ -25,9 +25,11 @@ public class _094_BinaryTreeInorderTraversal {
 		_094_BinaryTreeInorderTraversal obj = new _094_BinaryTreeInorderTraversal();
 		TreeNode tree = TreeNode.getDefaultTree();
 		List<Integer> list1 = obj.inorderTraversal(tree);
-		List<Integer> list2 = obj.inorderTraversalRecursive(tree);
+		List<Integer> list2 = obj.inorderTraversalRecursive1(tree);
+		List<Integer> list3 = obj.inorderTraversalRecursive2(tree);
 		System.out.println(list1);
 		System.out.println(list2);
+		System.out.println(list3);
 	}
 	
 	/* Iteratively */
@@ -50,20 +52,30 @@ public class _094_BinaryTreeInorderTraversal {
         return l;
     }
     
-	/* Recursive */
-    public List<Integer> inorderTraversalRecursive(TreeNode root) {
+	/* Recursive (list defined inside) */
+    public List<Integer> inorderTraversalRecursive1(TreeNode root) {
         
         List<Integer> list = new ArrayList<Integer>();
         if(root==null) return list;
         
-        List<Integer> listLeft = inorderTraversal(root.left);
+        List<Integer> listLeft = inorderTraversalRecursive1(root.left);
         if(listLeft!=null) list.addAll(listLeft);
         
         list.add(root.val);
         
-        List<Integer> listRight = inorderTraversal(root.right);
+        List<Integer> listRight = inorderTraversalRecursive1(root.right);
         if(listRight!=null) list.addAll(listRight);
         
         return list;
+    }
+    
+	/* Recursive (list defined outside) */
+    List<Integer> mList = new ArrayList<Integer>();
+    public List<Integer> inorderTraversalRecursive2(TreeNode root) {
+        if(root==null) return null;        
+        inorderTraversalRecursive2(root.left);
+        mList.add(root.val);
+        inorderTraversalRecursive2(root.right);        
+        return mList;
     }
 }
