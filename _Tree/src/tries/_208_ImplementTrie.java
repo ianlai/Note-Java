@@ -2,6 +2,13 @@ package tries;
 import java.util.HashMap;
 import java.util.Map;
 
+/*
+ * Implement a trie with insert, search, and startsWith methods.
+ * 
+ * Note:
+ * You may assume that all inputs are consist of lowercase letters a-z.
+ */
+
 public class _208_ImplementTrie {
 	
 	class Trie {
@@ -32,7 +39,7 @@ public class _208_ImplementTrie {
 	        		temp = new TrieNode(c);
 	        		children.put(c, temp);
 	        	}
-	        	children = temp.children; //get the map, not go down 
+	        	children = temp.children; //get the next level's map
 	        }
 	        temp.isLeaf=true;
 	    }
