@@ -49,19 +49,21 @@ public class MyScanner {
 	public static void main(String[] args) {
 		System.out.println("Test scanner");
 		Scanner in = new Scanner(System.in);
-		int number = in.nextInt();
 		
+		/* ========== */
+		int number = in.nextInt();
+		System.out.println("Number:" + number);
+		
+		/* ========== */
 		List<Integer> node = new ArrayList<Integer>();
 		List<List<Integer>> ll = new ArrayList<List<Integer>>();
 		Queue<List<Integer>> queue = new ArrayDeque<List<Integer>>();
 		
 		String line="";
-		int count = 0; 
+		int count = 1; 
 		System.out.println(in.nextLine());  //empty
 
 		while(!(line=in.nextLine()).isEmpty()){
-			//System.out.println("a");
-			//String s = in.nextLine();
 			List<Integer> temp = new ArrayList<Integer>();   //[index, manager, value]
 			int manager = Integer.valueOf(line.split(" ")[0]);
 			int value = Integer.valueOf(line.split(" ")[1]);
@@ -73,7 +75,6 @@ public class MyScanner {
 			ll.add(temp);
 		}
 		
-		System.out.println("Number:" + number);
 		System.out.println("LL    :" + ll);
 		
 		List<Integer> root = new ArrayList<Integer>();		

@@ -28,25 +28,39 @@ public class _137_SingleNumber2 {
     	/* Three 3 states need to be record, we use two bits. 
     	 * 
     	 * Define the state transition to be 
-    	 * AB: 00  -> 01  -> 10  -> 00
-    	 *     (0)    (1)    (2)    (3)
+    	 * AB: 00  -> 01  -> 10  -> 00 
+    	 *     (0)    (1)    (2)    (3)   //we want to capture (1) and (2), so let (3) disappear 
     	 * Three input bits: A, B, input 
-    	 * Two output bits : NA, NB       //next state A, next state B 
-    	 * NA = ~ABI  | A~B~I
-    	 * NB = ~A~BI | ~AB~I = ~A(B^I) 
+    	 * Two output bits : NA, NB       //next state A, next state B (just for keeping the original A, B)
+    	 * 
+    	 * [Current]   [Next]
+    	 * A  B  I  ->  NA NB
+    	 * 0  0  0      0  0  (0, not changed) 
+    	 * 0  1  0      0  1  (1, not changed) 
+    	 * 1  0  0      1  0  (2, not changed) 
+    	 * 
+    	 * 0  0  1      0  1  (0->1, changed) 
+    	 * 0  1  1      1  0  (1->2, changed) 
+    	 * 1  0  1      0  0  (2->3, changed) 
+    	 * 
+    	 * NA = (~A)BI    | A(~B)(~I)
+    	 * NB = (~A)B(~I) | (~A)(~B)I  
     	 * 
     	 * Because the special element will be at state-1 (once), return B (second).
     	 * If the special element will be at state-2 (twice), then return A (first).
     	 */
-        int first  = 0;
-        int second = 0;
+    	int A = 0;
+    	int B = 0;
         for(int i=0; i<nums.length; i++){
-            int f = first;    //record
-            int s = second;   //not needed, just save the characters
-            int t = nums[i];  //not needed, just save the characters
-            first  = ~f&s&t | f&~s&~t;   
-            second = ~f & (s^t); 
+            int I = nums[i];
+            //int NA = A&(~B)&(~I) | A&B&(~I) | (~A)&B&I | A&(~B)&I;
+            //int NB = (~A)&B&(~I) | A&B&(~I) | (~A)&(~B)&I | A&(~B)&I;
+            int NA = A&(~B)&(~I)   | (~A)&B&I;
+            int NB = (~A)&B&(~I)   | (~A)&(~B)&I;
+            A = NA;
+            B = NB;
         }
-        return isOnce ? second : first;  
+        //return isOnce ? B : A;   //Explicitly capture 01 (1) or 10 (2) 
+        return A|B;  //Capture both 01 and 10. Both A|B and A^B are fine.
     }
 }
