@@ -173,6 +173,42 @@ public class TreeNode {
         ll.add(list);
         return ll; 
     }
+    public List<List<Integer>> levelOrderWithNull() {
+        if(this==null) return new ArrayList<>();
+        
+        List<List<Integer>> ll = new ArrayList<List<Integer>>();
+        
+        Queue<TN> q = new ArrayDeque<TN>();
+        q.add(new TN(this, 1));
+        
+        int currentLevel = 1; 
+        List<Integer> list = new ArrayList<Integer>();
+        while(!q.isEmpty()){    
+            /* poll */
+            TN first = q.poll();
+            
+            /* add children */
+            //if(first.TreeNode.left!=null)
+            //if(first.TreeNode.right!=null)
+            if(first.TreeNode!=null){
+            	q.add(new TN(first.TreeNode.left, first.level+1));
+            	q.add(new TN(first.TreeNode.right, first.level+1));
+            }
+            
+            /* use */ 
+            if(first.level != currentLevel){
+                ll.add(list);
+                list = new ArrayList<Integer>();
+                currentLevel++; 
+            }
+            if(first.TreeNode==null)
+            	list.add(null);
+            else
+            	list.add(first.TreeNode.val);
+        }
+        ll.add(list);
+        return ll; 
+    }
 	
 	
 }

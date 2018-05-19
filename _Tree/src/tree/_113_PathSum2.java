@@ -25,8 +25,8 @@ public class _113_PathSum2 {
 	public static void main(String[] args) {
 		_113_PathSum2 obj = new _113_PathSum2();
 		
-		//TreeNode tree = TreeNode.arrayToTree(new Integer[] {5,4,8,11,null,13,4,7,2,null,null,5,1});    //Leetcode 
-		TreeNode tree = TreeNode.arrayToTree(new Integer[] {5,4,8,11,null,13,4,7,2,null,null,null,null,5,1});      //Mine constructor
+		//TreeNode tree = TreeNode.arrayToTree(new Integer[] {5,4,8,11,null,13,4,7,2,null,null,5,1});         //Leetcode 
+		TreeNode tree = TreeNode.arrayToTree(new Integer[] {5,4,8,11,null,13,4,7,2,null,null,null,null,5,1}); //My constructor
 
 		tree.printBFS();
 		int sum=22;
