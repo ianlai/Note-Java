@@ -44,7 +44,7 @@ Store in a list of list:
 
 */
 
-public class MyScanner {
+public class _Scanner {
 
 	public static void main(String[] args) {
 		System.out.println("Test scanner");
