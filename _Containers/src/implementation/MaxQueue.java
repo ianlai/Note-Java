@@ -32,6 +32,7 @@ public class MaxQueue {
 		Stack<Integer> stack2 = new Stack<>();
 
 		int mMax = Integer.MIN_VALUE;
+		boolean debug = true;
 
 		private void add(int x) {
 			if (stack1.isEmpty()) {
@@ -53,6 +54,10 @@ public class MaxQueue {
 				while (!stack2.isEmpty())
 					stack1.push(stack2.pop());
 			}
+			if(debug){
+				System.out.println("add("+x+")"); 
+				print();
+			}
 		}
 
 		private int poll() {
@@ -60,51 +65,89 @@ public class MaxQueue {
 			if (pop == mMax) {
 				mMax = stack1.pop(); // one more pop
 			}
+			if(debug){
+				System.out.println("poll()"); 
+				print();
+			}
 			return pop;
 		}
 
 		private int peek() {
+			if(debug) print();
 			return stack1.peek();
 		}
 
 		public int getMax() {
 			return mMax;
 		}
+		
+		public void printMax(){
+			System.out.println(getMax());
+		}
 
 		public void print() {
-			System.out.println("s1:");
+			//System.out.println("s1:");
 			System.out.println(stack1);
-			System.out.println("s2:");
-			System.out.println(stack2);
+			//System.out.println("s2:");
+			//System.out.println(stack2);
 			System.out.println("max:" + getMax());
+			System.out.println("==============");
 		}
 	}
 	// ============================================================
 
 	public static void main(String[] args) throws java.lang.Exception {
-		BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
-		String input = br.readLine();
-		System.out.println(input);
-
-		/* Read window size */
-		int w = Integer.parseInt(input);
-		int counter = 0;
-
-		/* Initiate the MaxQueue */
+		test();
+		
+		/* Original input from console */
+		
+//		BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
+//		String input = br.readLine();
+//		System.out.println(input);
+//
+//		/* Read window size */
+//		int w = Integer.parseInt(input);
+//		int counter = 0;
+//
+//		/* Initiate the MaxQueue */
+//		MQueue q = new MQueue();
+//
+//		/* Read commands */
+//		while ((input = br.readLine()) != null) {
+//			int num = Integer.parseInt(input);
+//			if (counter < w) { /* not need to poll in the beginning */
+//				q.add(num);
+//				counter++; /* counter will stop when reaching w */
+//				// System.out.println(q.getMax());
+//			} else { /* need to poll in the beginning */
+//				q.poll();
+//				q.add(num);
+//				System.out.println(q.getMax());
+//			}
+//		}
+	}
+	public static void test(){
 		MQueue q = new MQueue();
+		q.add(1);
+		q.add(2);
+		q.add(3);
+		
+		q.poll();
+		q.poll();
 
-		/* Read commands */
-		while ((input = br.readLine()) != null) {
-			int num = Integer.parseInt(input);
-			if (counter < w) { /* not need to poll in the beginning */
-				q.add(num);
-				counter++; /* counter will stop when reaching w */
-				// System.out.println(q.getMax());
-			} else { /* need to poll in the beginning */
-				q.poll();
-				q.add(num);
-				System.out.println(q.getMax());
-			}
-		}
+		q.add(8);
+		q.poll();
+		q.add(5);
+		
+		q.poll();
+		q.poll();
+		
+		q.add(3);
+		q.add(7);
+		
+		q.poll();  
+		q.poll();
+		
+		q.add(6);
 	}
 }
