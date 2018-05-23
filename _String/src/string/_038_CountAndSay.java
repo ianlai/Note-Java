@@ -11,7 +11,7 @@ public class _038_CountAndSay {
 
 	public static void main(String[] args) {
 		_038_CountAndSay obj = new _038_CountAndSay();
-		for(int i=1; i<=9; i++){
+		for(int i=1; i<=20; i++){
 			String ans = obj.countAndSay(i);
 			System.out.println(String.format("%-5s", i+":") + ans);
 		}
