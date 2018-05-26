@@ -124,6 +124,7 @@
 │       ├── collections
 │       │   ├── ArrayAndList.java
 │       │   ├── HashMapUse.java
+│       │   ├── _Deque.java
 │       │   ├── _HashSet.java
 │       │   ├── _List.java
 │       │   ├── _PriorityQueue.java
@@ -217,7 +218,6 @@
 │       │   └── _461_HammingDistance.java
 │       └── math
 │           ├── _007_ReverseInteger.java
-│           ├── _009_PalindromeNumber.java
 │           ├── _050_Pow.java
 │           ├── _069_Sqrt.java
 │           ├── _172_FactorialTrailingZeroes.java
@@ -250,6 +250,7 @@
 │       ├── string
 │       │   ├── _003_LongestSubstringWithoutRepeatingCharacters.java
 │       │   ├── _008_StringToInteger_AtoI.java
+│       │   ├── _009_PalindromeNumber.java
 │       │   ├── _013_RomanToInteger.java
 │       │   ├── _014_LongestCommonPrefix.java
 │       │   ├── _020_ValidParentheses.java
@@ -500,4 +501,4 @@
 * Quiz Java Number: 176
 ```
 * Quiz  Java Number: 176
-* Total Java Number: 245
+* Total Java Number: 246
