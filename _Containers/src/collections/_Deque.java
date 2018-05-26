@@ -26,7 +26,7 @@ public class _Deque {
 		q2.addLast(4);
 		q2.addLast(5);
 		q2.addFirst(8);         
-		q2.pollLast();          
+		q2.pollLast();
 		System.out.println(q2);  //8,9,2,3,4
 	}
 }
