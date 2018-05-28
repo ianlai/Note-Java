@@ -36,11 +36,15 @@ public class _047_Permutations2 {
  
 	public List<List<Integer>> permuteUnique(int[] nums) {
 		List<List<Integer>> list = new ArrayList<>();
-		Arrays.sort(nums);
+		Arrays.sort(nums);   //sorting first!
 		backtrack(list, new ArrayList<>(), nums, new boolean[nums.length]);
 		return list;
 	}
-
+	/* nums    : input 
+	 * list    : answer
+	 * tempList: use to create a list 
+	 * used    : to identify the element is used or not
+	 */
 	private void backtrack(List<List<Integer>> list, List<Integer> tempList, int[] nums, boolean[] used) {
 		if (tempList.size() == nums.length) {
 			list.add(new ArrayList<>(tempList));

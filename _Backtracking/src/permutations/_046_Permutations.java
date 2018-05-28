@@ -40,6 +40,10 @@ public class _046_Permutations {
 		return result;
 	}
 
+	/* arr : input  (change to List in order to use Collections.swap) 
+	 * list: answer
+	 * There is no tempList like permute2 because we can reuse arr list. 
+	 */
 	private void helper(List<Integer> arr, int k, List<List<Integer>> list) {
 		if (k == arr.size() - 1) {
 			List l = new ArrayList(arr);
@@ -69,7 +73,10 @@ public class _046_Permutations {
 		backtrack(list, new ArrayList<>(), nums);
 		return list;
 	}
-
+	/* nums    : input 
+	 * list    : answer
+	 * tempList: use to create a list 
+	 */
 	private void backtrack(List<List<Integer>> list, List<Integer> tempList, int[] nums) {
 		if (tempList.size() == nums.length) {
 			list.add(new ArrayList<>(tempList));
